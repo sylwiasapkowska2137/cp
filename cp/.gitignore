@@ -1,12 +1,6 @@
-
-# Ignore all
-*
-# Unignore all with extensions
-!*.*
-# Unignore all dirs
-!*/
-
-*.in
-*.out
-*.txt
-o.sh
+ */*         #ignore all files in each directory
+ !*/*.cpp      #unignore .c files in each directory
+ !*/*.sh     #unignore .h header files in each directory
+ !.gitignore #unignore .gitignore
+ 
+ o.sh
