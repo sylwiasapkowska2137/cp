@@ -1,10 +1,12 @@
-*.in
-*.out
-*.txt
-o.sh
+
 # Ignore all
 *
 # Unignore all with extensions
 !*.*
 # Unignore all dirs
 !*/
+
+*.in
+*.out
+*.txt
+o.sh
