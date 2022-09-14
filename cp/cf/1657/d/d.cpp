@@ -1,0 +1,118 @@
+//Sylwia Sapkowska
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long LL;
+typedef long double LD;
+
+void __print(int x) {cerr << x;}
+void __print(long x) {cerr << x;}
+void __print(long long x) {cerr << x;}
+void __print(unsigned x) {cerr << x;}
+void __print(unsigned long x) {cerr << x;}
+void __print(unsigned long long x) {cerr << x;}
+void __print(float x) {cerr << x;}
+void __print(double x) {cerr << x;}
+void __print(long double x) {cerr << x;}
+void __print(char x) {cerr << '\'' << x << '\'';}
+void __print(const char *x) {cerr << '\"' << x << '\"';}
+void __print(const string &x) {cerr << '\"' << x << '\"';}
+void __print(bool x) {cerr << (x ? "true" : "false");}
+
+template<typename T, typename V>
+void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ", "; __print(x.second); cerr << '}';}
+template<typename T>
+void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? ", " : ""), __print(i); cerr << "}";}
+void _print() {cerr << "]\n";}
+template <typename T, typename... V>
+void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+#ifndef ONLINE_JUDGE
+#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#else
+#define debug(x...)
+#endif
+
+#define int long long
+const int oo = 1e18;
+
+struct segtree{
+	vector<int>tab;
+	int size = 1;
+
+	segtree(int n, vector<pair<int, int>>&c){
+		while (size < n) size*=2;
+		tab.assign(2*size+1, oo);
+		for (int i = 0; i<(int)c.size(); i++) tab[i+size] = c[i].second;
+		for (int i = size-1; i>=1; i--) tab[i] = min(tab[2*i], tab[2*i+1]);
+	}
+
+	int query(int l, int r){
+		l = l+size-1;
+		r = r+size+1;
+		int ans = oo;
+		while (r-l>1){
+			if (!(l&1)) ans = min(ans, tab[l+1]);
+			if (r&1) ans = min(ans, tab[r-1]);
+			l/=2;r/=2;
+		}
+		return ans;
+	}
+};
+
+void solve(){
+	int n, C; cin >> n >> C;
+	vector<int>tmp(C+1, -oo);
+	for (int i = 0; i<n; i++){
+		int c, d, h; cin >> c >> d >> h;
+		tmp[c] = max(tmp[c], d*h);
+	}
+	//debug(mapa);
+	vector<int>cost(C+1, -oo);
+	
+	for (int i = 1; i<=C; i++){
+		if (tmp[i] == -oo) continue;
+		for (int j = i; j<=C; j+=i){
+			cost[j] = max(cost[j], (j/i)*tmp[i]);
+		}
+	}
+
+	vector<pair<int, int>>change;
+	int maxi = 0;
+	for (int i = 1; i<=C; i++){
+		if (cost[i] == -oo) continue;
+		maxi = max(maxi, cost[i]);
+		change.emplace_back(cost[i], i);
+	}
+	sort(change.begin(), change.end());
+	//debug(cost);
+	
+	int m; cin >> m;
+	vector<int>b;
+	for (int i = 0; i<m; i++){
+		int d, h; cin >> d >> h;
+		b.emplace_back(d*h);
+	}
+	//debug(change);
+	segtree seg((int)change.size()+1, change);
+	for (auto v:b){
+		if (v > maxi) {
+			cout << "-1 ";
+			continue;
+		}
+		auto x = (lower_bound(change.begin(), change.end(), pair<int, int>{v+1, 0})-change.begin());
+		int y = seg.query(x, seg.size-1);
+		if (y == oo) cout << "-1 ";
+		else cout << y << " ";
+	}
+	cout << "\n";
+}
+
+int32_t main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	int t = 1; //cin >> t;
+	while (t--) solve();
+	
+	return 0;
+}

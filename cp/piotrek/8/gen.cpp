@@ -1,0 +1,70 @@
+//Sylwia Sapkowska
+#include <bits/stdc++.h>
+using namespace std;
+
+void __print(int x) {cerr << x;}
+void __print(long long x) {cerr << x;}
+void __print(long double x) {cerr << x;}
+void __print(char x) {cerr << '\'' << x << '\'';}
+void __print(const char *x) {cerr << '\"' << x << '\"';}
+void __print(const string &x) {cerr << '\"' << x << '\"';}
+void __print(bool x) {cerr << (x ? "true" : "false");}
+
+template<typename T, typename V>
+void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ", "; __print(x.second); cerr << '}';}
+template<typename T>
+void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? ", " : ""), __print(i); cerr << "}";}
+void _print() {cerr << "]\n";}
+template <typename T, typename... V>
+void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+#ifndef ONLINE_JUDGE
+#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#else
+#define debug(x...)
+#endif
+
+#define int long long
+const int oo = 1e18, K = 30;
+
+mt19937 rng(chrono::steady_clock().now().time_since_epoch().count());
+int p(int a, int b){
+	return a+rng()%(b-a+1);
+}
+
+void solve(){
+	int n = p(2, 3);
+	int m = p(0, min(6LL, n*(n-1)));
+	cout << n << " " << m << "\n";
+	set<pair<int, int>>s;
+	while (s.size() < m){
+		while (1){
+			int a = p(1, n);
+			int b = p(1, n);
+			while (a == b){
+				b = p(1, n);
+			}
+			if (s.find({a, b}) == s.end()){
+				s.insert({a, b});
+				break;
+			}
+		}
+	}
+	vector<pair<int, int>>edges;
+	for (auto [x, y]:s){
+		edges.emplace_back(x, y);
+	}
+	shuffle(edges.begin(), edges.end(), rng);
+	for (auto [a, b]:edges){
+		cout << a << " " << b << "\n";
+	}
+}
+
+int32_t main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	solve();
+	
+	return 0;
+}
