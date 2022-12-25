@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[a4paper, total={6.5in, 8in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cases}
+\usepackage{parskip}
+\title{Some random problem}
+\date{}
+\begin{document}
+
+Let \(E\) be the arithmetic mean of \(a_i\): \(E = \frac{1}{n}\sum_{i=1}^{n} a_i\). Also let 
+\[
+    V = \frac{1}{n}\sum_{i=1}^{n} (a_{i}-E)^2 = \frac{1}{n}\sum_{i=1}^{n} a_i^2 - \frac{2}{n} \sum_{i=1}^{n} a_i E + n \cdot \frac{E^2}{n} = \frac{1}{n} \sum_{i=1}^{n} a_i^2 + E(E-\frac{2}{n}\sum_{i=1}^{n} a_i) = \frac{1}{n}\sum_{i=1}^{n} a_i^2 - E^2.
+\] 
+Let's divide initial inequality by \(n^2\) and substitute the above notation:
+\[
+    \frac{1}{n}\sum_{i\in A}^{n} a_i^2 + 4 \Bigl( \frac{\sum\limits_{i=1}^{n} a_i}{n} \Bigr) ^2 \leq 4 = \frac{4}{n} \sum_{i=1}^{n} a_i^2
+\]
+It's sufficient to prove the following inequality:
+\[
+  \frac{1}{n}\sum_{i\in A}^{n} \frac{a_i^2}{2} \leq V 
+\]
+
+From inequality between quadratic and arithmetic mean we know that \( \sqrt{\frac{\sum_{i=1}^{n} a_i^2}{n} }\geq  \frac{\sum_{i=1}^{n} a_i}{n} \implies \sum_{i=1}^{n} a_i \leq n \). 
+Moreover, since \(a \geq 2 \), then \(a-1 \geq \frac{a}{2}\).  
+However, 
+\[
+    V = \frac{1}{n}\sum_{i=1}^{n} (a_i - E)^2 \geq \frac{1}{n}\sum_{i\in A}^{n} (a_{i}-E)^2 \geq \frac{1}{n}\sum_{i\in A}^{n} (a_i -1)^2 \geq \frac{1}{n}\sum_{i\in A}^{n} \bigl(\frac{a_i}{2} \bigr) ^2, 
+\]
+which ends the proof.
+
+
+\end{document}
+

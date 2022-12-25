@@ -1,48 +1,15 @@
 #!/bin/bash
-## Version 2.4
 
 ## ****** BEGIN - Configuration *******
-
 # Input/Output format
 # '#' will be replaced by 1, 2, ...
-IN="#.in"
-OUT="#.out"
+IN="testy/wyp#.in"
+OUT="testy/wyp#.out"
 
-# Limits
-TL=42 # Time limit (in seconds)
-MAX_N=454
-
-# Compiling options
-CPP="g++ -O2 -w -lm" # C++
-C="gcc -O2 -w -lm" # C
-PAS="gpc" # Pascal
-
-
+MAX_N=5000 # Number of tests
+CPP="g++ -O3 -w -lm" # C++
 ## ****** END - Configuration ********
 
-#--------------------------------------------------
-
-#Copyright (c) 2012 Makis Arsenis
-
-#Permission is hereby granted, free of charge, to any person obtaining a copy
-#of this software and associated documentation files (the "Software"), to
-#deal in the Software without restriction, including without limitation the
-#rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-#sell copies of the Software, and to permit persons to whom the Software is
-#furnished to do so, subject to the following conditions:
-
-#The above copyright notice and this permission notice shall be included in
-#all copies or substantial portions of the Software.
-
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-#FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-#IN THE SOFTWARE.
-
-# Color Codes
 red='\033[0;31m'
 RED='\033[1;31m'
 GREEN='\033[1;32m'
@@ -52,6 +19,8 @@ BLUE='\033[1;34m'
 cyan='\033[0;36m'
 CYAN='\033[1;36m'
 NC='\033[0m' # No Color
+
+TL=10000 # Time limit (in seconds)
 
 # Cleanup on exit
 rm -f .overview .compiler_report .time_info .$1.out
@@ -106,7 +75,7 @@ do
   then
     break
   fi
-  echo -e "${BLUE}Test case $i:${NC}";
+  echo -e "${BLUE}$i:${NC}";
 
   time -p (./a.out < $TEST_CASE_IN > .$1.out) 2> .time_info;
 
@@ -125,7 +94,7 @@ do
     if [ $? -eq 0 ]
     then
       echo -e " ${GREEN}* OK${NC} [$PROG_TIME]"
-      echo -n "*" >> .overview
+      # echo -n "*" >> .overview
       CORRECT=`expr $CORRECT + 1`
     else
       echo -e " ${RED}X WA: Wrong Answer${NC} [$PROG_TIME]"
@@ -133,7 +102,7 @@ do
     fi
   fi
 
-  echo;
+  # echo;
 done
 N=`expr $i - 1`
 

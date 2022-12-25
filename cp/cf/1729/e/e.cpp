@@ -35,14 +35,19 @@ int query(int a, int b){
 	return d;
 }
 
-void solve(){
-	int mx = 1e18;
-	while (curr){
-		int a = p(1, mx);
-		int b = p(1, mx);
-	}
-	cout << "! " << ans << "\n";
+void answer(int x){
+	cout << "! " << x << "\n";
 	cout.flush();
+}
+
+void solve(){
+	for (int n = 2; n <= 30 ; n++){
+		int x = query(1, n);
+		if (x == -1) answer(n-1);
+		int y = query(n, 1);
+		if (x != y) answer(x+y);
+		if (n == 30) answer(x+y);
+	}
 }
 
 int32_t main(){
