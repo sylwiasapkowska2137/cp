@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1670230969 "/home/sylwia/Desktop/cp/latex/pw/xd.tex" "xd.pdf" "xd" 1670230970
+["pdflatex"] 1678279741 "/home/sylwia/Desktop/cp/latex/pw/xd.tex" "xd.pdf" "xd" 1678279741
   "/etc/texmf/web2c/texmf.cnf" 1669289872 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/sylwia/Desktop/cp/latex/pw/xd.tex" 1670230968 6940 c0d7cc404ede01de5f2bcad2b9cf26bc ""
+  "/home/sylwia/Desktop/cp/latex/pw/xd.tex" 1678279740 7791 7aa08a5daf6a8ec2e649c89a9bbb8ae2 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -15,6 +15,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
@@ -156,10 +157,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1669289907 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1669289938 2799987 732eefec2ddcd0564e499d16f4379b1b ""
-  "xd.aux" 1670230970 686 470fdebd29f279999e89f3533b8c7bc8 "pdflatex"
-  "xd.out" 1670230970 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "xd.tex" 1670230968 6940 c0d7cc404ede01de5f2bcad2b9cf26bc ""
-  "zadanie3pw.png" 1670102247 46014 706dafc0c61c7dff137582a42820eee3 ""
+  "xd.aux" 1678279741 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "xd.out" 0 -1 0 "pdflatex"
+  "xd.tex" 1678279740 7791 7aa08a5daf6a8ec2e649c89a9bbb8ae2 ""
+  "zadanie3pw.png" 1671998186 46014 706dafc0c61c7dff137582a42820eee3 ""
   (generated)
   "xd.aux"
   "xd.log"

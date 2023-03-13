@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Turniej Rycerski}
+\id{tur}
+\author{Przemysław Jakub Kozłowski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{28.09.2016}
+\RAM{32}
+
+\begin{document}
+\begin{tasktext}%
+W koloseum odbędzie się Starożytny Turniej Rycerski. W turnieju weźmie udział $n$ walecznych rycerzy. Każdy rycerz posiada 3 atrybuty: Siłę, Zwinność i Pancerz. Turniej zostanie przeprowadzony w systemie ,,każdy z każdym''. Oznacza to, że każdy rycerz spotka się w jednym pojedynku z każdym innym rycerzem. Pojedynek rycerzy składa się z trzech tur. W pierwszej turze rycerze siłują się na rękę. Wygrywa rycerz, który ma większą Siłę. W drugiej turze odbywa się bieg z przeszkodami. Tę turę wygrywa rycerz z większą Zwinnością. Trzecia tura to walka na pancerze i wygrywa ją rycerz z większym Pancerzem. Ponadto w każdej turze możliwy jest remis jeśli obaj rycerze mają taki sam atrybut. Zwycięzcą całego pojedynku (składającego się z 3 tur) zostaje rycerz, który wygrał w nim więcej tur. Pojedynek również może zakończyć się remisem.
+
+Wielkim Mistrzem turnieju zostaje rycerz, który wygra wszystkie swoje pojedynki. Może się jednak zdarzyć, że w turnieju nie zostanie wyłoniony Wielki Mistrz. Dzieje się tak wtedy, gdy każdy rycerz przegra lub zremisuje jakiś pojedynek.
+
+Przemek jest sędzią w Starożytnym Turnieju Rycerskim. Posiada listę wszystkich rycerzy, którzy się zapisali do turnieju. Zna również wszystkie 3 atrybuty każdego rycerza. Postanowił jeszcze przed rozpoczęciem turnieju, na podstawie atrybutów, przewidzieć czy w turnieju zostanie wyłoniony Wielki Mistrz oraz który rycerz nim zostanie.
+
+Niestety do turnieju zgłosiło się zbyt wielu rycerzy i Przemek nie ma nawet najmniejszych szans na przeczytanie całej listy rycerzy, nie mówiąc już o wyłonieniu Wielkiego Mistrza. W tym celu poprosił swojego przyjaciela Jakuba o pomoc. Jakub umie programować i postanowił napisać program, który wyłoni Wielkiego Mistrza na podstawie listy rycerzy z ich atrybutami lub stwierdzi, że Wielkiego Mistrza nie ma.
+
+  \section{Wejście}
+W pierwszym wierszu standardowego wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę rycerzy biorących udział w turnieju. Każdy z kolejnych $n$ wierszy zawiera 3 liczby całkowite: $s_i$, $z_i$, $p_i$ ($1 \leq s_i, z_i, p_i \leq 10^9$), oznaczające odpowiednio Siłę, Zwinność oraz Pancerz rycerza.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita oznaczająca numer rycerza, który zostanie Wielkim Mistrzem. Rycerze są ponumerowani liczbami całkowitymi od $1$ do $n$ zgodnie z kolejnością na wejściu. Natomiast jeśli w turnieju nie będzie Wielkiego Mistrza to należy wypisać jedno słowo: \texttt{NIE} .
+
+\makecompactexample
+
+\textbf{Wyjaśnienie do przykładu:} Wielkim Mistrzem zostanie rycerz nr $2$. Jego Pancerz nie jest najlepszy, ale za to ma tak wysoką Siłę oraz Zwinność, że bez problemu wygrał pojedynek z każdym innym rycerzem.
+
+\end{tasktext}
+\end{document}

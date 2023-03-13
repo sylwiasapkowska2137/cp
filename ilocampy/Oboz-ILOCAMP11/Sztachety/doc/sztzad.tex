@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Sztachety}
+\id{szt}
+\author{Michał Majewski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{olimpijska}
+\day{?}
+\date{??.09.2015}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Pewien znany fotograf podróżuje po świecie szukając nietypowych inspiracji, a następnie zachwyca miłośników fotografii swoimi dziełami. W tym roku wybrał się na podróż w poszukiwaniu ciekawych płotów. Po zebraniu zdjęć doszedł do wniosku, że najbardziej podobają mu się zdjęcia płotów z kolorowymi sztachetami. Ale czy tak kolorowe zdjęcia zostaną dobrze odebrane? Po dłuższych rozważaniach postanowił przyciąć niektóre fotografie, aby zawierały tylko fragmenty płotów z oryginalnych zdjęć.
+
+W wyciętym fragmencie powinno się znaleźć dokładnie $k$ sztachet o unikalnym kolorze (których kolor występuje dokładnie raz w tym fragmencie).
+
+Zadanie okazało się czasochłonne i trudne, a zdjęć do obróbki jest bardzo dużo. Spróbuj pomóc naszemu artyście znajdując odpowiednie fragmenty jego zdjęć.
+
+\section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$, $k$ ($1 \leq n, k \leq 1\,000\,000$) oznaczające odpowiednio liczbę sztachet w płocie oraz liczbę z treści zadania.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$ ($1 \leq x_i \leq 1\,000\,000$), gdzie $x_i$ oznacza kolor $i$-tej sztachety.
+
+\section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita oznaczająca długość najdłuższego (spójnego) fragmentu płotu, który spełnia warunki z zadania. Jeśli nie da się wybrać takiego fragmentu wypisz $-1$.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

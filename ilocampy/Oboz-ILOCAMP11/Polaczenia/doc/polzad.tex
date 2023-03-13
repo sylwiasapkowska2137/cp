@@ -1,0 +1,31 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Połączenia}
+\id{pol}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{średnia}
+\day{1}
+\date{21.09.2015}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Bajtolandia złożona jest z $n$ miast i $n - 1$ łączących je autostrad. Z dowolnego miasta da się dojechać do dowolnego innego, ale podróż potrafi być bardzo długa. Zbliżają się wybory i każdy kandydat obiecuje to zmienić. Jedni proponują dodatkowe autostrady, inni teleporty, trzeci połączenia lotnicze. Zajmiemy się ostatnią propozycją.
+
+Pewna partia zebrała spis miast granicznych (tzn. takich które mają bezpośrednie połączenie z dokładnie jednym miastem) i zaproponowała, żeby między każdą parą takich miast oddalonych od siebie o parzystą liczbę autostrad utworzyć połączenie lotnicze. Pomysł ciekawy, ale pojawia się ważne pytanie, ile to wszystko będzie kosztować? Twoim zadaniem jest obliczyć, ile takich połączeń trzeba będzie utworzyć, aby spełnić obietnice przedwyborcze.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($3 \leq n \leq 100\,000$) oznaczająca liczbę miast.
+
+W kolejnych $n - 1$ wierszach znajdują się pary liczb $a, b$ ($1 \leq a, b \leq n, a \neq b$), oznaczające, że miasta $a$ i $b$ są połączone autostradą.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca ile jest par miast, które należy połączyć liniami lotniczymi zgodnie z pomysłem partii.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

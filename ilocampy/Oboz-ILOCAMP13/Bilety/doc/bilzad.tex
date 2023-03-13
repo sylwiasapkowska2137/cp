@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Bilety}
+\id{bil}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{0}
+\date{25.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Pan Jan wyruszył autem w trasę składającą się z $n$ nastêpujących po sobie odcinków. Przed wjazdem na każdy z odcinków znajduje się kasa biletowa, w której trzeba skasować
+1 bilet, aby można było udać się w dalszą podróż. Dodatkowo w każdej kasie można kupić pewną liczbę biletów, które można kasować przed wjazdem na dowolny odcinek. 
+Ceny biletów w kasach mogą się różnić, a pojedyncza osoba może kupić ich ograniczoną liczbę. 
+
+Pan Jan chce zaplanować kupno biletów w taki sposób, aby koszt przejazdu wyszedł jak najmniejszy. Pomóż mu, i powiedz ile będzie musiał minimalnie wydać na bilety. 
+
+ \section{Wejście}
+    
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 1\,000\,000$), oznaczającą liczbę odcinków, z których składa się trasa. Kolejnych $n$ 
+wierszy zawiera opis kolejnych kas. Każdy z wierszy składa się z dwóch liczb całkowitych $c_i, x_i$ ($1 \leq c_i, x_i \leq 10^6$), oznaczających odpowiednio cenę i liczbę
+dostępnych biletów w $i$-tej kasie. 
+
+  \section{Wyjście}
+    Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą minimalnemu kosztowi przejechania całej trasy przez Pana Jana. 
+    
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

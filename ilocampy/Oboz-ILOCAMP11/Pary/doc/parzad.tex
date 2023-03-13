@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Pary}
+  \signature{ajas}
+  \id{par}
+  \etap{olimpijska}
+  \day{3}
+  \konkurs{XI obóz informatyczny}
+  \date{23.09.2015}
+  \RAM{128}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Adrian Jaskółka}
+  \history{2011.11.18}{Adrian Jaskółka-wszystko}{1.00}
+
+\begin{document}
+  \begin{tasktext}%
+Pani BitoKazimiera jest nauczycielką informatyki w jednym z Bajtockich gimnazjów. W jej ulubionej klasie ma $n$ uczniów. Każdy z uczniów ma pewnego najlepszego przyjaciela w klasie.
+
+	Pani BitoKazimiera chciała zabrać swoją ulubioną klasę na wycieczkę do Muzeum BitoKopernika, aby uczniowie poznali dokoniania ich rodaka 
+	(np. odkrycie, że to BitoSłońce obraca się wokół BitoZiemi, a nie na odwrót). W tym celu postanowiła połączyć uczniów w jak największą liczbę par, 
+	tak aby w każdej parze znajdował się uczeń oraz jego najlepszy przyjaciel. Jeżeli miała wiele możliwości podziału, to chciałaby to zrobić tak,
+    aby w jak największej liczbie par była dziewczynka oraz chłopczyk.
+
+	Twoim zadaniem jest policzenie ile można najwięcej utworzyć par oraz w jak największej liczbie par może być po dziewczynce i chłopczyku.
+	Oczywiście każdy uczeń może należeć tylko do jednej pary.
+	
+	Możesz założyć, że żadna osoba nie jest swoim najlepszym przyjacielem.
+
+  \section{Wejście}
+  	
+	W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ oznaczająca liczbę uczniów ($2~\leq~n~\leq~500\,000$). W kolejnych $n$ wierszach znajdują się po dwie liczby oznaczające kolejno
+	najlepszego przyjaciela $i$-tej osoby oraz płeć $i$-tej osoby ($1$ dla dziewczynki oraz $2$ dla chłopczyka).
+
+  \section{Wyjście}
+  	
+	Wypisz dwie liczby oznaczające największą możliwą liczbę par jakie możemy utworzyć, oraz ile najwięcej spośród tych par może być parą z dziewczynką i chłopcem.
+
+  \makecompactexample
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:}
+Łączymy w pary ucznia 2 z uczennicą 3 i uczennicę 4 z uczniem 5.
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Graf i ty}
+\id{git}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{20.01.2016}
+\RAM{128}
+
+\begin{document}
+\begin{tasktext}%
+Masz dany graf o $n$ wierzchołkach ponumerowanych kolejnymi liczbami naturalnymi od $1$ do $n$, w którym dwa wierzchołki $a$ i $b$ są połączone dwukierunkową krawędzią wtedy i tylko wtedy, gdy $a$ jest dzielnikiem $b$ lub $b$ jest dzielnikiem $a$.
+Jeśli $b$ jest dzielnikiem $a$, to waga tej krawędzi wynosi $\frac{a}{b}$, a jeśli $a$ jest dzielnikiem $b$, to waga krawędzi wynosi $\frac{b}{a}$.
+Masz również ciąg $q$ zapytań o długość najkrótszej ścieżki w tym grafie pomiędzy pewnymi dwoma wierzchołkami.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $q$ ($1 \leq n, q \leq 10^6$), oznaczające kolejno liczbę wierzchołków w grafie oraz liczbę zapytań.
+W każdym z kolejnych $q$ wierszy znajdują się dwie liczby $a$ i $b$ ($1 \leq a, b \leq n$), oznaczające numery wierzchołków, między którymi chcemy znaleźć długość najkrótszej ścieżki.
+  \section{Wyjście}
+Na wyjściu powinno pojawić się $q$ wierszy, a w każdym z nich jedna liczba całkowita -- długość najkrótszej ścieżki między wierzchołkami z kolejnych zapytań. 
+  \makecompactexample
+
+\end{tasktext}
+\end{document}

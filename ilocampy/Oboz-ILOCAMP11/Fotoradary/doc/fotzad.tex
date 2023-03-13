@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Fotoradary}
+  \author{Mateusz Puczel}
+  \pagestyle{fancy}
+  \signature{mp???}
+  \id{fot}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{olimpijska}
+  \day{1}
+  \date{21.09.2015}
+  \RAM{64}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Od pewnego czasu w Bajtocji zauważono coraz więcej nielegalnych wyścigów nocnych,
+które stały się poważnym zagrożeniem dla bezpieczeństwa mieszkańców.
+Z tego powodu szef Bajtockiej Policji postanowił zamontować na ulicach fotoradary w celu zebrania niezbędnych dowodów.
+  
+W mieście jest $n$ skrzyżowań połączonych $n - 1$ ulicami. Każda ulica ma długość $1$.
+Wyścig może odbyć się między dowolnymi dwoma różnymi skrzyżowaniami na ulicach łączących te skrzyżowania.
+Z powodu ograniczonego budżetu Bajtocka Policja może zamontować maksymalnie $k$ fotoradarów na tych $n - 1$ ulicach. 
+Fotoradary powinny być zamontowane w taki sposób, aby długość najdłuższej trasy niepokrytej żadnym fotoradarem była jak najkrótsza.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq k < n \leq 10^6$), 
+oznaczające kolejno liczbę skrzyżowań w Bajtocji oraz maksymalną liczbę fotoradarów, które można zamontować.
+
+W każdym z kolejnych $n - 1$ wierszy znajdują się dwie liczby całkowite $a, b$ ($1 \leq a, b \leq n$, $a \neq b$),
+oznaczające, że istnieje ulica pomiędzy skrzyżowaniami $a$ i $b$.
+
+  \section{Wyjście}
+W pierwszym i jedynym wierszu wyjścia powinna znaleźć się jedna liczba całkowita, oznaczająca długość najdłuższej trasy, na której
+może odbywać się wyścig i na żadnej z ulic tej trasy nie stoi fotoradar.
+    
+    \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Gra w klocki}
+\id{gwk}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{16.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek gra z jego kolegą Jakubem w pewną grę. Jej przebieg prezentuje się następująco. 
+
+Na dwóch nieskończenie długich planszach o szerokości 1, w taki sam sposób ustawianych jest $n$ klocków na polach $a_1$, $a_2$, ..., $a_n$. Każdy z klocków posiada pewną wysokość $h_i$. Jedna z tych planszy należy do Jakuba, a druga do Przemka. Chłopcy mogą przewrócić każdy z klocków w lewo lub prawo, a kiedy to nastąpi upada on na pola z przedziału [$a_i$ - $h_i$, $a_i$] lub [$a_i$, $a_i$ + $h_i$]. Klocek może też pozostać nietknięty i w takim przypadku zajmuje on jedynie pole $a_i$. Zabronione jest takie przewrócenie klocka, którego efektem będzie jego upadek na pole zajmowane przez inny klocek. Wygrywa ten kto przewróci więcej klocków.
+
+Znając wynik Jakuba, Przemek chciałby wiedzieć czy ma szansę pokonać go w danej partii, jeśli uzyska najwyższy do osiągnięcia wynik. Należy pamiętać, że z Jakuba jest cwany lis i czasem zdarza mu się oszukiwać, podając niemożliwą do uzyskania liczbę punktów! W takim przypadku wygrywa Jakub otrzymując walkower.
+
+  \section{Wejście}
+
+W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ oraz $k$ ($1 \leq n \leq 3 \cdot 10^5$, $1 \leq k \leq 10^9$) oznaczające kolejno liczbę klocków na planszach oraz uzyskany przez Jakuba wynik.
+
+W każdym z kolejnych $n$ wierszy znajdują się dwie liczby całkowitych $a_i$ oraz $h_i$ ($1 \leq a_i \leq 10^6$, $1 \leq h_i \leq 10^9$, $ a_i < a_{i+1}$), oznaczające numer pola na którym stoi $i$-ty klocek oraz jego wysokość. Żadne dwa klocki nie stoją na tym samym polu.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać jedno słowo \texttt{NIE}, jeśli Przemek nie może wygrać z Jakubem lub słowo \texttt{TAK} i liczbę $w$ będącą maksymalnym do uzyskania wynikiem, jeśli Przemek ma szansę pokonać Jakuba.
+
+\makecompactexample 
+
+
+\hspace{1cm} \textbf{\newline Wyjaśnienie do przykładu:} Wynik 4 możemy uzyskać w następujący sposób: 
+\begin{itemize}
+	\item Pierwszy klocek przewracamy w lewo  - teraz zajmuje on pola $[-3, 2]$
+	\item Drugi klocek przewracamy w prawo - teraz zajmuje on pola $[3, 6]$
+	\item Trzeci klocek przewracamy w lewo - teraz zajmuje on pola $[7, 9]$
+	\item Czwarty klocek pozostawiamy nietknięty - zajmuje on jedynie pole $11$
+	\item Piąty klocek przewracamy w prawo - teraz zajmuje on pola $[14, 16]$
+\end{itemize}
+\end{tasktext}
+\end{document}

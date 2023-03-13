@@ -1,0 +1,61 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Stemple}
+\id{stm}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{19.01.2016}
+\RAM{64}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bonifacy chce pomalować swój drewniany szablon. Zamierza w tym celu użyć swoich kolorowych stempli.
+
+Szablon składa się z $n$ pionowych pasków o szerokości $1$ cm i pewnych wysokościach.
+Dolne krawędzie pasków ułożone są w jednej linii. Każdy z jego $m$ stempli jest prostokątem i ma unikalny kolor.
+
+Malowanie szablonu polega na odciskaniu stempli w określonych miejscach tak, aby pokryć farbą całą powierzchnię figury.
+Miejsce, w którym został przyłożony stempel, zostaje nasiąknięte farbą.
+Chłopiec ma następujące wymagania:
+
+1) Szablon nie może być pokryty kolorem innym niż kolory jego stempli, co mogłoby powstać po odciśnięciu na pewnym
+fragmencie dwóch różnych pieczątek i wymieszaniu kolorów.
+
+2) Szablon podczas malowania leży na cennej, antycznej podkładce. Chłopiec woli stwierdzić, że nie da się pomalować
+szablonu zgodnie z jego zasadami, niż usilnie przykładać stemple do szablonu, wychodząc poza pole figury i brudzić
+podkładkę.
+
+3) Stemple muszą być przykładane do dolnej krawędzi szablonu określonym bokiem (Bonifacy nie może obracać stempli).
+
+4) Przecinając szablon w dowolnym miejscu prostopadle do jego podstawy, oś przecięcia nie może przebiegać
+przez więcej niż jeden kolor.
+
+Bonifacy chciałby dokonać $minimalnej$ liczby przyłożeń pewnych stempli do szablonu, ponieważ jest to bardzo
+czasochłonne. Zorientował się, że być może istnieje wiele sposobów zrealizowania jego zadania, zatem poprosił
+Cię o pomoc. Chłopiec poinformował Cię, że możesz używać jego stempli wielokrotnie.
+
+ \section{Wejście}
+
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, m$ ($1 \leq n, m \leq 1\,000$), oznaczające
+odpowiednio długość szablonu w centymetrach oraz liczbę stempli Bonifacego.
+Kolejny wiersz zawiera $n$ dodatnich liczb całkowitych, reprezentujących szerokości szablonu na kolejnych
+jednocentymetrowych odcinkach figury.
+W kolejnych $m$ wierszach znajdują się pary liczb całkowitych $a_i$, $b_i$, oznaczających, że $i$-ty stempel
+chłopca ma wymiary $a_i$ na $b_i$, gdzie $b_i$ to długość boku przykładanego równolegle do podstawy szablonu.
+
+  \section{Wyjście}
+Jeżeli nie da się pomalować szablonu przy użyciu podanych stempli zgodnie z wymaganiami Bonifacego,
+na standardowe wyjście należy wypisać jedno słowo \texttt{NIE}. W przeciwnym razie,
+w pierwszym wierszu wyjścia należy wypisać minimalną liczbę wykonanych odciśnięć stempli, które pokryją
+cały szablon Bonifacego i nie zabrudzą leżącej pod nim podkładki. W drugim wierszu powinny znaleźć się
+numery użytych stempli w kolejności od lewej do prawej. Stemple numerujemy zgodnie z kolejnością pojawienia
+się ich na wejściu, poczynając od numeru jeden. Jeżeli istnieje kilka możliwości wypisania drugiego wiersza,
+należy wypisać ten, który jest wcześniejszy leksykograficznie.
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zamach}
+\id{zam}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{27.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Franekstein planuje zamach na Block City. Miasto składa się z $n$ bloków ustawionych bezpośrednio jeden za drugim. Każdy z bloków ma pewną liczbę pięter.
+Piętra o tym samym numerze w dwóch sąsiadujących ze sobą blokach przylegają do siebie. Podłożenie bomby na $i$-tym piętrze w pewnym bloku sprawia, 
+że siła zniszczenia rujnuje wszystkie piętra w tym bloku, a dodatkowo przemieszcza się do sąsiednich bloków, demolując pomieszczenia znajdujące się 
+w nich na $i$-tym piętrze. Następnie fala uderzeniowa ponownie rozchodzi się w obie strony masakrując $i$-te piętra w kolejnych blokach. Fala zatrzymuje się w momencie, gdy
+sąsiadujący blok ma mniej niż $i$ pięter, ponieważ gruz i pył ulatują w powietrze, dzięki czemu dalej położone bloki zostają nietknięte tym wybuchem. Bloki w Block City to nie byle jakie bloki. Posiadają niesamowicie grube i solidne ściany.
+Naruszenie pojedynczym wybuchem dowolnego piętra, zabija wszystkich ludzi, którzy się na nim znajdują, jednak nie zakłóca konstrukcji bloku. Franekstein postanowił
+to wykorzystać i nie zamierza tak podkładać bomb, aby któraś ściana, podłoga bądź sufit oberwały dwukrotnie. Budynek zrównałby się z ziemią, a Franekstein
+nie mógłby go wówczas obłupić. Siła rażenia przemieszczając się w pionie w obrębie jednego budynku, narusza jedynie poziome płyty konstrukcji (podłogi i sufity),
+natomiast przechodząc z jednego bloku do drugiego, niszczy wyłącznie ściany pomiędzy nimi.
+
+Franekstein dysponuje $k$ bombami z opóźnionym zapłonem. Zupełnie przypadkowo, włączył zapłon we wszystkich z nich dzisiaj o godzinie 9:00. Franekstein
+lubi kombinatorykę i pomimo, że za 5 godzin, równo o 14:00, bomby wybuchną, postanowił, że policzy na ile różnych sposobów może rozmieścić wszystkie bomby 
+w pewnych pomieszczeniach bloków Block City, tak aby nie zaburzyć konstrukcji budynków. Oczywiście zadanie to przerosło zamachowca, a że czasu jest mało,
+a Ty siedzisz przed komputerem, poprosił Cię o pomoc.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq k \leq n \leq 1000$), oznaczające odpowiednio liczbę bloków w mieście oraz liczbę 
+bomb które posiada Franekstein. W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $h_1, h_2, \dots, h_n$, oznaczających liczbę pięter w kolejnych budynkach Block City
+($0 \leq h_i \leq 10^9$). 
+
+Możesz założyć, że w testach wartych łącznie $50\%$ punktów $h_i \leq n$.
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać jeden wiersz zawierający jedną liczbę całkowitą równą liczbie sposobów, na które Franekstein może rozmieścić $k$ bomb
+    w opisanym na wejściu mieście, modulo $10^9 + 7$. Zakłdamy, że wszystkie bomby są nierozróżnialne.
+    
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

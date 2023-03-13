@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Monety}
+  \id{mon}
+  \signature{jtom???}
+  \author{Jacek Tomasiewicz} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \etap{pocz±tkuj±ca}
+  \day{2}
+  \date{24.09.2013}
+  \RAM{32} % HINT: To pole uzupelnia opracowujacy
+ 
+\begin{document}
+  \begin{tasktext}%
+Bitoasia u³o¿y³a w rzêdzie $n$ monet. Ka¿da z nich pokazuje or³a lub reszkê.
+Dwie s±siednie monety nazywamy \textit{przyleg³ymi} je¶li pokazuj± tê sam± stronê.
+ 
+Bitoasia \textbf{musi} odwróciæ dok³adnie jedn± monetê.
+Chcia³aby to zrobiæ w taki sposób, aby liczba par przyleg³ych monet w ca³ym ci±gu by³a jak najwiêksza. 
+
+  \section{Wej¶cie}
+Pierwszy wiersz wej¶cia zawiera jedn± liczbê ca³kowit± $n$ ($1 \leq n \leq 300\,000$), 
+oznaczaj±c± liczbê monet. Drugi wiersz wej¶cia zawiera $n$ liczb ca³kowitych 
+$m_1, m_2, \ldots, m_n$ ($m_i \in \{0, 1\}$), gdzie $m_i$ oznacza stronê $i$-tej monety: 0 --- orze³, a 1 --- reszka.
+
+  \section{Wyj¶cie}
+
+Pierwszy i jedyny wiersz wyj¶cia powinien zawieraæ jedn± liczbê ca³kowit±, 
+równ± maksymalnej liczbie par przyleg³ych monet.
+
+     \makecompactexample    
+	 
+\medskip
+\noindent
+\textbf{Wyja¶nienie do przyk³adu:} Po odwróceniu trzeciej monety, przeleg³e bêd± monety: (1, 2), (2, 3), (3, 4) i (5, 6).
+
+  \end{tasktext}
+\end{document}

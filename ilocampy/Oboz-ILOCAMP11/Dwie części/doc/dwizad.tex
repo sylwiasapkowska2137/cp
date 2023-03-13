@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Dwie części}
+  \id{dwi}
+  \signature{jtom???}
+  \author{Jacek Tomasiewicz} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \etap{początkująca}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{64} % HINT: To pole uzupelnia opracowujacy
+ 
+\begin{document}
+  \begin{tasktext}%
+Jaś znalazł w domu długą taśmę. Bez chwili namysłu napisał na taśmie pewien ciąg liczb całkowitych.
+Jaś może przeciąć taśmę w pewnym miejscu, tylko wtedy gdy na obydwu połówkach
+istnieje lider oraz wartości tych liderów są takie same.
+
+Liderem nazywamy element, który występuje więcej niż $\frac{k}{2}$ razy, 
+gdzie $k$ jest liczbą rozpatrywanych elementów. 
+Chcielibyśmy poznać, na ile sposobów Jaś może przeciąć taśmę.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($2 \leq n \leq 300\,000$), oznaczającą
+liczbę liczb na taśmie. Drugi wiersz wejścia zawiera $n$ liczb całkowitych $a_1, a_2, \ldots, a_n$
+($-10^9 \leq a_i \leq 10^9$), gdzie $a_i$ oznacza $i$-tą liczbę napisaną na taśmie.
+
+  \section{Wyjście}
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą liczbie
+sposobów, na które Jaś może przeciąć taśmę.
+
+     \makecompactexample    
+
+  \end{tasktext}
+\end{document}

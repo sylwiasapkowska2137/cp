@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Kule sprężyste}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{spr}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{1}
+  \date{21.09.2015}
+  \RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Na pewnym stole rozłożonych jest w linii $n$ kul sprężystych. Co ciekawe, każda z kul została wprawiona  w ruch. Kule poruszają się w jedną z dwóch stron, w lewo bądź prawo.
+
+Jeśli dwie sąsiednie kule $i$ i $i+1$ poruszają się w przeciwnych kierunkach, tak że nastąpi ich  zderzenie, czyli kula $i$ w prawo, a $i+1$ w lewo, to po zderzeniu następuje zmiana kierunku kul: $i$  zaczyna się poruszać w prawo a $i+1$ w lewo. Zastanawiamy się ile będzie łącznie zderzeń oraz jakie będą kierunki kul po wszystkich zderzeniach.
+
+  \section{Wejście}
+Pierwszy i jedyny wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 1\,000\,000$),  oznaczającą liczbę kul. Kolejny wiersz zawiera słowo złożone z $n$ liter, tak że litera $i$ opisuje początkowy kierunek ruchu kuli $i$. Litera \texttt{L} oznacza, że kula porusza się w lewo, a \texttt{P} w prawo.
+
+  \section{Wyjście}
+Pierwszy wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą liczbie wszystkich zderzeń.
+Drugi wiersz wyjścia powinien zawierać słowo złożone z $n$ liter, gdzie litera $i$ jest kierunkiem kuli $i$ po wszystkich zderzeniach.
+
+     \makecompactexample
+
+\medskip
+  \noindent
+  \textbf{Wyjaśnienie do przykładu:} 
+
+Kolejne zderzenia się kul:
+\begin{itemize}
+\item kule (3, 4) -- \texttt{LPLPLP},
+\item kule (2, 3) i (4, 5) -- \texttt{LLPLPP},
+\item kule (3, 4) -- \texttt{LLLPPP}.
+\end{itemize}
+
+  \end{tasktext}
+\end{document}

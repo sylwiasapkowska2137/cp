@@ -1,5 +1,6 @@
 //Sylwia Sapkowska
 #include <bits/stdc++.h>
+#pragma GCC optimize("O3", "unroll-loops")
 using namespace std;
 
 void __print(int x) {cerr << x;}
@@ -24,97 +25,64 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #endif
 
 #define int long long
+typedef pair<int, int> T;
 const int oo = 1e18, oo2 = 1e9+7, K = 11;
 const int mod = 998244353;
 
 struct Tree{
-    vector<vector<int>>tab;
+    vector<vector<T>>tab;
     vector<int>lazy;
     int size = 1;
 
     Tree(int n){
-        while (size < n) size*=2;
-        tab.assign(2*size, vector<int>(K, 0));
-        for (int i = size; i<(int)tab.size(); i++) tab[i][1] = 1;
-        for (int i = size-1; i>=1; i--) merge(i);
+        while (size < n) size *= 2;
+        tab.assign(2*size, vector<T>(K, {oo2, 0}));
         lazy.assign(2*size, 0);
     }
 
-    void calc(vector<int>&ans, int x, int lx, int rx, int l, int r){
+    void init(int x, int lx, int rx, int l, int r){
         if (lx > r || rx < l) return;
-        if (lx >= l && rx <= r){
-            for (int i = 0; i<K; i++){
-                ans[max(i, 1LL)] += tab[x][i];
-            }
+        if (lx == rx) {
+            tab[x][0] = {0, 1};
             return;
         }
         int m = (lx+rx)/2;
-        push(x, lx, rx);
-        calc(ans, 2*x, lx, m, l, r);
-        calc(ans, 2*x+1, m+1, rx, l, r);
+        init(2*x, lx, m, l, r);
+        init(2*x+1, m+1, rx, l, r);
         merge(x);
     }
 
-    void push(int x, int lx, int rx){
-        if (lx == rx || lazy[x] == 0) return;
-        move(x);
-        lazy[2*x] += lazy[x];
-        lazy[2*x+1] += lazy[x];
-        lazy[x] = 0;
-    }
-
     void merge(int x){
-        for (int i = 0; i<K; i++) tab[x][i] = tab[2*x][i] + tab[2*x+1][i];  
+        int l = 0, r = 0;
+        for (int i = 0; i<K; i++){
+            if (tab[2*x][l].first == tab[2*x+1][r].first){
+                tab[x][i] = {tab[2*x][l].first, tab[2*x][l].second + tab[2*x+1][r].second};
+                l++;r++;
+            } else if (tab[2*x][l].first < tab[2*x+1][r].first) tab[x][i] = tab[2*x][l++];
+            else tab[x][i] = tab[2*x+1][r++];
+        }
     }
 
-    void move(int x){
-        //move o lazy[x]
-        if (!lazy[x]) return;
-        // debug(x, lazy[x], tab[x]);
-        if (lazy[x] > 0){
-            //move right
-            for (int i = K-1; i>=0; i--){
-                if (i + lazy[x] < K) {
-                    tab[x][i+lazy[x]] = tab[x][i];
-                }
-            }
-            for (int i = 0; i<min(K, lazy[x]); i++){
-                tab[x][i] = 0;
-            }
-        } else {
-            for (int i = 0; i<K; i++){
-                if (i + lazy[x] >= 0) {
-                    tab[x][i+lazy[x]] = tab[x][i];
-                }
-            }
-            for (int i = K-1; i>=max(0LL, K+lazy[x]); i--){
-                tab[x][i] = 0;
-            }
+    void add(int x, int b){
+        lazy[x] += b;
+        for (int i = 0; i<K; i++) {
+            tab[x][i].first += b;
         }
-        // debug(tab[x]);
-        lazy[x] = 0;
     }
 
     void update(int x, int lx, int rx, int l, int r, int v){
         if (lx > r || rx < l) return;
         if (lx >= l && rx <= r){
-            lazy[x] += v;
-            move(x);
+            add(x, v);
             return;
         }
         int m = (lx+rx)/2;
-        push(x, lx, rx);
+        add(2*x, lazy[x]);
+        add(2*x+1, lazy[x]);
+        lazy[x] = 0;
         update(2*x, lx, m, l, r, v);
         update(2*x+1, m+1, rx, l, r, v);
         merge(x);
-    }
-};
-
-struct sweep{
-    int l, r, add;
-    sweep(){}
-    sweep(int _l, int _r, int _add){
-        l = _l, r = _r, add = _add;
     }
 };
 
@@ -126,37 +94,43 @@ void solve(){
             cin >> a[rep][i];
         }
     }
-    vector<vector<sweep>>curr(2*n+2);
-    auto add_rect = [&](vector<int>A, vector<int>B){
-        int mn = *min_element(A.begin(), A.end());
-        int mx = *max_element(A.begin(), A.end());
-        int ymn = 1, ymx = 2*n;
-        for (auto x: B){ // forbidden
-            if (mn <= x && x <= mx) return;
-            if (x < mn) ymn = max(ymn, x+1);
-            if (x > mx) ymx = min(ymx, x-1);
+    vector<vector<tuple<int, int, int>>>curr(2*n+2);
+    auto add = [&](int aa, int b, int c, int d){
+        if (aa <= b && c <= d){
+            curr[aa].emplace_back(c, d, 1);
+            curr[b+1].emplace_back(c, d, -1);
         }
-        if (ymn > ymx) return;
-        curr[mn].emplace_back(ymn, ymx, 1);
-        curr[mx+1].emplace_back(ymn, ymx, -1);
+    };
+    auto add_rect = [&](pair<int, int>A, pair<int, int>B){
+        int mn = min(A.first, A.second);
+        int mx = max(A.first, A.second);
+        int ymn = 1, ymx = 2*n;
+        for (auto x: {B.first, B.second}){ // forbidden
+            if (mn <= x && x <= mx) return;
+            if (x <= mn) ymn = max(ymn, x+1);
+            if (x >= mx) ymx = min(ymx, x-1);
+        }
+        add(ymn, mn, mx, ymx);
     };
     for (int i = 0; i < n; i++){
         int j = (i == 0 ? n-1 : i-1);
-        add_rect({a[0][i]}, {a[1][i], a[0][j]});
-        add_rect({a[1][i]}, {a[0][i], a[1][j]});
+        add_rect({a[0][i], a[0][i]}, {a[1][i], a[0][j]});
+        add_rect({a[1][i], a[1][i]}, {a[0][i], a[1][j]});
         add_rect({a[0][i], a[1][i]}, {a[0][j], a[1][j]});
     }
     Tree t(2*n+3);
+    t.init(1, 0, t.size-1, 1, 2*n);
     vector<int>ans(K);
     for (int i = 1; i<=2*n; i++){
-        sort(curr[i].begin(), curr[i].end(), [](auto x, auto y){return x.add < y.add;});
-        debug(i);
-        for (auto [l, r, add]: curr[i]) {
-            debug(l, r, add);
-            t.update(1, 0, t.size-1, l, r, add);
+        for (auto [l, r, d]: curr[i]) t.update(1, 0, t.size-1, l, r, d);
+        for (int j = 0; j<K; j++){
+            if (t.tab[1][j].first <= k){
+                ans[t.tab[1][j].first] += t.tab[1][j].second;
+            }
         }
-        t.calc(ans, 1, 0, t.size-1, i, 2*n);
+        t.update(1, 0, t.size-1, i, i, oo2);
     }
+    ans[1] += ans[0];
     for (int i = 1; i<=k; i++) cout << ans[i] << " ";
     cout << "\n";
 }

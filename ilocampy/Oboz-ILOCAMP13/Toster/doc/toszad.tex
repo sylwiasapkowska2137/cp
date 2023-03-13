@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Toster}
+\id{tos}
+\author{Przemysław Jakub Kozłowski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{28.09.2016}
+\RAM{64}
+
+\begin{document}
+\begin{tasktext}%
+Na Ilocampie, po kolacji, uczestnicy idą jeść tosty. Na całym obozie jest tylko jeden toster - w pokoju Sieciowców. Potrafi on przyrządzić jeden tost na minutę.
+
+W tym roku na obóz przyjechało bardzo dużo osób, a konkretnie $n$. Każdy z uczestników potrzebuje jedzenia, aby przeżyć. Niektórzy z uczestników są szczupli, a inni bardziej puszyści. Osoby szczupłe zazwyczaj potrzebują więcej jedzenia, ponieważ nie posiadają zapasów tłuszczu. Każdy uczestnik określił za ile minut pójdzie spać oraz ile tostów potrzebuje zjeść zanim pójdzie spać. Wiadomo, że jeśli uczestnik nie zje wymaganej liczby tostów przed zaśnięciem to będzie głodny przez całą noc, a to spowoduje, że zdobędzie zero punktów na zawodach następnego dnia i więcej nie przyjedzie na obóz.
+
+Sieciowcy chcą temu zapobiec. Postanowili wykorzystać do tego swój toster oraz swoją sieć. Toster wykorzystają, aby przygotować tosty wszystkim uczestnikom Ilocampu. Natomiast poprzez sieć każdy uczestnik zgłosi, o której godzinie idzie spać oraz ile tostów potrzebuje zjeść przed spaniem. Następnie rozplanują kolejność wręczania tostów uczestnikom tak, aby nikt nie musiał głodować.
+
+Gdy uczestnik przychodzi po swoje tosty to Sieciowcy nie muszą od razu wręczyć mu wszystkich tostów, które mu się należą. Mogą na przykład pierwszy przygotowany tost wręczyć Przemkowi, drugi tost Jakubowi, a trzeci znów Przemkowi.
+
+Sieciowcy zastanawiają się czy uda się wyżywić wszystkich uczestników Ilocampu jednym tosterem czy może jakiś z uczestników będzie głodował. Posiadając dane zebrane poprzez swoją sieć, postanowili obliczyć czy możliwe jest dostarczenie wymaganej liczby tostów każdej osobie.
+
+Pierwszy tost zostanie ukończony dokładnie minutę po zakończeniu kolacji na obozie i może zostać od razu wręczony dowolnemu uczestnikowi do zjedzenia. Kolejne tosty będą pojawiały się co minutę. Zjedzenie tosta też zajmuje jedną minutę, więc uczestnik obozu może zacząć jeść swojego ostatniego tosta dokładnie minutę przed zaśnięciem.
+
+  \section{Wejście}
+W pierwszym wierszu standardowego wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę uczestników obozu Ilocamp. Kolejne $n$ wierszy opisuje uczestników. Każdy z tych wierszy zawiera dwie liczby całkowite opisujące jednego uczestnika: $z_i$, $t_i$ ($1 \leq z_i, t_i \leq 10^9$). Liczba $z_i$ oznacza czas zaśnięcia podany w minutach po kolacji. Liczba $t_i$ oznacza wymaganą liczbę tostów przez tego uczestnika.
+
+  \section{Wyjście}
+Na wyjściu powinno się znaleźć jedno słowo: \texttt{TAK} lub \texttt{NIE}. Powinno być ono odpowiedzią na pytanie czy uda się nakarmić wszystkich uczestników zanim zasną.
+
+\makecompactexample
+
+\textbf{Wyjaśnienie do przykładu:} Pierwsze 9 tostów musi zostać zjedzone przez drugiego uczestnika, po czym od razu idzie on spać. Następne 7 tostów zostanie wręczone dwóm pozostałym uczestnikom (pierwszemu i trzeciemu) w dowolnej kolejności.
+
+\end{tasktext}
+\end{document}

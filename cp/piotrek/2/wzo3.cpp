@@ -154,6 +154,7 @@ void solve(){
 	for (int i = 1; i<=n; i++){
 		if (czas.tab[1] < i-d) {
 			auto [lx, rx] = czas.erase();
+			debug(lx, rx);
 			seg.update(1, 0, seg.size-1, lx, rx, -oo, 1);
 		}
 		// int x = seg.query(1, 0, seg.size-1, a[i], n);

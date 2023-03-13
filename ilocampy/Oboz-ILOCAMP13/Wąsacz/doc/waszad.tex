@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wąsacz}
+\id{was}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{4}
+\date{29.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+W ostatnim czasie Maciej uznał, że jego wygląd nie jest zbyt męski i aby to zmienić postanowił zahodować pieknego wąsa, nie jest jednak pewien czy posiadanie go przypadnie mu do gustu, więc zdecydował się hodować go przez $k$ dni, po których podejmie decyzję co z nim dalej robić.
+
+Maciek jest też niesamowitym podrywaczem i w najbliższym czasie umówił się na dokładnie $n$ randek, z których każda odbywa się w południe innego dnia. Niestety niektóre kobiety, z którymi spotka się Maciek, nie przepadają za zbyt bujnym wąsem i jeśli na spotkaniu wąs naszego bohetara będzie zbyt długi, momentalnie dostanie on kosza. 
+
+Po dokładnych analizach swojego zarostu Maciej odkrył, że każdej nocy jego wąs rośnie dokładnie $c$ jednostek. Może jednak temu zapobiec i wieczorem skrócić go o $c$ jednostek, jeśli waś jest niezerowej długości. Podrażni to wąsa i sprawi, że tej nocy nie urośnie ani o milimetr. 
+
+Maciej posiada nienaganą reputację podrywacza, więc nie może sobie pozwolić na odrzucenie na jakimkolwiek spotkaniu. Młodzieniec ciekaw jest jaką maksymalną długość może osiągnąć jego wąs w w ciągu $k$ dni, przy założeniu że żadna jego randka nie może zakończyć się dostaniem kosza. 
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $k$ oraz $c$ ($1 \leq n \leq 10^6$, $1 \leq k \leq 10^9$, $1 \leq c \leq 10^9$) z treści zadania.
+
+W kolejnych $n$ wierszach znajdują się dwie liczby całkowite $t_i$ oraz $w_i$ ($1 \leq t_i \leq k$, $0 \leq w_i \leq 10^9$), oznaczające kolejno dzień w którym odbędzie się $i$-ta randka oraz maksymalną długość wąsą jaką Maciek może na niej posiadać.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbę całkowitą, będącą maksymalną długością wąsa, jakiego może zahodować Maciek równocześnie spełniając oczekiwania na wszystkich umówionych randkach lub \texttt{NIE}, gdy to niemożliwe.
+\makecompactexample 
+
+\end{tasktext}
+\end{document}

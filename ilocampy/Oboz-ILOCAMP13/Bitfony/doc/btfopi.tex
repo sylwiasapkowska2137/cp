@@ -1,0 +1,71 @@
+\documentclass[opr]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{btf}
+  \title{Bitfon}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \etap{pocz±tkuj±ca}
+  \day{4}
+  \date{26.11.2011}
+  \RAM{32}
+  \history{2011.12.12}{Jacek Tomasiewicz, przygotowanie rozwi±zania}{1.00}
+
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwi±zanie wzorcowe $O(n)$}
+
+Symulujemy przesy³anie wiadomo¶ci do momentu, a¿ dojdziemy do adresata, lub natrafimy na osobê, któr± wcze¶niej odwiedzili¶my (oznacza to, ¿e jeste¶my na cyklu, z którego nigdy nie wyjdziemy).
+
+\begin{lstlisting}
+wczytaj(n, t[])
+ile := 0
+while (a != b) and (a != 0)
+   ile := ile + 1
+   pom := a
+   a := t[a]
+   t[pom] := 0
+if a != b then
+   wypisz(-1)
+else wypisz(ile)
+\end{lstlisting}
+
+Z³o¿ono¶æ czasowa takiego rozwi±zania to $O(n)$, gdy¿ ka¿d± osobê odwiedzimy maksymalnie jeden raz.
+
+\end{tasktext}
+\end{document}

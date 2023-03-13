@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Język bajtocki}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{jez}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{64}
+  \history{JTom, pomysł i redakcja}{2012.07.07}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Nauczycielka z języka bajtockiego napisała na tablicy bardzo długie słowo i  zadała uczniom znalezienie wzorca, który będzie występował jak największą liczbę razy w tekście z tablicy.
+
+Dwie koleżanki Asia i Kasia oddały taki sam wzorzec. Ponieważ dziewczynki siedziały w jednej ławce, to nauczycielka podejrzewa, że wymyśliły wzorzec wspólnie. Dziewczynki muszą teraz podzielić wzorzec na dwie części: Asia odda pierwszą część wzorca, a Kasia drugą. 
+
+Dziewczynki chcą, aby żadna z nich nie była poszkodowana, dlatego podzielą wzorzec sprawiedliwie, czyli tak, aby słabsza z części była jak najlepsza. Wzorzec jest tym lepszy, im więcej razy występuje w tekście. Zakładamy, że część wzorca (po podzieleniu) musi zawierać co najmniej jedną literę.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ i $m$ ($2 \leq m \leq n \leq 3\,000\,000$), oznaczające długość tekstu z tablicy i długość znalezionego przez dziewczynki wzorca.
+
+Drugi wiersz wejścia zawiera $n$-literowe słowo, oznaczające tekst z tablicy. Trzeci wiersz wejścia zawiera $m$-literowe słowo, oznaczające wzorzec znaleziony przez dziewczynki. Oba słowa składają się z małych liter alfabetu angielskiego.
+
+W testach wartych około $65\%$ punktów zachodzi dodatkowy warunek $n, m \leq 1\,000\,000$, a w testach wartych około $30\%$ punktów zachodzi $n, m \leq 1\,000$.
+
+  \section{Wyjście}
+	
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą maksymalnej liczbie wystąpień słabszej części wzorca.
+
+     \makecompactexample
+
+	\medskip
+	\noindent
+	\textbf{Wyjaśnienie do przykładu:} Dziewczynki mogą podzielić wzorzec $ab|a$. Słabsza część występuje dwa razy w tekście. 
+
+  \end{tasktext}
+\end{document}

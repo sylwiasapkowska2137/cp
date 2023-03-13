@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wycieczka}
+\id{wyc}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{Olimpijska}
+\day{3}
+\date{28.09.2016}
+\RAM{128}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+  W Bajtocji trwa remont dróg, a Przemek który uwielbia podróżować nie może czekać ze swoimi wycieczkami bo skończą mu się wakacje!
+  
+  Jak wszyscy dobrze wiemy Bajtocja składa się z $n$ miast połączonych $m$ dwukierunkowymi drogami. W Bajtocji podczas wakacji Przemka w jednym momencie jest remontowana dokładnie jedna droga. Droga na czas remontu jest nieprzejezdna. Przemek chciałbym wybrać się na wycieczkę pomiędzy dwoma miastami. Jednakże z powodu remonu może się okazać, że nie da się przejechać pomiędzy niektórymi parami miast. 
+  
+  Przemek chciałby zawczasu wiedzieć czy jego pomysł na wycieczke może być zrealizowany. Potrzebuje więc programu który będzie odpowiadał na jego pytania czy wycieczka pomiędzy miastami $a$ i $b$ jest możliwa, gdy remontowana jest krawędz pomiędzy miastami $x$ i $y$! Sytuacja (jak i zachcianki Przemka) zmieniają się bardzo dynamicznie więc program może dostać wiele zapytań.
+  
+  Przemek, jako że ma wakacje i $"$$nie$ $chce$ $mu$ $się$ $kminić"$ poprosił Ciebie, dobrego kumpla którego niegdyś uczył kodzenia o pomoc! Czy możesz napisać dla niego program którego potrzebuje?
+  
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $m$ i $q$ ($1 \leq n, m, q \leq 10^6$), oznaczająca kolejno liczbę miast, dróg oraz liczbę zapytań.
+
+W każdym z kolejnych $m$ wierszy, znajdują się dwie liczby całkowite $a$ i $b$ oddzielone spacją, oznaczające że istnieje droga dwukierunkowa pomiędzy miastami $a$ i $b$, ($1 \leq a, b \leq n$, $a \neq b$).
+
+W kolejnych $q$ wierszach będą cztery liczby całkowite $a$, $b$, $x$ i $y$ ($1 \leq a, b, x, y \leq n$, $a \neq b$) oddzielone spacją oznaczające zapytania Przemka, czy da się przejechać pomiędzy wierzchołkami $a$ i $b$ gdy droga pomiędzy wierzchołkami $x$ i $y$ jest remontowana.
+
+%TODO: czy graf jest spójny
+Remontowane drogi z zapytań musiały wcześniej być podane jako istniejące drogi w Bajtocji. Pomiędzy parą miast może istnieć co najwyżej jedna droga.
+
+  \section{Wyjście}
+    Na wyjście należy wypisać $q$ wierszy. $i$-ty wiersz powinnien być odpowiedzią na kolejne zapytanie z wejścia i powinnien zawierać TAK jeśli da się zrealizować $i$-tą wycieczke a NIE jeśli jest to niemożliwe.
+    
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

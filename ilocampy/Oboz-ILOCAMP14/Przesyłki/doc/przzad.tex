@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Przesyłki}
+\id{prz}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{1}
+\date{16.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek jest kurierem w firmie o zacnej nazwie $KozlovExpress$, a do zakresu jego obowiązków należy rozwożenie przesyłek. Do tej pory radził sobie z tym znakomicie, ale wczoraj w wyniku wielu nieszczęśliwych zbiegów okoliczności oraz perturbacji pomylił adresy pewnych paczek przez co te trafiły do niewłaściwych odbiorców. Ta wpadka nie mogła przejść niezauważona i niezadowoleni klienci od razu opublikowali negatywne recenzje dotyczące $KozlovExpress$ na pewnym portalu społecznościowym. Grozi to doszczętnym zniszczeniem reputacji firmy i zwolnieniem Przemka, więc musi on to wszystko jak najszybciej naprawić!
+
+Wszystkie paczki zostały zamówione na jedną dwukierunkową ulicę, przy której stoją domy ponumerowane od $1$ do $n$. Droga została podzielona na $n - 1$ fragmentów łączących każde dwa sąsiednie domy, a do każdego z nich powinna trafić dokładnie jedna paczka o numerze odpowiadającym numerowi tego domu. Przejazd między sąsiednimi domami zajmuje dokładnie jedną jednostkę czasu.
+
+Przemek postanowił, że, aby naprawić to co spartaczył, wyruszy z domu numer $1$, a następnie w dowolny sposób będzie jechał drogą odwiedzając kolejne domy. W momencie, gdy odwiedzi miejsce, w którym znajduje się niewłaściwa przesyłka, to zabierze ją i zapakuje do swojego kurierskiego busa, który może pomieścić nieskończenie wiele paczek. Podobnie, jeśli odwiedzając jakiś dom w swoim samochodzie posiada odpowiadającą mu paczkę, to wyjmuje ją i przekazuje właściwemu odbiorcy, równocześnie przepraszając go za zaistniałą sytuację i błagając o usunięcie negatywnej recenzji firmy z internetu. 
+
+Czasu jest mało, a każda kolejna sekunda zwlekania tylko pogarsza sytuację firmy, dlatego Przemek chce poznać najkrótszy czas po którym wszystkie przesyłki trafią na właściwe miejsce.
+
+  \section{Wejście}
+W pierwszym wierszu znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę domów.
+
+Drugi, a zarazem ostatni wiersz wejścia składa się z ciągu $n$ liczb całkowitych $p_i$ ($1 \leq p_i \leq 10^6$), gdzie $i$-ta z nich odpowiada numerowi przesyłki dostarczonej do $i$-tego domu. Każda z liczb od $1$ do $n$ wystąpi w tym ciągu dokładnie raz.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbą całkowitą równą minimalnemu czasowi, po którym wszystkie przesyłki trafią do właściwych domów.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

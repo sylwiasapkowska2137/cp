@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zgred Fred}
+\id{zgr}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{28.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+
+  
+W Michałczewie organizowany był wczoraj maraton. Biegło w nim $n$ zawodników. Niestety maszyna odpowiedzialna za mierzenie czasów na linii mety
+zawiodła i nieznane są dokładne wyniki biegu. Dla każdego biegacza maszyna podała przedział czasowy w jakim zawodnik pojawił się na mecie.
+Organizatorzy sprawdzili zachowanie urządzenia i stwierdzili, że dla każdych dwóch podprzedziałów równej długości, prawdopodobieństwo
+tego, że faktyczny czas zawodnika się w nich zawierał, jest równe. Innymi słowy, dla każdego momentu z przedziału podanego
+przez urządzenie, prawdopodobieństwo, że to właśnie w tym momencie zawodnik zakończył maraton, jest take same.
+
+Twój przyjaciel Zgred Fred biegł w tym maratonie i chciałby wiedzieć, jakie ma szanse na zwycięstwo. Jeszcze nie doszedł do siebie po biegu,
+dlatego obliczenie prawdopodobieństwa tego, że wygrał, przypadło Tobie.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 300$), oznaczająca liczbę zawodników którzy brali udział w biegu.
+Zawodników numerujemy dla uporoszczenia liczbami naturalnymi od $1$ do $n$, przy czym Zgred Fred ma numer 1.
+W każdym z kolejnych $n$ wierszy, znajdują się dwie liczby całkowite $a_i$ i $b_i$ ($0 \leq a_i \leq b_i \leq 10^9$), 
+oddzielone spacją, oznaczające początek i koniec przedziału podanego przez maszynę dla $i$-tego zawodnika.
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać jedną liczbę rzeczywistą równą prawdopodobieństwu tego, że Zgred Fred wygrał maraton. Wynik 
+    zostanie zaliczony, jeśli nie będzie się różnić od optymalnego o więcej niż $10^{-5}$ oraz liczba cyfr po przecinku nie przekroczy $10$.
+    
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

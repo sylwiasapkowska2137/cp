@@ -1,0 +1,42 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Narciarze}
+  \id{nar}
+  \signature{jtom???}
+  \author{Piotr Gawryluk} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \etap{początkująca}
+  \konkurs{XIV obóz informatyczny}
+  \day{2}
+  \date{17.01.2017}
+  \RAM{128} % HINT: To pole uzupelnia opracowujacy
+ 
+\begin{document}
+  \begin{tasktext}%
+
+W Górach Bajtolandii znajduje się ogromny stok narciarski, podzielony na fragmenty. Każdy fragment ma swoją ustaloną trudność.
+Trasą zjazdu nazwiemy spójny fragment stoku. Przeprowadzono badania, z których wynika, że aby trasa zjazdu była dochodowa, nie może być zbyt monotonna,
+to znaczy musi zawierac co najmniej dwa fragmenty o różnych stopniach trudności.
+Tak więc trasa składająca się z fragmentów o trudności $3, 3, 3$ nie jest dochodowa, a $3, 2, 3$ już jest.
+W szczególności trasa składająca się z jednego fragmentu nigdy nie jest dochodowa'.
+
+Zostałeś poproszony o pomoc właścicielowi w obliczeniu na ile sposobów klienci mogą wybrać dochodową trasę zjazdu.
+
+  \section{Wejście}
+
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 10^{6}$), 
+oznaczającą ilość fragmentów stoku narciarskiego. W drugiej linii wejścia znajduje się $n$ liczb całkowitych 
+$x_{i}$ ($ 1 \leq x_{i} \leq n, 1 \leq i \leq 10^{6} $), oznaczających odpowiednio poziom trudności i-tego 
+fragmentu stoku.
+
+  \section{Wyjście}
+
+Pierwszy i jedyny wiersz wyjscia powinien zawierać jedną liczbę całkowitą, równą ilości różnych spójnych 
+tras zjazdu (zaczynających się i kończących na dowolnym fragmencie stoku), zawierających fragmenty o 
+różnej trudności.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

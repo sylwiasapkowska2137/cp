@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wystąpienia}
+\id{wys}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{18.01.2017}
+\RAM{128}
+
+\begin{document}
+\begin{tasktext}%
+
+Przemek napisał na kartce $n$ liczb w ciągu. Chciałby teraz wskazać liczbę, która występuje w tym ciągu najczęściej. Zanim jednak zacznie jej szukać,
+może on wykonać nie więcej niż $k$ razy operację zwiększenia dowolnej z liczb o 1. Chciałby teraz wykonać te operacje w taki sposób,
+aby liczba wystąpień najczęściej występujacej liczby była jak największa.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq n \leq 5 \cdot 10^5$, $0 \leq k \leq 10^9$), oznaczające odpowiednio
+liczbę liczb na kartce oraz liczbę dozwolonych operacji.
+
+W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $a_1, a_2, \cdots, a_n$ ($0 \leq a_i \leq 10^9$), oznaczające kolejne liczby na kartce.
+
+  \section{Wyjście}
+Na wyjściu powinny znaleźć się dwie liczby oddzielone spacją -- pierwsza oznacza liczbę wystąpień najczęściej występującego elementu po wykonaniu co najwyżej $k$ operacji,
+a druga najmniejszą spośród liczb występujących tyle razy.
+
+\makecompactexample
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} Jeżeli zwiększymy liczbę na pozycji drugiej i piątej, to otrzymamy czterokrotne wystąpienie liczby $2$.
+Zauważ, że można również zwiększyć dwukrotnie liczbę na drugiej pozycji oraz jednokrotnie liczby na pozycjach 3 i 4. Wówczas otrzymamy również
+czterokrotne wystąpienie liczby $3$, jednak szukamy najmniejszej możliwej liczby.
+
+\end{tasktext}
+\end{document}

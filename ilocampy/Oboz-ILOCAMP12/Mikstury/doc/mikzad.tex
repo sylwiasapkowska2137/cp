@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Mikstura}
+\id{mik}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{20.01.2016}
+\RAM{512}
+
+\begin{document}
+\begin{tasktext}%
+Przemek jest magikiem. Ma przepis na magiczną miksturę, która składa się z $n$ składników.
+Przepis mówi, że aby stworzyć miksturę trzeba wymieszać $x_i$ jednostek substancji typu $i$.
+Przemek chce iść do magicznego sklepu, aby kupić roztwory do stworzenia substancji.
+Każda jednostka roztworu zawiera pewną ilość każdej substancji oraz ma jakąś cenę.
+Życie magika nie jest jednak sielanką, więc Przemek chciałby wydać jak najmniej pieniędzy na swoją miksturę.
+Przemek może kupić w sklepie dowolną ilość każdego z roztworów. W szczególności może być to każda nieujemna liczba rzeczywista.
+
+Oblicz minimalną kwotę wydanych pieniędzy, którą będzie musiał wydać Przemek, aby stworzyć miksturę.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq n, k\leq 10$), oznaczające kolejno liczbę różnych substancji oraz liczbę dostępnych w sklepie roztworów.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $x_1, x_2, ..., x_n$ ($0 \leq x_i \leq 10$), oznaczających ilości składników potrzebnych do przygotowania mikstury.
+
+W kolejnych $k$ wierszach znajdują się opisy rozworów. Opis roztworu zawiera $n$ liczb całkowitych $y_1, y_2, ..., y_n$ ($0 \leq y_i \leq 10$) opisujących ilości składników w roztworze oraz liczbę całkowitą $c$ ($0 \leq c \leq 10$) oznaczającą cenę roztworu.
+
+W $30\%$ testów zachodzi $n, k \leq 4$.
+
+  \section{Wyjście}
+Na wyjściu powinna się znaleźć jedna liczba rzeczywista oznaczająca minimalny koszt mikstury lub $-1$, gdy nie jest możliwe utworzenie takiej mikstury.
+Rozwiązanie będzie akceptowane, jeśli błąd bezwzględny nie przekroczy $10^{-9}$.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

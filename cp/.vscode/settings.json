@@ -90,7 +90,9 @@
     },
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
+        "dfessa",
         "popcountll",
         "sameset"
-    ]
+    ],
+    "C_Cpp.dimInactiveRegions": false
 }

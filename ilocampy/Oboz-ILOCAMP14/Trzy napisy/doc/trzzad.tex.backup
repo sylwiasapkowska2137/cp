@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Trzy napisy}
+\id{trz}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.01.2017}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek na obozie informatycznym dowiedział się niedawno, co to jest porządek leksykograficzny. Dokładniej, mówimy, że napis $s$ jest mniejszy
+leksykograficznie od napisu $t$, jeśli na pierwszej pozycji, na której te napisy się różnią, znak w napisie $s$ jest mniejszy od znaku w napisie $t$.
+Jeżeli taka pozycja nie istnieje, to $s$ jest mniejszy leksykograficznie od $t$, jeśli jest od niego krótszy.
+
+Przemek napisał dwa napisy $s$ i $t$ równej długości, takie że $s$ jest mniejszy leksykograficznie od $t$.  Chciałby teraz znaleźć trzeci napis $z$,
+takie że $s$ jest mniejszy leksykograficznie od $z$, a $z$ jest mniejszy leksykograficznie od $t$ oraz $z$ ma taką samą długość jak $s$ i $t$.
+Ponieważ napisy są długie, potrzebuje programu, który mu to obliczy.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedno słowo składające się z $n$ liter alfabetu angielskiego $s$ ($1 \leq |s| \leq 10^5$, gdzie $|s|$ oznacza długość słowa $s$).
+W drugim wierszu wejścia znajduje się jedno słowo składające się z $n$ liter alfabetu angielskiego $t$ ($1 \leq |t| \leq 10^5, |s| = |t|$, gdzie $|t|$ oznacza długość słowa $t$).
+
+W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $a_1, a_2, \cdots, a_n$ ($1 \leq a_i \leq 10^9$), oznaczające liczbę cukierków, jaką chcą otrzymać kolejne dzieci.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca numer dziecka, które jako ostatnie pójdzie do domu.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

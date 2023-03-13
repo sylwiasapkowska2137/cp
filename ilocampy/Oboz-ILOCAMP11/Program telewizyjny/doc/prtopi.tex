@@ -1,0 +1,90 @@
+\documentclass[zad, zawodnik, utf8]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+}
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+
+\signature{jtom001}
+  \id{prt}
+  \title{Program telewizyjny}
+  \author{Jacek Tomasiewicz}
+  \konkurs{XI obóz informatyczny}
+  \etap{początkująca}
+  \day{1}
+  \date{25.02.2012}
+  \RAM{32}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Jacek Tomasiewicz}
+  \history{2012.02.2012}{Jacek Tomasiewicz, pomysł i redakcja zadania}{1.00}
+
+\begin{document}
+
+  \begin{tasktext}%
+
+    \setcounter{def}{1}
+    \setcounter{tw}{1}
+    \setcounter{wn}{1}
+    \setcounter{obs}{1}
+
+    \section{Rozwiązanie wzorcowe $O(n*log^2n)$}
+    Zauważmy, że jeżeli da się skonstruować rozwiązanie z wynikiem większym bądź
+    równym $r$, to równie dobrze możemy skonstruować rozwiązanie o wyniku $p$,
+    gdzie $p \leq r$. Dodatkowo, jeżeli nie da się skonstruować rozwiązania o
+    wyniku większym bądź równym $r$, to też nie da się skonstruować rozwiązania
+    o wyniku $p$, gdzie $p \geq r$. Wykorzystując te dwa fakty, możemy binarnie
+    wyszukać wynik.
+
+    Podczas wyszukiwania binarnego, gdy sprawdzamy wartość $r$, musimy sprawdzić
+    czy da się tak wybrać co najmniej $k$ programów o atrakcyjności
+    $a_i \geq r$, tak aby było się nie pokrywały. Do tego możemy zastosować
+    prosty algorytm wykorzystujący programowanie dynamiczne.
+
+    Jeżeli nie ma co najmniej $k$ programów spełniających $a_i \geq r$
+    oczywistym jest, że dla tego $r$ nie da się skonstruować rozwiązania.
+    Najpierw posortujmy zbiór programów o atrakcyjności $a_i \geq r$ rosnąco
+    po $e_i$. Ciąg posortowanych tak indeksów programów nazwijmy $m_j$. Niech
+    $dp[x]$ będzie równe największej możliwej liczbie programów, które można
+    wybrać spośród pierwszy $x$ programów, tak aby się nie pokrywały. Budujemy
+    tą tablicę według wzoru:
+
+    \[
+      dp[x] = \left\{
+        \begin{array}{l l}
+          1 & \quad \text{gdy $x = 1$} \\
+          max_{1 \leq y < x \land e_{m_y} < b_{m_x}}(dp[y]) + 1 & \quad \text{gdy $x > 1$}
+        \end{array} \right.
+    \]
+
+    Gdybyśmy brutalnie wypełniali tę tablicę otrzymalibyśmy złożoność
+    $O(n^2*logn)$. Jednak warto zauważyć, że poszukiwany w powyższym równaniu
+    $y$ możemy wyszukać binarnie w posortowanej liście programów. Wykorzystując
+    to, złożoność zmniejsza się do $O(n*log^2n)$, która nas satysfakcjonuje.
+
+  \end{tasktext}
+\end{document}

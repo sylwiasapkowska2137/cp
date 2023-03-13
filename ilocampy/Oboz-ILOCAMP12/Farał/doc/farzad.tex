@@ -1,0 +1,51 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Farał}
+\id{far}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{20.01.2016}
+\RAM{128}
+
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji zbliża się XXIV maraton.
+Rafał bardzo lubi biegać i chciałby wziąć udział w maratonie, lecz ze względu na zbyt małe umiejętności oraz zbyt dużą masę
+nie jest w stanie przebiec go na całej długości. Pomimo to Rafał nie odpuszcza i przygotował sobie program treningowy, który przygotuje go
+do udziału.
+
+Program treningowy zawiera $n$ odcinków o różnym stopniu trudności do pokonania. Rafał ma wytrzymałość $k$. 
+Każdego dnia przebiega odcinki w ustalonej kolejności (takiej samej każdego dnia), a po każdym przebiegnięciu odcinka jego wytrzymałość zmniejsza się o poziom trudności tego odcinka.
+Rafał kończy trening, gdy odcinek, który go czeka ma większą trudność niż Rafał wytrzymałość.
+Wówczas przyjeżdża po niego Adam i zabiera go do domu.
+W rezultacie poziom trudności każdego odcinka, który przebiegł Rafał danego dnia zmniejsza
+się o $1$, a jednocześnie wytrzymałość Rafała zwiększa się o liczbę odcinków, którą przebiegł danego dnia.
+
+Rafał chciałby wiedzieć, którego dnia będzie w stanie pokonać każdy odcinek, aby mógł z większą pewnością wystartować w maratonie.
+Ponieważ Rafał w tej chwili biega, Ty napiszesz program, który obliczy, którego dnia Rafał przebiegnie wszystkie odcinki.
+Jeżeli trudność odcinka spadnie poniżej $0$, staje się on dla Rafała tak prosty, że zwiększa na tym odcinku swoją wytrzymałość.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby naturalne $n, k$ ($1 \leq n \leq 10^5, 1 \leq k \leq 10^9$), oznaczające kolejno liczbę odcinków do pokonania oraz początkową wytrzymałość Rafała.
+
+Kolejny wiersz zawiera $n$ liczb całkowitych $a_1, a_2, \ldots, a_n$ ($0 \leq a_i \leq 10^9$), oznaczające trudności kolejnych odcinków, które Rafał będzie pokonywał.
+
+  \section{Wyjście}
+Na wyjsciu powinna pojawić sie jedna liczba całkowita -- dzień, którego Rafał przebiegnie wszystkie odcinki lub słowo \texttt{NIE} w przypadku gdy nie da się ukończyć programu treningowego. 
+Rafał zaczyna dnia numer $1$.
+
+   \makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Pierwszego dnia Rafał pokonuje pierwszy odcinek, jego wytrzymałość wzrasta do $7$, a trudności odcinków wyniosą kolejno: $3$ $4$ $3$ $2$.
+\\Drugiego dnia pokonuje $2$ odcinki, wytrzymałość wzrasta do $9$, a trudności odcinków wynoszą kolejno: $2$ $3$ $3$ $2$.
+\\Trzeciego dnia Rafał pokona $3$ odcinki, wytrzymałość wzrośnie do $12$, a trudności odcinków wyniosą kolejno: $1$ $2$ $2$ $2$.
+\\Czwartego dnia Rafałowi starczy wytrzymałości aby pokonać wszystkie odcinki.
+
+  \end{tasktext}
+\end{document}

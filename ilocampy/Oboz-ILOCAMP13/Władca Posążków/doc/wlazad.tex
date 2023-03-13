@@ -1,0 +1,56 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Władca Posążków}
+\id{wla}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{26.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Pradawna indiańska legenda głosi, iż każdy z dziewięciu bogów, by uwiecznić swą moc, wykuł posążek ze szlachetnych kamieni, zamykając w nim cząstkę samego siebie.
+W posążkach została zaklęta wola rządzenia każdą z ras. Wszyscy bogowie zostali jednak oszukani. Najmroczniejszy z nich - Ktulu - ukuł Jedyny Posążek, rządzący pozostałymi.
+Przelał w ów posążek całe swe okrucieństwo, złość i żądzę władania wszelkim życiem. Jeden, by wszystkimi rządzić, jeden, by wszystkie odnaleźć, jeden, by wszystkie 
+zgromadzić i w ciemności związać. Jeden, by posiąść Wszechbinarność. 
+
+Indianin Ilek, zwany wśród swego plemienia Binarnym Rozpruwaczem\footnote{Przydomek Binarny Rozpruwacz Ilek otrzymał ze względu na swoją ponadprzeciętną umiejętność 
+rozpruwania liczb na postać binarną.},
+nieoczekiwanie wszedł w posiadanie Jedynego Posążka.
+Warto wspomnieć, że posążki indiańskich bogów, podczas wykuwania, były zabezpieczane zaklęciem ochronnym. Posiadacz posążka, zanim stawał się jego panem,
+musiał wypowiedzieć wyraźnie wspomniane zaklęcie (o ile szeryf nie zamknął go tej nocy w więzieniu). 
+Jak łatwo się domyślić, zaklęcie do Jedynego Posążka nie jest powszechnie znane. Binarny Rozpruwacz w celu jego poznania rozpruł już wiele liczb i wypatroszył tysiące
+indiańskich szamanów. Ostatecznie od pewnego pastora z pobliskiego miasteczka dowiedział się, że Ktulu pozostawił wskazówkę do zaklęcia, licząc, że pewnego dnia
+jakaś bystra istota okiełzna jego wszechbinarną moc i razem spowiją mrokiem całą Ziemię. Zaklęciem okazał się zbiór $n$ liczb całkowitych, które Ktulu zapisał niegdyś
+na Magicznym Okręgu. By zapanować nad posążkiem należy wyrecytować zgodnie z ruchem wskazówek zegara wszystkie liczby z okręgu, zaczynając od dowolnej z nich.
+Pastor (zanim został rozpruty) wyjawił Ilkowi, że wskazówka również składa się z $n$ liczb całkowitych oraz widnieje na Magicznym Okręgu, 
+przykrywając swymi liczbami liczby zaklęcia. Legenda głosi, że każda z liczb wskazówki jest sumą $k$ sąsiadujących ze sobą liczb zaklęcia, 
+przy czym początek i koniec przedziału sumowanych liczb przesuwa się o jeden zgodnie z ruchem wskazówek zegara dla każdej kolejnej liczby należącej do
+podpowiedzi pozostawionej przez Ktulu. 
+
+Posiadając tę wiedzę, Binarny Rozpruwacz udał się do Magicznego Okręgu (liczbę $k$ kupił od Lucky Luke'a, który planował później przejąć posążek, by oddać go na cele charytatywne). 
+Ilek jednak nie potrafi wykonywać operacji arytmetycznych na tak wielu liczbach. Ostatniej nocy, jego żona - indiańska szamanka, zwana Iloną - podłożyła Ci ziółka 
+i czy chcesz czy nie, musisz pomóc Binarnemu Rozpruwaczowi w odkryciu Legendarnego Kodu władającego Jedynym Posążkiem. Wszechbinarność czeka na Ciebie!
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq n, k \leq 10^6$), oznaczające liczbę liczb z których składa się zaklęcie do Jedynego Posążka
+oraz długość przedziałów zaklęcia, które zostały zsumowane w celu wytworzenia wskazówki. 
+W kolejnym wierszu znajduje się $n$ liczb całkowitych, oznaczających liczby widniejące na Magicznym Okręgu, będące wskazówką do zaklęcia. Liczby podane są zgodnie z ruchem
+wskazówek zegara i należą do przedziału $\big \langle-10^9, 10^9\big \rangle$, podobnie jak liczby szukanego zaklęcia.
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać jeden wiersz zawierający $n$ liczb całkowitych, będących kolejnymi liczbami zaklęcia. Należy przyjąć, że pierwsza wczytana z wejścia
+liczba wskazówki powstała poprzez zsumowanie pierwszych $k$ wypisanych na wyjście liczb. Istnieje możliwość, że wskazówka jest niejednoznaczna, to znaczy istnieje wiele
+zaklęć, które mogły zostać zaszyfrowane przy jej pomocy. Należy wówczas wypisać dowolne z nich i liczyć na szczęście, że to właśnie te liczby tworzą poszukiwane zaklęcie. 
+Możesz założyć, że istnieje przynajmniej jedno zaklęcie składające się z liczb całkowitych z przedziału $\big \langle-10^9, 10^9\big \rangle$, które po zakodowaniu zgodnie
+z instrukcjami zasłyszanymi u pastora, utworzy wskazówkę wczytaną z wejścia. 
+
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

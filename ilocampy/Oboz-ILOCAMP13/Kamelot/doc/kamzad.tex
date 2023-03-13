@@ -1,0 +1,44 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Kamelot}
+\id{kam}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{29.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+
+  W Państwie Kamelot znajduje się $n$ miast połączonych dwukierunowymi drogami. Z każdego miasta da się dojechać do każdego innego dokładnie na jednen sposób. 
+  Innymi słowy, sieć połączeń w Kamelocie tworzy \textit{drzewo}. Każda droga łącząca dwa miasta ma określoną liczbę minut, potrzebnych by ją przejechać i wynika ona 
+  z nawierzchni oraz stanu tej drogi. Król Kamelotu - Jakubysław - mieszka w stolicy państwa i zależy mu na tym, aby czas potrzebny na dojechanie ze stolicy do najbardziej 
+  odległego miasta był jak najkrótszy. Jakubysław dysponuje $k$ kamefuntami. Robotnicy Kamelotu się cenią - za jeden kamefunt mogą poprawić stan dowolnej drogi tylko o tyle, 
+  że czas potrzebny na jej przejechanie zmiejszy się o jedną minutę. Geolodzy Kamelotu zbadali dokładnie litosferę znajdującą się pod drogami państwa, wyznaczając w ten
+  sposób minimalny czas do jakiego mogą zejść robotnicy Jakubysława poprawiając stan poszczególnych dróg. 
+  
+  Król zastanawia się jak optymalnie wykorzystać zasoby finansowe Kamelotu, aby liczba minut jazdy do miasta o najdłuższym czasie dojazdu była możliwie najmniejsza. 
+  Przemykub nie uważał na lekcjach matematyki, dlatego jak pewnie się domyślasz - prosi Cię o pomoc. 
+  
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq n \leq 10^5, 1 \leq k \leq 10^9$), oznaczające odpowiednio liczbę miast w Kamelocie
+oraz liczbę kamefuntów, którymi dysponuje Jakubysław. W $n-1$ kolejnych wierszach znajdują się opisy kolejnych dróg składające się z czwórek liczb 
+$a_i$, $b_i$, $t_i$, $(t_{min})_i$ ($1~\leq~a_i,~b_i~\leq~n,~a_i~\neq~b_i,~1~\leq~(t_{min})_i~\leq~t_i~\leq~10^9$). Reprezentują one kolejno: numery miast, które łączy
+dana droga, czas potrzebny do jej przebycia oraz minimalny czas przejadu tą drogą, jaki można uzyskać poprzez modernizację. Dla uproszczenia załóżmy, że miasto będące
+stolicą ma numer $1$.
+
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać jedną liczbę całkowitą, równą liczbie minut potrzebnych na dojazd ze stolicy do miasta, do którego czas dojazdu jest najdłuższy,
+    przy otymalnym wykorszystaniu zasobów finansowych króla Przemykuba.
+    
+    
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

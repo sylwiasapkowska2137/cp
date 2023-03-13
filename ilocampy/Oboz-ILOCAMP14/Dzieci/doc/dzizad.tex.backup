@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dzieci}
+\id{dzi}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+W rzędzie stoi $n$ dzieci ponumerowanych kolejnymi liczbami naturalnymi od $1$ do $n$. Przemek chce im rozdać cukierki.
+Dziecko o numerze $i$ chce dostać co najmniej $a_i$ cukierków.
+
+Przemek rozdaje cukierki w nastepujący sposób. Zaczyna od dziecka na początku rzędu i po kolei podchodzi do każdego dziecka i daje mu $m$ cukierków.
+Jeżeli dziecko dostało już co najmniej tyle cukierków, ile chciało, to idzie do domu. W przeciwnym wypadku staje na końcu rzędu i dalej oczekuje na kolejne cukierki.
+Przemek rozdaje cukierki tak długo, aż wszyscy pójdą do domu.
+
+Twoim zadaniem jest wyznaczyć, które dziecko pójdzie do domu ostatnie.
+
+  \section{Wejście}
+Na wejściu znajdują się trzy liczby całkowite $a$, $b$, $m$ ($0 \leq a, b \leq 10^9$, $0 \leq m \leq 2 \cdot 10^9$), oznaczające odpowiednio współrzędne
+końcowe pionka oraz liczbę ruchów, które należy wykonać, aby się tam dostać z punktu $(0,~0)$.
+
+  \section{Wyjście}
+Jeżeli Przemek może przesunąć pionek z pola (0, 0) na pole $(a,~b)$ wykonując dokładnie $m$ ruchów, należy na standardowe wyjście wypisać \texttt{TAK}.
+W przeciwnym wypadku należy wypisać \texttt{NIE}.
+  
+\section{Przykład}
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

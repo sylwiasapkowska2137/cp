@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Parking}
+\id{par}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{20.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Na parkingu jest $n^2$ miejsc parkingowych, na których ustawionych jest obecnie $n$ samochodów, co ciekawe dokładnie 1 samochód w każej kolumnie. Każdy z samochodów jest ustawiony przodem lub tyłem w kierunku północnym. 
+
+Znając położenie każdego z samochodów, chcielibyśmy wiedzieć, czy możliwe jest ustawienie wszystkich samochodów w jednym rzędzie. Zakładamy, że samochody mogą jechać tylko prosto przed siebie (bez cofania, skręcania).
+
+ \section{Wejście}
+	
+Pierwszy wiersz wejścia zawiera jedną liczbę całowitą $n$ ($1 \leq n \leq 1\,000\,000$), oznaczającą liczbę samochodów. Kolejny wiersz zawiera $n$ liczb całkowitych $s_1, s_2, \ldots, s_n$ ($1 \leq s_i \leq n$), gdzie $s_i$ oznacza numer rzędu (rzędy numerujemy od północy parkingu) samochodu położonego w $i$-tej kolumnie. 
+
+Kolejny wiersz zawiera $n$ liczb całkwowitych $z_1, z_2, \ldots, z_n$ ($0 \leq z_i \leq 1$), gdzie $z_i$ oznacza zwrot $i$-tego samochody. Jeśli $z_i$ jest równe 0, to samochód ustawiony jest przodem w kierunku północnym, 1 -- w kierunku południowym.
+
+W testach wartych $40\%$ punktów zachodzi dodatkowy warunek $n \leq 1\,000$.
+
+  \section{Wyjście}
+	Pierwszy i jedyny wiersz wyjścia powinien zawierać jedno słowo \texttt{TAK}, jeśli można ustawić samochody w jednym rzędzie, lub słowo \texttt{NIE} w przeciwnym przypadku.
+
+     \makecompactexample
+
+\medskip
+\noindent
+\textbf {Wyjaśnienie do przykładu:} Wszystkie samochody mogą ustawić się w 3 rzędzie.
+
+  \end{tasktext}
+\end{document}

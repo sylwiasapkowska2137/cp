@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Klatki Chołksona}
+\id{kla}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{1}
+\date{26.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+
+Szalony Chołkson zamierza odwiedzić $m$ miast i w każdym z nich chce pozamykać humanistów w swoich klatkach. Humaniści w $i$-tym mieście ponumerowani
+są liczbami naturalnymi od $1$ do $n_i$. 
+Chołkson cierpi na po-analizowe zboczenie $k$-tego stopnia i boi się zamknąć w jednym mieście dwóch takich humanistów, że numer jednego z nich jest $k$ razy większy od numeru drugiego. 
+Zależnie od strefy klimatycznej w której znajduje się miasto, zboczenie Chołksona nasila się lub słabnie.
+
+Pomóż Chołksonowi i oblicz dla każdego miasta maksymalną liczbę humanistów, których może zamknąć w swoich klatkach.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $m$ ($1 \leq m \leq 10^5$), oznaczająca liczbę miast, w których dojdzie do hekatomby.
+
+W każdym z kolejnych $m$ wierszy, znajdują się dwie liczby całkowite $n_i$ i $k_i$ oddzielone spacją, oznaczające liczbę humanistów w $i$-tym mieście oraz stopień nasilenia
+zboczenia Chołksona w tym mieście ($1~\leq~n_i,~k_i~\leq~10^{18}$).
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $m$ wierszy. $I$-ty wiersz powinien składać się z jednej liczby całkowitej, równej maksymalnej liczbie humanistów, których
+może zmknąć Chołkson w $i$-tym mieście.
+    
+\makecompactexample
+
+  \end{tasktext}
+\end{document}

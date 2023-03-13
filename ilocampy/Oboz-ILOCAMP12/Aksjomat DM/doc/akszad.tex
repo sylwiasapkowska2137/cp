@@ -1,0 +1,42 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Aksjomat DM}
+\id{aks}
+\author{Przemysław Jakub Kozłowski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{4}
+\date{21.01.2016}
+\RAM{512}
+
+\usepackage{amsfonts}
+
+\begin{document}
+\begin{tasktext}%
+Punktem wyjścia do całej właściwie matematyki jest teoria mnogości (tj. zbiorów) i logika matematyczna. Potrzebujemy ich więc także w analizie matematycznej. Sporo elementów powyższych teorii poznacie Państwo na przedmiocie Podstawy Matematyki na studiach. Oczekuję, że nie jest Państwu obca podstawowa symbolika logiczna i rachunku zbiorów. Co to są liczby rzeczywiste, tj. jak się nimi posługiwać, jakie obowiązują dla nich reguły -- to dość dobrze każdy z Państwa wie; przynajmniej macie już Państwo wyrobione nawyki i rozwinięte intuicje ich dotyczące. Dla matematyka (i dla informatyka...) to jednak za mało. My potrzebujemy ścisłych reguł rozumowania i narzędzi weryfikowania hipotez.  Zapewni nam to \textit{teoria aksjomatyczna}. Najpierw przyjmujemy więc kilka podstawowych pojęć (tzw. pojęć pierwotnych), takich, które w naszej teorii przyjmujemy bez definicji. Są to: $\mathbb{R}$ -- zbiór liczb rzeczywistych, dwie operacje $+$ i $\cdot$, dwa wyróżnione elementy zbioru $\mathbb{R}$ — mianowicie $0$ i $1$ oraz relację (porządku) $\leq$. Wszystkie pozostałe obiekty będziemy musieli zdefiniować.
+
+Drugi „fundament” to aksjomaty (inaczej pewniki), czyli te własności dotyczące powyższych pojęć pierwotnych, które przyjmujemy za punkt wyjścia w naszej teorii. Przyjmujemy je zatem bez żadnego dowodu, jako fakty niepodważalne. Natomiast wszystkie inne twierdzenia (dla niektórych z nich będziemy używali też innych nazw: lemat, własność, wniosek, fakt itp.) będą już wymagały dowodu, który będzie musiał być ścisłym logicznie rozumowaniem, wykorzystującym wyłącznie aksjomaty (które właściwe także są twierdzeniami, tyle że niezbyt „trudnymi”...) lub twierdzenia wcześniej udowodnione.\footnote{ Uwaga! Ten idealistyczny program z konieczności będziemy realizowali z licznymi odstępstwami. A to, by Państwa nie zanudzić i by zdążyć do końca obozu z obszernym programem.}
+Oczywiście aksjomaty będą własnościami w pełni zgodnymi z naszą intuicją. Będzie ich na tyle dużo, by „wszystko co trzeba” dało się przy ich pomocy udowodnić. Ponadto (co już znacznie mniej ważne) na tyle mało, by jedne z drugich nie wynikały (tzw. niezależność aksjomatów).
+
+Zastanawiające są żałosne wprost wyniki zadania 1 z pierwszego dnia zawodów. Można je zatem, wbrew zamierzeniom autora, uznać za zadanie ,,trudne''. Ale reszta -- to zadania jednak standardowe. Wydaje mi się, że główną przyczyną jest niestety -- mówiąc brutalnie, niepolitycznie, nieelegancko, itp. -- ,,zwykłe nieuctwo''.
+
+Po długich rozmyślaniach (m. in. nad w.w. nieuctwem), postanowiłem jednak \textbf{obniżyć nieco progi} na poszczególne batony. Liczę po cichu na to, że mimo wszystko taka decyzja nie spowoduje bardzo dużej ,,demoralizacji'' w Państwa gronie.
+
+Na kartce jest zapisane $n$ liczb całkowitych. Jakub wziął każdy niepusty podzbiór tych liczb, obliczył iloczyn jego elementów, a następnie zsumował wszystkie iloczyny. Na zakończenie Przemek obliczył resztę z dzielenia uzyskanego wyniku Jakuba przez $m$.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ oraz $m$ ($1 \leq n \leq 10^6$, $1 \leq m \leq 10^9$). W drugim wierszu znajduje się $n$ liczb całkowitych $a_i$ ($1 \leq a_i \leq 10^9$), które są zapisane na kartce.
+
+Możesz dodatkowo założyć, że w testach wartych przynajmniej:\newline
+- $30\%$ punktów zachodzi: $n \leq 10$\newline
+- $50\%$ punktów zachodzi: $n \leq 1000$\newline
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita -- wynik obliczony przez Przemka.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

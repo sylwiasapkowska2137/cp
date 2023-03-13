@@ -1,0 +1,30 @@
+Important rzeczy na OI:
+0. Przed dniem próbnym
+	- powtórzyć łatwo zapominalne rzeczy (ordered_set, custom comparators, operators, etc)
+	- algorytmy: rozszerzony euklides, sos dp, kmp, suffix array, lcp, GEOMETRIA, punkty artykulacji, cykl eulera, matching, segtree beats
+	- dobry template do debugu
+	- flagi kompilacji
+1. Dzień próbny
+	- dodać makefile + ~/./bashrc
+	- zaklepać templatkę (najlepiej kilka razy)
+	- spróbować submit przez terminal
+	- vscode (sprawdzić czy jest cpp extension)
+	- wydrukować coś
+2. Dni właściwe
+	- ważne, by czytać zadanie kilka razy, uważnie, by nie rozwiązywać zupełnie innego zadania
+	- spójrz na subtaski, myśl nad nimi po kolei, określ, co tak właściwie jest trudnością zadania; zbuduj model
+	- spróbuj myśleć, co by ci poradził Piotrek do zrobienia
+	- pisz bruty, WYSNUWAJ ŚMIAŁE HIPOTEZY, nie bój się ich sprawdzać z brutem 
+	- jest 5 godzin na tylko dwa zadania, rób przerwy, zbilansuj czas
+	- jeśli zabraknie ci papieru, wydrukuj go
+	- zabrać ze sobą: dużo wody(!!), leki, słodycze, linijkę, długopis, chusteczki
+3. Strategie
+	- bruty, backtracki, szukaj patternu
+	- czy odpowiedź jest jakaś mała? duża? kiedy odpowiedź wynosi NIE?
+	- overflowy, #define, czy wszystko miesci się w long longu?
+	- odwróć problem
+	- charakterystyka optymalnego rozwiązania, co można zmienić, by rozwiązanie wciąż pozostawało optymalne?
+	- co jest trudnością zadania???
+	- czy zadanie/przejścia dp/pewna faza pomysłu coś ci przypomina?? co?
+	- think like problemsetter
+	- intuicja jest ważniejsza niz scisly dowód matematyczny

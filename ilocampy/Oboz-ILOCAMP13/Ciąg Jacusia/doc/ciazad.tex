@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Ciąg Jacusia}
+\id{cia}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{4}
+\date{29.09.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+
+Jacuś miał zapisany na kartce \textbf{ściśle} rosnący ciąg $n$ liczb całkowitych dodatnich, tj. $a_i < a_{i + 1}$ dla każdej pary sąsiednich liczb. Jacuś niechcący wylał
+trochę wody na kartkę i część liczb na wskutek zamoczenia stała się niewidoczna. Jacuś nie pamięta niestety jakie
+liczby znajdowały się w brakujących miejscach przed rozlaniem wody. 
+
+Tak naprawdę nie jest to istotne -- Jacuś chciałby mieć po prostu znowu ściśle rosnący ciąg o długości $n$. Pomóż mu
+i podaj przykładowy zestaw liczb, które mogły znajdować się w miejscach zalanych przez wodę.
+
+ \section{Wejście}
+    W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 500~000$).
+    W kolejnym wierszu znajduje się $n$ liczb całkowitych $a_1, a_2, \dots, a_n$ ($1 \leq a_i \leq 10^9$), oznaczających kolejne liczby ciągu
+    Jacusia. Jeśli $i$-ta liczba ciągu została zalana wodą, wówczas $a_i = -1$.
+    
+ 
+  \section{Wyjście}
+    W pierwszym i jedynym wierszu wyjścia należy wypisać $n$ liczb całkowitych, które mogły tworzyć oryginalny ciąg Jacusia
+    lub jedna liczba $-1$, jeśli Jacusiowi coś się pomyliło i jego ciąg zapisany na kartce wcale nie był ściśle rosnący.
+    Zaproponowane liczby muszą być dodatnimi liczbami całkowitymi, a ich wartości nie mogą przekraczać $10^9$.
+    
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

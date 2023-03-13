@@ -1,0 +1,30 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zegar}
+\id{zeg}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.09.2015}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Jaś ma dostać od rodziców prezent, bardzo się niecierpliwi i nie może doczekać tej chwili. Ciągle pyta mamę: ,,Czy to już?''. Mama ma tego serdecznie dość, więc postanowiła zdradzić Jasiowi dokładnie o której godzinie spotka go wyczekiwane szczęście. Jaś teraz zastanawia się, ile jeszcze minimalnie czasu musi upłynąć, aby na zegarze wybiła dokładnie ta godzina. Ty zaś mu w tym pomożesz.
+
+  \section{Wejście}
+W pierwszej linii wejścia znajduje się obecny czas w formacie \texttt{HH}:\texttt{MM} (gdzie \texttt{HH} oznacza godziny a \texttt{MM} minuty, $0 \leq \texttt{HH} \leq 23, 0 \leq \texttt{MM}
+\leq 59$). W drugiej linii wejścia znajduje się czas, w którym Jaś spodziewa się otrzymać od rodziców prezent, również w formacie \texttt{HH}:\texttt{MM}, opisanym wcześniej.
+
+Po godzinie \texttt{23:59} na zegarze pojawia się godzina \texttt{00:00}. Czas obecny i czas, w którym Jaś spodziewa się otrzymać od rodziców prezent, nie muszą należeć do tego samego dnia. 
+
+  \section{Wyjście}
+W pierwszej i jedynej linii wyjścia powinna znaleźć się liczba, oznaczająca ile minut musi upłynąć od pierwszego czasu, aby zegar wskazał czas drugi.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

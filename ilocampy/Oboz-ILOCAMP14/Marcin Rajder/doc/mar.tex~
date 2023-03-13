@@ -1,0 +1,65 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Marcin Rajder}
+\id{mar}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{17.01.2017}
+\RAM{512}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek gra w nową grę $Marcin Rajder 5002$. Jest nią bardzo podekscytowany. Gra działa następująco.
+
+Po uruchomieniu gry gracz wykonuje kolejne $podejścia$. Każde podejście kończy się wynikiem punktowym, który jest nieujemną liczbą całkowitą. Gracz rozpoczynając grę posiada poziom $skilla$, który rośnie wraz z grą. Na początku skill gracza wynosi $0$. Każde podejście kończy się wynikiem z przedziału $[0, aktualny\_skill]$. Gdy gracz zdobędzie ścisle więcej punktów w danym podejściu niż w jego poprzednim podejściu (bezpośrednio poprzednim), to jego skill zwiększa się o $1$. Zakładamy, że również po pierwszym podejściu graczowi wzrośnie skill o $1$.
+
+Całą rozgrywkę składającą się z $n$ podejść nazwiemy $miłą$, jeśli nie istnieją takie liczby całkowite $i$, $j$ i $l$ ($1 \leq i < j < l \leq n$) takie, że przy $i$--tym podejściu gracz uzyska wynik $x$, przy $j$--tym uzyska wynik większy od $x$ (przez co gracz robi się szczęśliwy), zaś przy $l$--tym wynik mniejszy od $x$ (przez co gracz nagle się demotywuje, robi nieszczęśliwy i wyłącza grę w złości).
+
+Przemek zastanawia się ile jest możliwych rozgrywek, składających się z $n$ podejść, które są miłe. Dwie rozgrywki uważamy za różne, jeśli istnieje taki numer podejścia, że podczas tych dwóch rozgrywek gracz uzyskał podczas tego podejścia różne liczby punktów.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się liczba całkowita $n$ ($1 \leq n \leq 32$), oznaczająca liczbę podejść.
+
+  \section{Wyjście}
+W pierwszym wierszu wyjścia powinna znaleźć się jedna liczba całkowita, oznaczająca liczbę rozgrywek składających się z $n$ podejść, które są miłe.
+  
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Ciągi punktów zdobywanych w kolejnych podejściach w możliwych rozgrywkach to:
+\vskip 1mm
+$(0, 0, 0, 0)$
+\vskip 1mm
+$(0, 0, 0, 1)$
+\vskip 1mm
+$(0, 0, 1, 0)$
+\vskip 1mm
+$(0, 1, 0, 0)$
+\vskip 1mm
+$(0, 0, 1, 1)$
+\vskip 1mm
+$(0, 1, 0, 1)$
+\vskip 1mm
+$(0, 1, 1, 0)$
+\vskip 1mm
+$(0, 1, 1, 1)$
+\vskip 1mm
+$(0, 1, 0, 2)$
+\vskip 1mm
+$(0, 1, 1, 2)$
+\vskip 1mm
+$(0, 1, 2, 2)$
+\vskip 1mm
+$(0, 1, 2, 0)$
+\vskip 1mm
+$(0, 1, 2, 1)$
+\vskip 1mm
+$(0, 1, 2, 3)$
+
+\end{tasktext}
+\end{document}

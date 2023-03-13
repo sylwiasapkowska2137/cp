@@ -1,0 +1,47 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Prezenty}
+\id{bud}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{24.09.2015}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+Franek ma wielu przyjaciół. W jego mieście jest $S$ sklepów, w których można kupić $P$ różnych typów przedmiotów.
+Franek bardzo lubi przeglądać oferty kupna różnych towarów. 
+Dana oferta mówi o tym, że w jakimś ze sklepów można kupić $X$ przedmiotów danego typu w cenie $C$.
+Franek niektórych ze swoich przyjaciół lubi bardziej, a niektórych mniej. 
+W zależności od tego jak bardzo kogo lubi chciałby kupić mu daną liczbę prezentów na urodziny.
+Franek nie jest jednak głupi i chciałby wybrać jak najtańsze przedmioty.
+Franek nie chce też danej osobie kupić za dużo przedmiotów jednego typu, bo wtedy prezent będzie słaby.
+Dokładniej, Franek może kupić co najwyżej $K[i]$ przedmiotów typu $i$.
+Franek nie chce również kupić za dużo przedmiotów w jednym sklepie, żeby przyjaciele nie myśleli, że był zbyt leniwy i nie chciał dla nich odwiedzić wielu sklepów.
+Dokładniej, w $i$-tym sklepie nasz bohater może kupić nie więcej niż $M[i]$ przedmiotów. 
+
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $m, S, P$ ($1 \leq m \leq 10^3, 1 \leq S, P \leq 100$), oznaczające kolejno liczbę ofert, liczbę sklepów oraz liczbę typów przedmiotów.
+
+W drugim wierszu wejścia jest $S$ liczb całkowitych opisujących tablicę $M$. $i$-ta liczba mówi o tym, jak dużo przedmiotów może kupić Franek w $i$-tym sklepie. Liczby nie przekraczają $200$ i są dodatnie.
+
+W trzecim wierszu wejścia jest $P$ liczb całkowitych opisujących tablicę $K$. $i$-ta liczba mówi o tym jak dużo egzemplarzy $i$-tego przedmiotu może kupić Franek. Te liczby również nie przekraczają $200$ i są dodatnie.
+
+W kolejnych $m$ wierszach znajdują się cztery liczby całkowite $a, b, X$ oraz $C$, będące ofertą sprzedaży przedmiotu $a$ w sklepie $b$ w ilości $X$ ($ 1 \leq X \leq 10^4$) o koszcie $C$ ($1 \leq C \leq 10^4$).
+
+W kolejnym wierszu znajduje się liczba całkowita $q$ ($1 \leq q \leq 10^3$) będącą liczbą zapytań o kupienie danej liczby przedmiotów spełniających wymagania Franka.
+
+W $q$ kolejnych wierszach znajduje się po jednej liczbie całkowitej $Y$ ($1 \leq Y \leq 10^9$), oznaczającej że Franek chce kupić $Y$ przedmiotów według opisanych zasad.
+
+  \section{Wyjście}
+Na wyjściu powinno się znaleźć $q$ wierszy, w każdym wierszu jedna liczba całkowita, oznaczająca minimalny koszt kupienia przedmiotów dla każdego z zapytań. Jeśli nie da się kupić tylu przedmiotów, wypisz $-1$.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

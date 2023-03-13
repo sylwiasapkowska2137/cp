@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+\usepackage{hyperref}
+
+\title{Przeszkody}
+\id{pre}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{17.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek po wielu godzinach wyczerpującego ulepszania sprawdzarki postanowił pouprawiać jakieś zajęcia na świeżym powietrzu w celu doznania relaksu.
+Postanowił pokonać tor przeszkód na swoim placu zabaw.
+
+Tor przeszkód ma kształt prostokąta o wysokości $n$ i szerokości $m$. Wyróżniamy w nim $(n+1)\cdot (m+1)$ punktów o współrzędnych całkowitych,
+z punktem $(0, 0)$ w lewym górnym rogu i punktem $(n, m)$ w prawym dolnym rogu.
+
+Na torze, w punktach o współrzędnych całkowitych mogą znajdować się przeszkody w kształcie koła. Każda przeszkoda ma pewien promień, może ona wystawać
+poza tor oraz nachodzić się z innymi przeszkodami.
+
+Przemek zaczyna pokonywać tor przeszkód z dowolnego punktu na górnej krawędzi toru i chce go zakończyć w dowolnym punkcie na dolnej krawędzi toru.
+Problem w tym, że nie może w żadnym momencie mieć kontaktu z żadną przeszkodą. Pomoż Przemkowi stwierdzić, czy to w ogóle możliwe.
+
+  \section{Wejście}
+W pierwszym wierszu znajduje się jedna liczba całkowita $t$ ($1 \leq t \leq 10^6$), oznaczająca liczbę zestawów testowych.
+
+W każdym z kolejnych $t$ wierszy znajdują się dwie liczby całkowite $n$ oraz $k$ ($1 \leq n \leq 60, 1 \leq k \leq 2^n - 1$) oznaczające kolejno głębokość drzewa oraz numer zarażonego wierzchołka. 
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $t$ wierszy, a w każdym z nich jedną liczbę całkowitą będącą maksymalną liczbą niezarażonych węzłów w kolejno rozpatrywanych zestawach testowych.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Drewno}
+  \author{JT?}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{dre}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{16}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji drewno stało się niesłychanie cennym surowcem. Król Bajtocji postanowił ściąć i sprzedać większość drzew ze swoich $n$ lasów. Zamierza rozkazać, aby ścinać drzewa w niektórych lasach, pozostawiając co $k$-te drzewo (przykładowo dla $k = 2$ w lesie złożonym z 5 drzew pozostawione będą dwa drzewa o ,,numerach''~2~i~4).
+
+Król opracował $m$ różnych wariantów swoich rozkazów. W $i$-tym wariancie król chce, by w lasach o numerach od $a_i$ do $b_i$ (włącznie) wyciąć jak najwięcej drzew, ale tak, by zostawić w tych lasach łącznie co najmniej $D_i$ drzew. Jakie $k_i$ dla każdego rozkazu powinien wybrać król?
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 10^4$), oznaczającą liczbę lasów. Drugi wiersz wejścia zawiera ciąg $n$ liczb całkowitych $l_1, l_2, \ldots, l_n$ ($1 \leq l_i \leq 10^4$), gdzie $l_i$ oznacza liczbę drzew w $i$-tym lesie.
+
+Trzeci wiersz wejścia zawiera liczbę $m$ ($1 \leq m \leq 500\,000$), oznaczającą liczbę wariantów żądań króla. Następnych $m$ wierszy zawiera po trzy liczby: $a_i, b_i, D_i$ ($1 \leq a_i \leq b_i \leq n, 1 \leq D_i \leq 10^{18}$), które określają poszczególne warianty rozkazów, których wydanie rozważa król.
+
+  \section{Wyjście}
+Wyjście powinno składać się z $m$ wierszy. Wiersz $i$-ty zawiera jedną liczbę całkowitą $k_i$ --- odpowiedź dla $i$-tego wariantu rozkazu. W przypadku, gdy poprawnych jest wiele odpowiedzi, program powinien zwrócić największą z nich. W przypadku, gdy nie da się znaleźć odpowiedniego $k_i$, program powinien wypisać $-1$.
+
+     \makecompactexample
+
+	\medskip
+	\noindent
+	\textbf{Wyjaśnienie do przykładu:} W pierwszym wariancie mamy ścinać drzewa tak, by pozostało jedno lub więcej, $k = 11$ daje $0$ drzew, więc wybieramy $k = 10$ i trzy drzewa. W drugim wariancie pozostawiając co drugie drzewo, zostanie dokładnie $1 + 1 = 2$ drzewa i $k = 2$ jest jedyną taką liczbą. W trzecim wariancie nie da się wybrać $k$, które spełnia warunki zadania, ponieważ suma drzew w lesie numer 4 jest mniejsza niż 3.
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,60 @@
+ZADANIE B: BAJTKOWY RYSUNEK
+
+Bajtek lubi rysowaæ. Do swoich obrazków u¿ywa ró¿nych wzorków. Ostatnio narysowa³ pewien obraz ze znaczków "#". Okaza³o siê jednak, ¿e jego rozmiar nie przypad³ Bajtkowi do gustu. Chcia³by obejrzeæ kopie swego dzie³a w ró¿nej skali, aby wybraæ najlepsz¹ z nich. Nie potrafi tego jednak szybko zrobiæ, a wiêc poprosi³ Ciebie o pomoc.
+
+Wejœcie:
+Jedna liczba ca³kowita N (2 <= N <= 200), oznaczaj¹ca skalê o której przedstawienie, prosi Ciê Bajtek.
+
+Wyjœcie:
+Rysunek sk³adaj¹cy siê ze znaczków "#", przedstawiaj¹cy dzie³o Bajtka o podanym na wejœciu rozmiarze. (Patrz przyk³ad.)
+
+Przyk³ad:
+
+Dla danych wejœciowych:			Poprawnym wynikiem jest:
+
+6					      ######
+     					      #    #
+     					      # ## #
+     					      # ## #
+     					      # ## #
+					 ###### ## ######
+					 #      ##      #
+					 # ############ #
+					 # ############ #
+					 #      ##      #
+					 ###### ## ######
+    					      # ## #
+     					      # ## #
+     					      # ## #
+     					      #    #
+     					      ######
+
+Natomiast dla danych:			Poprawnym wynikiem jest:
+
+9					        #########
+        					#       #
+        					# ##### #
+        					# #   # #
+        					# # # # #
+        					# # # # #
+        					# # # # #
+        					# # # # #
+					######### # # # #########
+					#         # # #         #
+					# ######### # ######### #
+					# #         #         # #
+					# # ################# # #
+					# #         #         # #
+					# ######### # ######### #
+					#         # # #         #
+					######### # # # #########
+        					# # # # #
+        					# # # # #
+        					# # # # #
+        					# # # # #
+        					# #   # #
+       						# ##### #
+        					#       #
+        					#########
+
+

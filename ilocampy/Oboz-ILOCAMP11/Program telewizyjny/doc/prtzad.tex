@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Program telewizyjny}
+  \signature{jtom???}
+  \id{prt}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{32}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Jacek Tomasiewicz}
+  \history{2012.02.21}{Jacek Tomasiewicz, pomysł i redakcja zadania}{1.00}
+
+\begin{document}
+  \begin{tasktext}%
+    W \textit{BajtTV} trwają obecnie prace nad nową ramówką. Redaktorzy otrzymali
+    $n$ propozycji programów. Każdy jest opisany przez jego ramy czasowe
+    (czas rozpoczęcia emisji programu $b_i$ oraz czas jej zakończenia $e_i$)
+    i~stopień atrakcyjności dla telewidzów $a_i$. Szefostwo chce, aby w
+    ramówce znajdowało się co najmniej $k$ kanałów. Jednocześnie atrakcyjność
+    najsłabszego emitowanego programu, ma być jak największa. Programy nie mogą się pokrywać, w szczególności jeden program nie może się zaczynać w momencie zakończenia drugiego.
+
+    Redaktor naczelny poprosił Ciebie, informatyka pracującego w \textit{BajtTV},
+    o napisanie programu, który wyznaczy ramówkę, tak aby najsłabszy program
+    miał jak największą atrakcyjność.
+
+    \section{Wejście}
+    Pierwszy wiersz standardowego wejścia zawiera dwie liczby całkowite $n$ i
+    $k$ ($1 \leq n \leq 10^5$, $1 \leq k \leq n$) oznaczające odpowiednio
+    liczbę propozycji programowych oraz minimalną ich liczbę w ramówce.
+
+    Kolejne $n$ wierszy standardowego wejścia zawiera po trzy liczby całkowite
+    $b_i$, $e_i$, $a_i$ ($1 \leq b_i < e_i \leq 10^6)$, $1 \leq a_i \leq 10^6$,
+    $1 \leq i \leq n$) oznaczających odpowiednio czas rozpoczęcia emisji, jej
+    zakończenia oraz atrakcyjność $i$-tego programu.
+
+    \section{Wyjście}
+    Pierwszy i jedyny wiersz standardowego wyjścia powinien zawierać jedną
+    liczbę całkowitą, równą atrakcyjności najsłabszego programu w optymalnej
+    ramówce. Natomiast, jeżeli nie da się ułożyć żadnej ramówki, to należy wypisać $-1$.
+
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

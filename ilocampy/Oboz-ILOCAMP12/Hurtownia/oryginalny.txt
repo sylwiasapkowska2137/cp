@@ -1,0 +1,18 @@
+ZADANIE F: Hurtownia 
+
+Bajtazar chce za³o¿yæ w Bitocji nowy oœrodek swojej firmy budowlanej. Jego dzia³alnoœæ jest bardzo znana na ca³ym œwiecie jednak Bitocja nie posiada jeszcze ¿adnej placówki tej organizacji. Hurtownie te s³yn¹ z olbrzymich oœrodków, które dziêki swej wielkoœci i jakoœci potêguj¹ dochody Bajtazara. Miasta w Bitocji s¹ jednak ma³e, a Bajtazar potrzebuje a¿ trzech hurtowni, aby placówka odpowiednio prosperowa³a, gdy¿ zadaniem ka¿dej, jest zaj¹æ siê inn¹ dziedzin¹ budownictwa. Król pañstwa nie che, ¿eby wszystkie 3 budynki znajdowa³y siê w jednym mieœcie, gdy¿ przemys³ znacznie by je zanieczyœci³. Bajtazar musi wiêc rozmieœciæ swoje hurtownie w trzech ró¿nych miastach, przy czym ze wzglêdów ekonomicznych i taktycznych, zale¿y mu aby miasta w których rozpocznie budowê swojego oœrodka, by³y mo¿liwie blisko siebie. Dok³adniej nasz bohater chcia³by, aby suma odleg³oœci pomiêdzy ka¿d¹ par¹ miast w których powstan¹ hurtownie, by³a jak najmniejsza. Miast w Bitocji jest bardzo du¿o, a jeszcze wiêcej jest opcji wyboru optymalnych 3 miast dla Bajtazara, dlatego zosta³eœ poproszony o pomoc!
+
+Wejœcie:
+W pierwszym wierszu standardowego wejœcia znajduj¹ siê 2 liczby ca³kowite N oraz M, (3 <= N <= 10^5, N <= M <= 10^5) oznaczaj¹ce iloœæ miast w Bitocji oraz liczbê ³¹cz¹cych je dróg. Kolejne M wierszy zawiera opis sieci dróg Bitocji. Ka¿dy wiersz opisuje jedn¹ drogê i sk³ada siê z trzech liczb ca³kowitych ai, bi, ci (1 <= ai, bi <= N, 1 <= ci <= 10^6), oznaczaj¹cych kolejno: miasta które ³¹czy i-ta droga oraz d³ugoœæ tej drogi. Mo¿esz za³o¿yæ ze z ka¿dego miasta da siê dojechaæ poœrednio do dowolnego innego oraz ¿e wszystkie drogi s¹ dwukierunkowe.
+
+Wyjœcie:
+Na standardowe wyjœcie nale¿y wypisaæ dok³adnie jedn¹ liczbê ca³kowit¹, równ¹ najmnieszej mo¿liwej sumie odleg³oœci pomiêdzy ka¿d¹ par¹ spoœród 3 wybranych miast.
+
+Przyk³ad:
+Dla danych wejœciowych:				Poprawnym wynikiem jest:
+4 5						6
+1 2 1
+1 4 7
+2 3 3
+3 1 2
+3 4 5

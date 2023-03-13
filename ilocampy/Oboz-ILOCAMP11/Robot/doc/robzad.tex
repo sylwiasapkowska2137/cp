@@ -1,0 +1,44 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Robot}
+  \id{rob}
+  \signature{jtom???}
+  \author{Jacek Tomasiewicz} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \etap{początkująca}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{32} % HINT: To pole uzupelnia opracowujacy
+ 
+\begin{document}
+  \begin{tasktext}%
+Mamy daną tablicę $n$ liczb całkowitych. Na pozycji $k$ jest ustawiony robot, który musi wykonać $m$ ruchów.
+Ruch robota polega na przesunięciu się do sąsiedniej komórki tablicy.
+W każdej komórce robot zabiera liczbę, zastępując ją zerem.
+Celem robota jest zebranie liczb o jak największej całkowitej sumie, 
+a Twoim celem jest jego zaprogramowanie.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera trzy liczby całkowite $n, k, m$ ($0 \leq k, m < n \leq 300\,000$), 
+oznaczające odpowiednio liczbę elementów tablicy, pozycję robota oraz liczbę ruchów robota. 
+Drugi wiersz wejścia zawiera $n$ liczb całkowitych $t_0, t_1, \ldots, t_{n-1}$ ($0 \leq t_i \leq 1\,000$), 
+gdzie $t_i$ oznacza wartość $i$-tej komórki tablicy.
+
+Możesz założyć, że w testach wartych około $40\%$ punktów zachodzi dodatkowy warunek $n \leq 5\,000$.
+
+  \section{Wyjście}
+
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, 
+równą maksymalnej sumie, jaką może uzbierać robot.
+
+     \makecompactexample    
+
+	 \medskip
+	 \noindent
+	 \textbf{Wyjaśnienie do przykładu:} Robot może odwiedzić komórki o indeksach ($3, 4, 5, 6$) 
+	 i zebrać następujące liczby: $1 + 5 + 0 + 3 + 9 = 18$.
+	 
+  \end{tasktext}
+\end{document}

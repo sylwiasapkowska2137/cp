@@ -1,0 +1,58 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Baki z wodą}
+\id{bak}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{20.01.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Na hawajskiej wyspie z nieznanych przyczyn stoi wieża złożona z $n$ baków na wodę, ustawionych jeden na drugim. 
+Dla uproszczenia dalszych opowieści, ponumerujmy baki od góry liczbami od $1$ do $n$.
+Wieża jest podzielona na $k$ grup baków. Wszystkie baki należące do tej samej grupy posiadają taką samą pojemność.
+Grupy tworzą rozłączne przedziały, to znaczy, że pomiędzy dowolnymi dwoma bakami z pewnej grupy, nie znajduje
+się żaden bak, który do niej nie należy. Zatem możemy ponumerować te grupy kolejnymi liczbami od $1$ do $k$ zaczynając od szczytu wieży.
+Na samym dole, pod ostatnim bakiem, znajduje się ogromny, przepotężny, 
+monstrualny, tytaniczny bak o nieskończonej pojemności, który jest zakopany głęboko w ziemi. 
+
+ 
+Początkowo wszystkie baki w wieży są puste. Hawajscy ziomale postanowili nalewać wodę do baków (i jak pewne
+się domyślasz, zwrócili się do Ciebie z prośba o pomoc). Wspomnieni ludzie
+będą dolewać wodę do baków $m$-krotnie. Za każdym razem wleją dokładnie $l$ litrów wody do każdego baku należącego do
+pewnego spójnego przedziału wieży. Jeżeli woda nie mieści się już w pewnym baku, to jej nadmiar spływa do baq, 
+który znajduje się bezpośrednio pod nim. Jeżeli ilość wody w baku o numerze $n$, przekroczy jego pojemność, 
+woda spływa z niego do baku o nieskończonej pojemności. Ziomale chciałyby wiedzieć
+trzy rzeczy. Po pierwsze proszą o policzenie liczby baków, które będą pełne po zakończeniu wszystkich operacji.
+Po drugie interesuje ich numer pierwszej operacji, po której pewna ilość wody spłynęła do nieskończonego baku.
+Po trzecie potrzebują też informacji, ile litrów wody spłynęło łącznie do nieskończonego baku po zakończeniu wszystkich operacji. Do dzieła!
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $k$, $m$ ($1 \leq n \leq 10^9, 1 \leq m,k \leq 3 \cdot 10^5$), 
+oznaczające kolejno liczbę wszystkich baków w wieży, liczbę grup, z których składa się wieża oraz liczbę operacji wlewania
+wody do baków. 
+
+W każdym z kolejnych $k$ wierszy, znajdują się dwie liczby całkowite, opisujące kolejne grupy baków. Pierwsza z nich to liczba
+baków wchodzących w skład danej grupy. Liczebności wszystkich grup sumują się oczywiście do $n$. Druga liczba z każdej pary
+oznacza pojemność każdego z baków należących do tej grupy. Wartości te nie będą większe niż $10^9$.
+
+W następnych $m$ wierszach znajdują się opisy kolejnych dolań wody do wieży. Każdy wiersz składa się z trzech
+liczb całkowitych $a_i$, $b_i$, $w_i$ ($1 \leq a_i \leq b_i \leq n, 1 \leq w_i \leq 1\,000$), oznaczających, że do \textit{każdego}
+baku należącego do przedziału $[a_i, b_i]$, dolewanych jest $w_i$ litrów wody.
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać jeden wiesz, zawierający trzy liczby: liczbę baków, które będą pełne po wykonaniu
+    wszystkich operacji; numer dolania, po którym do nieskończonego baku poraz pierwszy wpłynie pewna ilość wody; 
+    a także ilość litrów, które do niego spłyną po dokonaniu wszystkich operacji. Jeżeli ostatnia wartość jest równa zero, 
+    wtedy druga powinna wynosić -1.
+    
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

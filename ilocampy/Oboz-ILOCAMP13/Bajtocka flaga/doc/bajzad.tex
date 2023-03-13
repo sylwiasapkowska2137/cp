@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Bajtocka flaga}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{baj}
+  \iomode{stdin}
+  \etap{zaawansowana}
+  \day{3}
+  \date{28.09.2016}
+  \RAM{64}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+ Obecnie bajtocka flaga sk³ada siê z $n$ ró¿nokolorowych, poziomych pasów.  Wiemy, ¿e ¿adne dwa s±siednie pasy nie s± tego samego koloru.
+
+Bajtocja zdecydowa³a siê do zmiany flagi. Król chcia³by, aby flaga sk³ada³a  siê z $n$ naprzemiennych pasów o dok³adnie 2 kolorach. Raz kolor $A$,  nastêpnie $B, A, B$, itd. Wybór kolorów nie jest istotny dla króla. Istotne  natomiast jest to, aby przemalowanie flagi by³o mo¿liwie proste.
+
+Przemalowanie jest tym prostrze, im mniej pasów nale¿y przemalowaæ. 
+
+    \section{Wej¶cie}
+    Pierwszy wiersz wej¶cia zawiera jedn± liczbê ca³kowit± $n$ ($2 \leq n \leq  500\,000$), oznaczaj±c± liczbê pasów flagi. Kolejny wiersz wej¶cia zawiera  $n$ liczb ca³kowitych $k_1, k_2, \ldots, k_n$ ($1 \leq k_i \leq n$), gdzie  $k_i$ oznacza kolor $i$-tego pasa flagi.
+
+    \section{Wyj¶cie}
+Pierwszy i jedyny wiersz wyj¶cia powinien zawieraæ jedn± liczbê ca³kowit±,  równ± minimalnej liczbie pasów, które nale¿y przemalowaæ, aby flaga sk³ada³a  siê tylko z dwóch kolorów i ¿adne dwa s±siednie pasy nie by³y tego samego  koloru.
+
+    \makecompactexample
+
+  \medskip
+  \noindent
+  \textbf{Wyja¶nienie do przyk³adu:} 
+Nowa flaga bêdzie sk³ada³a siê z kolorów: $1, 2, 1,  2, 1, 2$. 
+
+  \end{tasktext}
+\end{document}

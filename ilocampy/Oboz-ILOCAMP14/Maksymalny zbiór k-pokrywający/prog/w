@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE result [
+  <!ELEMENT result (#PCDATA)>
+  <!ATTLIST result outcome CDATA #REQUIRED>
+]>
+<result outcome="10.00000">10.00000</result>

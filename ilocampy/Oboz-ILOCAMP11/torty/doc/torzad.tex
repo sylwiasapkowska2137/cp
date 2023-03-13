@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Torty}
+\id{tor}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{olimpijska}
+\day{?}
+\date{??.09.2015}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Jakub jest cukiernikiem i uwielbia torty, ma ich bardzo dużo, bo aż $n$. Kuba lubi też Kasie i chce się z nią podzielić swoimi tortami. Z drugiej strony Jakub nie chce żeby Kasia była gruba, więc musi dopilnować żeby jednego dnia nie zjadła nie więcej niż $k$ kalorii.
+
+Kasia również dba o linie i nie chcę być gruba, więc zdecydowała, że dziennie zje co najwyżej dwa torty. Niestety nie zna się ona na kaloriach jak Kuba i nie potrafi stwierdzić czy podczas jedzenia tortów nie przekroczy $k$ kalorii.
+
+Torty Kuby są ułożone kolejno na wystawie i ponumerowane od $1$ do $n$.
+Każdego dnia Kasia mówi, że chce zjeść jakieś tory z przedziału $[a,b]$. Kuba natomiast chce usunąć niektóre torty z tego przedziału tak, żeby Kasia niezależnie od tego jakie torty wybierze nie stała się gruba (czyli nie zjadła więcej niż $k$ kalorii). 
+
+Jako, że Kuba jest wyśmienitym kucharzem, każdego wieczoru po zjedzeniu przez Kasie tortów, piecze torty identyczne do tych zjedzonych oraz usuniętych i ustawia je w taki sposób, że jego wystawa wygląda tak jak wyglądała na początku dnia.
+
+Twoim zadaniem jest obliczyć ile minimalnie tortów musi usunąć Kuba z podanego przedziału każdego dnia tak, żeby Kasia nie mogła zjeść tortów o kaloryczności przekraczającej $k$ kalorii przy założeniu, że Kasia je najwyżej dwa torty dziennie.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n, q, k$ ($1 \leq n, q \leq 10^6, 1 \leq k \leq 10^9$) oznaczające kolejno liczbę tortów posiadanych przez Kubę, liczbę dni przez które Kasia będzie jeść torty oraz maksymalną liczbę kalorii które może zjeść Kasia jednego dnia.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych nie przekraczających $10^9$, $i$-ta liczba oznacza kaloryczność $i$-tego tortu.
+
+W kolejnych $q$ wierszach znajdują się pary liczb $a, b$ ($1 \leq a, b \leq n, a \leq b$), oznaczające przedział który danego dnia wybrała Kasia.
+
+  \section{Wyjście}
+Na wyjściu powinno się znaleźć $q$ wierszy, w każdym wierszu jedna liczba całkowita oznaczająca minimalną liczbę tortów które musi usunąć Kuba, żeby Kasia nie mogła danego dnia zjeść tortów o sumarycznej ilości kalorii większej niż $k$. 
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

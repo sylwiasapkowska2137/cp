@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Kredkowanie}
+\id{kng}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{19.01.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Karolina jest Małą dziewczynką, która lubi informatyczne zabawy. Teraz do dyspozycji ma drzewo o $n$ wierzchołkach. Zabawa Karoliny polega na wybieraniu pary wierzchołków i pokolorowaniu kredkami wszystkich niepokolorowanych jeszcze wierzchołków na ścieżce pomiędzy nimi. Karolina ma jednak ograniczoną ilość kredek i chciałaby wiedzieć, jak dużo już z nich zużyła, więc zastanawia się, ile wierzchołków zostało już przez nią pokolorowanych.
+Karolina, mimo tego, że lubi informatyczne zabawy, jeszcze nie umie programować tak dobrze, aby rozwiązać ten problem. Poza tym musi dokupić kredki. Ale za to wybrała właśnie Ciebie do pomocy!
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, q$ ($1 \leq n, q\leq 500\,000$) oznaczające liczbę wierzchołków drzewa i liczbę par wierzchołków które wybierała do kolorowania.
+
+W kolejnych $n - 1$ wierszach znajdują się dwie liczby $a, b$ ($1 \leq a, b \leq n, a \neq b$), oznaczające krawędź między wierzchołkami $a$ i $b$.
+
+W kolejnych $q$ wierszach znajdują się dwie liczby $a, b$ ($1 \leq a, b \leq n$) oznaczające pary wierzchołków malowane kolejno przez Karolinę.
+
+  \section{Wyjście}
+Na wyjściu powinno się znaleźć $q$ liczb całkowitych oznaczających ilość pokolorowanych wierzchołków po każdym wybraniu pary wierzchołków do malowania.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

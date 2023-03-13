@@ -1,0 +1,30 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Trójkąt maksymalny}
+  \signature{jtom???}
+  \id{tro}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{32}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Jacek Tomasiewicz}
+  \history{2011.08.07}{Jacek Tomasiewicz, pomysł i redakcja zadania}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+	Bajtuś zebrał w lesie $n$ prostych patyczków. Gdy zaszedł do domu, to postanowił ułożyć z nich trójkąty. Aktualnie męczy się nad ułożeniem trójkąta o największym obwodzie. Pomóż mu i wskaż obwód, który jest maksymalny.
+
+  Z danych trzech patyczków można zbudować trójkąt, jeśli suma dwóch krótszych patyczków jest nie mniejsza od długości najdłuższego.
+
+    \section{Wejście}
+	Pierwszy wiersz standardowego wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 500\,000$), oznaczającą liczbę patyczków, które zebrał Bajtuś. Drugi wiersz wejścia zawiera $n$ liczb całkowitych $p_1, p_2, \ldots, p_n$ ($1 \leq p_n \leq 10^9$), gdzie $p_i$ oznacza długość $i$-tego patyczka.
+
+    \section{Wyjście}
+	Pierwszy i jedyny wiersz standardowego wyjścia powinien zawierać jedną liczbę całkowitą, równą długości największego możliwego obwodu. Jeśli nie da się zbudować żadnego trójkąta, to odpowiedzią powinno być 0.
+
+    \makecompactexample
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dzielny Przemo}
+\id{dzi}
+\author{JT} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{24.09.2015}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Mamy dany ciąg $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$.
+Przemo chce znaleźć najdłuższy spójny fragment, tak aby można było go podzielić na dwie niepuste części,
+lewą i prawą. Jedynym warunkiem jest to, aby w lewej części była tylko jedna wartość maksymalna, a w prawej tylko jedna wartość minimalna.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($2 \leq n \leq 10^6$),
+oznaczająca liczbę elementów ciągu.
+W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$ ($-10^9 \leq x_i \leq -10^9$), gdzie $x_i$ oznacza $i$-tą liczbę w ciągu.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, równa maksymalnej długości szukanego fragmentu.
+Jeżeli taki fragment nie występuje, to wynikiem powinna być wartość \texttt{0}.
+
+\makecompactexample    
+
+\end{tasktext}
+\end{document}

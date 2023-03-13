@@ -1,0 +1,30 @@
+\documentclass[opr]{sinol}
+  \signature{jtom031}
+  \title{£añcuch}  
+  \id{lan}                       
+  \iomode{stdin}
+  \author{Jacek Tomasiewicz}         
+  \history{2011.07.19}{JTom, przygotowanie opracowania autorskiego}{1.00}
+  
+  
+\begin{document}
+  \begin{tasktext}% 
+    \section{Rozwi±zania poprawne}
+      
+	\begin{itemize}
+	\item
+	$O(n^2)$ --- sprawdzamy ka¿d± parê liczb, które nie s± s±siadami i wybieramy z nich minimum,
+
+	\item
+	$O(n)$ --- znajdujemy cztery najmniejsze liczby i z nich szukamy najmniejszej pary liczb, która podzieli ³añcuch na trzy czê¶ci.
+
+	\end{itemize}
+
+    \section{Rozwi±zania niepoprawne}
+	\begin{itemize}
+	\item
+	$O(n)$ --- podobne jak wzorcowe $O(n)$, tylko ¿e szukamy pary lub trójki najmniejszych liczb.
+	\end{itemize}
+
+  \end{tasktext}
+\end{document}

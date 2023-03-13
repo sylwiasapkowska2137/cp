@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+\usepackage{hyperref}
+
+\title{To niesamowite!}
+\id{nie}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{?}
+\date{??.01.2017}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+
+W życiu Przemka nastąpił ostatnio wielki przełom, chwila której nie zapomni do końca życia. Skończył właśnie 8 lat, a jak każdy wie to najwyższa pora, aby każdy maluch wybrał w końcu swoją ulubioną liczbę, kolor, owoc, porę roku, godzinę, zabawkę i wiele innych rzeczy. Dzisiaj skupimy się tylko na tym pierwszym czyli na ulubionej liczbie Przemka (plotki głoszą, że o innych "ulubieńcach" będą traktować zadania w najbliższej przyszłość), która musi być niesamowita, zresztą tak jak i sam Przemek!
+
+Przemek nie zna się jeszcze zbyt dobrze na matematyce i uważa, że liczba jest tym większa im posiada ona więcej zer na końcu swojego zapisu, a oczywiście im większa tym też jest bardziej niesamowita. Ponadto w ostatnim czasie Przemek bardzo polubił sformułowanie "system liczbowy", co prawda nie wie jeszcze do końca co to oznacza, ale jego starszego brata powiedział mu, że dzięki systemom liczbowym możemy dowolną liczbę zamienić w inną, możliwe że jeszcze bardziej niesamowitą! Okropnie podekscytowany tą informacją, Przemek zapisał na kartce $n$ liczb naturalnych $a_i$. Teraz chciałby, aby iloczyn liczb na kartce zapisany w systemie liczbowym o podstawie $m$ został jego ulubioną liczbą (skąd Przemek wiedział czym jest iloczyn nie wie już nawet sam autor tego zadania...), ale zanim to się stanie chce on poznać liczbę jej zer wiodących, aby sprawdzić czy jest ona dla niego wystarczająco niesamowita!
+
+  \section{Wejście}
+W pierwszym wierszu znajduje się jedna liczba całkowita $t$ ($1 \leq t \leq 10$), oznaczająca liczbę zestawów testowych.
+
+W pierwszej linii każdego zestawu testowego znajdują się dwie liczby całkowite $n$ oraz $m$ ($1 \leq n \leq 10^6, \\ 1 \leq m \leq 10^{10}$) z treści zadania.
+
+Kolejna linia składa się z $n$ liczb całkowitych $a_i$ ($0 \leq a_i \leq 10^6$) zapisanych w systemie dziesiętnym, których iloczyn jest rozpatrywaną liczbą z treści zadania.
+
+Suma $n$ ze wszystkich zestawów testowych nie przekroczy $10^6$.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $t$ wierszy, w każdym z nich powinna się znaleźć jedna liczba całkowitą równa liczbie zer wiodących liczby z danego zestawu testowego.
+
+\makecompactexample
+
+\medskip
+\noindent
+\textbf {Wyjaśnienie do przykładu:} W pierwszym przypadku testowym liczba $k$ jest równa $2 \cdot 3 \cdot 4 = 24_{(10)} = 11000_{(2)}$, a w drugim $7 \cdot 12 \cdot 15 = 1260_{(10)} = 1201200_{(3)}$.
+
+\end{tasktext}
+\end{document}

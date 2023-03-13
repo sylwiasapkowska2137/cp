@@ -1,0 +1,29 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Odzyskiwanie}
+\id{odz}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{22.09.2015}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Przemek układa testy do zadań z tablicami. Wygenerował tablicę $n$-elementową z liczbami z zakresu od 1 do $m$. Następnie dla każdej liczby wyznaczył wartość pierwszej mniejszej liczby na lewo. Ze zmęczenia zapisał te dane w początkowej tablicy. Teraz próbuje odtworzyć początkowe dane i zastanawia się na ile sposobów może to zrobić. Wystarczy, że podasz wynik modulo $10^9 + 7$.
+
+  \section{Wejście}
+W pierwszej linii wejścia znajdują się dwie liczby całkowite $n, m$ ($1 \leq n \leq 10^6$, $1 \leq m \leq 10^9$) oznaczające liczby z treści zadania.
+W drugiej linii wejścia znajduje się $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$ ($0 \leq x_i \leq m$) reprezentujących stan tablicy po nadpisaniu, gdzie $x_i = 0$ oznacza, że po lewej stronie $i$-tej liczby nie było mniejszej wartości.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita równa liczbie różnych tablic, które mógł początkowo wygenerować Przemek modulo $10^9 + 7$.
+Dwie tablice uważamy za różne, jeśli różnią się wartością na conajmniej jednej pozycji.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

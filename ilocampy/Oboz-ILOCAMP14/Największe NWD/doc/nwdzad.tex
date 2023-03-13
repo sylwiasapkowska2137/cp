@@ -1,0 +1,31 @@
+\documentclass[zad,zawodnik]{sinol}
+\usepackage[utf8x]{inputenc}
+  \title{Największe NWD}
+  \id{nwd}
+  \signature{???}
+  \author{Mateusz Puczel} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \etap{początkująca}
+  \day{2}
+  \date{17.01.2017}
+  \RAM{128} % HINT: To pole uzupelnia opracowujacy
+ 
+\begin{document}
+  \begin{tasktext}%
+Dany jest ciąg $n$ liczb ${a_1}, {a_2}, ..., {a_n}$. Twoim zadaniem jest znaleźć w nim dokładnie $k$ elementów o największym NWD.
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera 2 liczby całkowite $n$, $k$ ($1 \leq k \leq n \leq 10^6$), 
+oznaczające odpowiednio długość ciągu oraz liczbę szukanych elementów.
+Kolejny wiersz zawiera $n$ liczb całkowitych dodatnich, oznaczające kolejne elementy ciągu. Elementy ciągu nie przekraczają $10^6$.
+
+Możesz założyć, że w testach wartych około $70\%$ punktów zachodzi dodatkowy warunek $n \leq 10^5$ oraz elementy ciągu nie przekraczają $5\cdot10^5$.
+  \section{Wyjście}
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, 
+równą największemu NWD znalezionego podciągu $k$-elementowego.
+
+     \makecompactexample    
+
+  \end{tasktext}
+\end{document}

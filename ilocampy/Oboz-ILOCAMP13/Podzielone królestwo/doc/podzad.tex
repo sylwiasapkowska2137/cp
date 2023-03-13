@@ -1,0 +1,61 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Podzielone królestwo}
+\id{pod}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{1}
+\date{26.09.2016}
+\RAM{128}
+
+\begin{document}
+\begin{tasktext}%
+Pewien król miał królestwo, w którym było $2n$ miast oraz dwóch synów -- Przemka i Jakuba. Król w swoim testamencie przekazał po $n$ miast każdemu z nich.
+
+Pewnego razu nastąpił podział królestwa na dwie części. Pierwszą część stanowiły miasta przepisane Przemkowi, a drugą miasta przepisane
+Jakubowi. Zostały też zniszczone wszystkie bezpośrednie połączenia pomiędzy miastami z dwóch różnych części.
+
+Nikt właściwie nie wie, dlaczego królestwo zostało podzielone, ponieważ Przemek i Jakub bardzo się lubią i
+mają ze sobą wiele wspólnego. Właściwie to niczym
+się nie różnią. Dlatego bracia postanowili odbudować i połączyć oba królestwa.
+
+Królestwo Przemka składa się z $n$ miast ponumerowanych liczbami naturalnymi od $1$ do $n$,
+połączonych pewną liczbą jednokierunkowych dróg. Analogicznie królestwo Jakuba.
+Przemek mieszka w mieście o numerze $p$ w swoim królestwie, a Jakub w mieście o numerze $j$ w swoim.
+
+Bracia chcą odbudować swoje królestwo w taki sposób, aby Przemek mógł dostać się do mieszkania Jakuba.
+Jednocześnie chcieliby przeprowadzić odbudowę jak najmniejszym kosztem.
+Niestety infrastruktura królestwa pozwala jedynie na zbudowanie \textbf{dwukierunkowego} mostu pomiędzy $i$-tym miastem w królestwie Przemka,
+a $i$-tym miastem w królestwie Jakuba.
+Innymi słowy, można wybudować most z dowolnego miasta do miasta w drugim królestwie o takim samym numerze.
+Koszt wybudowania mostu wynosi~$1$.
+
+Pracujesz w zarządzie dróg królewskich i twoim zadaniem jest wyznaczyć minimalny koszt odbudowy królestwa według ustaleń braci.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $p$, $j$ ($1 \leq p, j \leq n \leq 500\,000$), oznaczające
+odpowiednio liczbę miast w obu królestwach oraz numery miast, w których mieszkają Przemek i Jakub.
+
+W drugim wierszu wejścia znajduje się jedna liczba całkowita $m_p$ ($0 \leq m_p \leq 500\,000$), oznaczająca liczbę jednokierunkowych
+dróg w królestwie Przemka.
+
+W każdym z kolejnych $m_p$ wierszy znajdują się dwie liczby całkowite $a$, $b$ ($1 \leq a, b \leq n$, $a \neq b$), oznaczające,
+że w królestwie Przemka z miasta $a$ prowadzi jednokierunkowa droga do miasta $b$.
+
+W kolejnym wierszu wejścia znajduje się jedna liczba całkowita $m_j$ ($0 \leq m_j \leq 500\,000$), oznaczająca liczbę jednokierunkowych
+dróg w królestwie Jakuba.
+
+W każdym z kolejnych $m_j$ wierszy znajdują się dwie liczby całkowite $a$, $b$ ($1 \leq a, b \leq n$, $a \neq b$), oznaczające,
+że w królestwie Jakuba z miasta $a$ prowadzi jednokierunkowa droga do miasta $b$.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca minimalny koszt odbudowy królestwa.
+Jeżeli odbudowa królestwa nie jest możliwa, wypisz \texttt{NIE}.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+	\title{Ścieżki}
+	\id{sci}
+	\signature{xxx0000}
+	\author{Karol Farbiś}
+
+	\pagestyle{fancy}
+	\iomode{stdin}
+ 	\konkurs{WIC 2015, dzień świra}
+	
+	\day{???}
+	\date{22.08.2015}
+
+	\RAM{128}
+
+
+\begin{document}
+\begin{tasktext}%
+	\emph{Grafem zorientowanym} nazywamy parę zbiorów $\left(V,\, E\right)$ taką, że elementami $E$ są
+	uporządkowane pary elementów~$V$. Elementy zbioru $V$ nazywamy wierzchołkami,
+	elementy $E$ -- krawędziami. \emph{Ścieżką} długości $k$ nazywamy ciąg wierzchołków $\left(v_1,\, v_2,\, \ldots
+	,\, v_k,\, v_{k+1}\right)$ taki, że dla $i=1,\, 2,\, \ldots,\, k$ zachodzi $\left(v_i,\, v_{i+1}\right)\in E$
+	(innymi słowy, każde dwa kolejne wierzchołki są połączone krawędzią).
+
+	Dany jest graf $G$. Twoim zadaniem jest odpowiadanie na zapytania postaci: \textit{czy od wierzchołka $u$ do $v$
+	istnieje ścieżka długości dokładnie $k$?}.
+
+\section{Wejście}
+	W~pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $m$ ($1\leq n\leq 20$, $0\leq m\leq n(n-1)$),
+	oznaczające liczbę wierzchołków i krawędzi grafu. Wierzchołkami grafu są liczby całkowite od $0$ do $n-1$.
+	W~$m$~kolejnych wierszach znajduje się po dwie liczby całkowite $u$ i $v$
+	($0\leq u,\, v < n$, $u\neq v$), oznaczające istnienie krawędzi
+	$\left(u,\, v\right)$. Żadne dwa wiersze nie będą opisywały tej samej krawędzi.
+
+	W~następnym wierszu znajduje się pięć liczb całkowitych $q$, $S$, $A$, $B$ i $L$ ($1\leq q\leq 10^7$, $0\leq S,\, A,\, B,\, L < 2^{64}$),
+	oznaczające liczbę zapytań ($q$) i parametry generatora liczb pseudolosowych (reszta). Zapytania są generowane za~pomocą
+	generatora w~następujący sposób:
+	\vspace{-2ex}
+	\begin{verbatim}
+def rand():
+    S := S * A + B  #obliczenia są wykonywane modulo 2^64
+    return S
+
+def next_query():
+    u := rand() mod n
+    v := rand() mod n
+    k := rand() mod L
+
+    return (u, v, k)
+	\end{verbatim}
+	\vspace{-2ex}
+
+	W~około połowie testów zachodzi: $L \leq 100$, a w~około połowie (być może częściowo innej): $q\leq 10^4$.
+
+\section{Wyjście}
+	Na~wyjście należy wpisać jedną liczbę całkowitą w~systemie szesnastkowym taką, że $i$-ta cyfra w~zapisie binarnym
+	odpowiada na~$i$-te zapytanie (\texttt{1} -- odpowiedź twierdząca, \texttt{0} -- odpowiedź negatywna).
+
+\section{Przykład}
+	\makeexample 0
+
+\paragraph{Wyjaśnienie do przykładu} Zapytania w~teście przykładowym to:
+(2,\,~4,\,~3),
+(3,\,~4,\,~3),
+(1,\,~2,\,~1),
+(2,\,~2,\,~4),
+(4,\,~2,\,~2),
+(3,\,~1,\,~0),
+(2,\,~3,\,~0),
+(2,\,~0,\,~3),
+(0,\,~2,\,~1).
+Odpowiedzi to: $\text{000100011}_2$ = $\text{23}_{16}$.
+
+\end{tasktext}
+\end{document}

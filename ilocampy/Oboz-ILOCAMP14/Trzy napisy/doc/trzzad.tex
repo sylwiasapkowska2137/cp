@@ -1,0 +1,51 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Trzy napisy}
+\id{trz}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{18.01.2017}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek na obozie informatycznym dowiedział się niedawno, co to jest porządek leksykograficzny. Dokładniej, mówimy, że napis $s$ jest mniejszy
+leksykograficznie od napisu $t$, jeśli na pierwszej pozycji, na której te napisy się różnią, znak w napisie $s$ jest mniejszy od znaku w napisie $t$.
+Jeżeli taka pozycja nie istnieje, to $s$ jest mniejszy leksykograficznie od $t$, jeśli jest od niego krótszy.
+
+Przemek napisał dwa napisy $s$ i $t$ równej długości, takie że $s$ jest mniejszy leksykograficznie od $t$.  Chciałby teraz znaleźć trzeci napis $z$,
+taki że $s$ jest mniejszy leksykograficznie od $z$, a $z$ jest mniejszy leksykograficznie od $t$ oraz $z$ ma taką samą długość jak $s$ i $t$.
+Ponieważ napisy są długie, potrzebuje programu, który mu to obliczy.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedno słowo składające się z małych liter alfabetu angielskiego $s$ ($1 \leq |s| \leq 10^5$, gdzie $|s|$ oznacza długość słowa $s$).
+
+W drugim wierszu wejścia znajduje się jedno słowo składające się z małych liter alfabetu angielskiego $t$ ($1 \leq |t| \leq 10^5, |s| = |t|$, gdzie $|t|$ oznacza długość słowa $t$).
+
+  \section{Wyjście}
+Na wyjściu powinno znaleźć się jedno słowo składające się z małych liter alfabetu angielskiego, które spełnia wymagania Przemka. Jeżeli takie słowo nie istnieje,
+należy wypisać \texttt{NIE}. Jeżeli takich słów jest wiele, należy wypisać dowolne z nich.
+
+  \section{Przykład}
+   \twocol{%
+       \noindent Dla danych wejściowych:
+       \includefile{../in/\ID0a.in}
+     }{%
+       \noindent jednym z poprawnych wyników jest:
+       \includefile{../out/\ID0a.out}
+     }
+   \twocol{%
+       \noindent natomiast dla danych wejściowych:
+       \includefile{../in/\ID0b.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID0b.out}
+     }
+
+\end{tasktext}
+\end{document}

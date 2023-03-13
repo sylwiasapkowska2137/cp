@@ -1,0 +1,43 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Konkurs}
+  \author{Mateusz Puczel}
+  \pagestyle{fancy}
+  \signature{mp???}
+  \id{kon}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{olimpijska}
+  \day{1}
+  \date{21.09.2015}
+  \RAM{128}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Przemek jest nauczycielem informatyki. W czasie obozu informatycznego zorganizował konkurs dla swoich uczniów.
+Najpierw napisał na tablicy ciąg $n$ nieujemnych liczb całkowitych ponumerowanych kolejno od $1$ do $n$, a następnie podyktował uczniom ciąg przedziałów.
+Ich zadaniem było jak najszybsze policzenie sumy liczb na każdym z podanych przedziałów tego ciągu.
+
+Zadanie Przemka okazało się zbyt proste. Wielu uczniów rozwiązało je w bardzo krótkim czasie, przez co ciężko było sprawiedliwie
+wyłonić zwycięzcę. Wpadł więc na pomysł: starł z tablicy cały ciąg i kazał swoim uczniom odtworzyć go na podstawie wcześniej podanych
+zapytań i obliczonych dla nich wyników.
+
+Jesteś uczestnikiem obozu i bardzo zależy ci na wygranej. W tym celu musisz znaleźć najmniejszą taką liczbę $k$,
+że pierwsze $k$ zapytań pozwala jednoznacznie odtworzyć ciąg, a następnie go wypisać. Możesz założyć, że poprawnie rozwiązałeś
+pierwsze zadanie, to znaczy, że odpowiedzi na podane zapytania są poprawne.
+  
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, m$ ($1 \leq n, m \leq 3\cdot10^6$), 
+oznaczające odpowiednio długość szukanego ciągu oraz liczbę zapytań.
+
+W każdym z kolejnych $m$ wierszy znajdują się trzy liczby całkowite $a, b, c$ ($1 \leq a \leq b \leq n$, $0 \leq c \leq 10^{9}$),
+oznaczające, że suma liczb na przedziale $[a, b]$ wynosi $c$.
+
+  \section{Wyjście}
+W pierwszym wierszu wyjścia powinna znaleźć się jedna liczba całkowita $k$ ($1 \leq k \leq m$), oznaczająca, że
+za pomocą pierwszych $k$ zapytań można jednoznacznie odtworzyć ciąg lub $-1$, gdy nie da się odtworzyć ciągu.
+Jeżeli da się jednoznacznie odtworzyć ciąg, to w drugim wierszu powinno znaleźć się $n$ liczb, oznaczających kolejne wartości szukanego ciągu.
+    \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

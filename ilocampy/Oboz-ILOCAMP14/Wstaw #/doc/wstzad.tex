@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wstaw \#}
+\id{wst}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{17.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Dane jest słowo $s$ o długości $n$ składające się wyłącznie z małych liter języka angielskiego. Podsłowo słowa $s$ jest jedwabiste wtedy, gdy liczba jego występień w $s$ 
+jest większa niż jeden. Musisz zamienić jedną literę $s$ na znak \# tak, aby długość najdłuższego jedwabistego podsłowa w nowopowstałym słowie była jak największa.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba naturalna $n$ ($1 \leq n \leq 10^5$), oznaczająca długość słowa $s$, które podane będzie w drugim wierszu wejścia.
+
+  \section{Wyjście}
+Na stadardowe wyjście należy wypisać dwie liczby całkowite $l$ i $p$ oznaczające kolejno długość najdłuższego jedwabistego podsłowa po zamianie jednej litery słowa $s$
+na \# oraz indeks litery, na której należy dokonać zamiany. Jeżeli istnieje wiele takich indeksów, należy wypisać najmniejszy z nich. Litery słowa numerujemy od $1$ do $l$.
+  
+\makecompactexample
+\noindent
+\textbf{Wyjaśnienie do przykładu:} Wynikowe podsłowo jedwabiste to $aab$.
+
+\end{tasktext}
+\end{document}

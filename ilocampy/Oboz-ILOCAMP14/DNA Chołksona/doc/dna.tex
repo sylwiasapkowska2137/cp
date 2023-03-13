@@ -1,0 +1,47 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{DNA Chołksona}
+\id{dna}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{17.01.2017}
+\RAM{64}
+
+\usepackage{enumitem}
+ 
+\begin{document}
+\begin{tasktext}%
+Szalony Chołkson tym razem postanowił pozabijać humanistów przy użyciu zainfekowanego DNA. Humaniści nie są skomplikowanymi istotami,
+dlatego łańcuchy cząstek ich DNA składają się jedynie z dwóch zasad: 
+
+\begin{itemize}
+\item zasady W - reprezentującą Wenę Twórczą oraz
+\item zasady G - reprezentującą Głupotę.
+\end{itemize}
+
+Chołkson tworząc nowe DNA zawsze zaczyna od jednej zasady typu W. Następnie jego apokaliptyczna maszyna co sekundę podwaja długość łańcucha.
+Dokładniej, każdą zasadę typu W zastępuje parą zasad GW, a każdą zasadę typu G zastępuje parą zasad WG. Tak więc po pierwszej sekundzie
+łańcuch DNA będzie wyglądał tak: GW, a po drugiej następująco: WGGW.
+
+Proces infekowania DNA przez Chołksona następuje dopiero po zakończeniu pracy jego maszyny. Chołkson zastanawia się jednak, ile sekund powinna
+działać jego maszyna, aby zwrócić DNA najlepiej nadające się do tuningu. DNA zdaniem szaleńca jest tym lepsze, im więcej istnieje w nim
+sąsiadujących ze sobą zasad reprezentujących Głupotę modulo $10^9+7$. Musisz uwierzyć mu na słowo.
+
+Chołkson nadal zmaga się z po-analizowym zboczeniem, dlatego to Ty musisz stwierdzić, na ile hekatombiczne DNA powstanie po $t$ sekundach pracy jego maszyny.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $t$ ($0 \leq t \leq 10^6$) oznaczająca liczbę sekund przez które będzie pracować maszyna
+Chołksona.
+
+ \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbę całkowitą równą liczbie sąsiadujących ze sobą zasad typu G w łańcuchu DNA
+otrzymanym po $t$ sekundach pracy maszyny modulo $10^9+7$.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

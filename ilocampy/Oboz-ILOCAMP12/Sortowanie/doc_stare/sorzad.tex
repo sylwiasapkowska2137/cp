@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Sortowanie}
+  \author{?}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{sor}
+  \iomode{stdin}
+  \etap{olimpijska}
+  \day{3}
+  \date{26.09.2012}
+  \RAM{32}
+  \history{2011.02.20}{JTom, pomys³ i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Ma³y Adrianek dosta³ ostatnio w prezencie zestaw pude³ek. Ka¿de pude³ko ma na przodzie napisany numerek. Wszystkie numerki s± ró¿ne. 
+
+Adrianek umie¶ci³ pude³ka w rzêdzie na pod³odze i teraz postanowi³, ¿e chce je posortowaæ wg numerów w kolejno¶ci rosn±cej. Oprócz pude³ek, Adrianek otrzyma³ w prezencie maszynê do ich sortowania. Maszyna dzia³a w nastêpuj±cy sposób: Adrianek wybiera pewien podzbiór pude³ek, nastêpnie maszyna chwyta wybrane pude³ka, i umieszcza je na koñcu rzêdu (zachowuj±c oryginaln± kolejno¶æ wybranych elementów), zostawiaj±c niewybrane pude³ka na pocz±tku rzêdu (ich oryginalna kolejno¶æ równie¿ zostaje zachowana).
+
+Je¶li pocz±tkowy porz±dek pude³ek to $[1,2,3,4,5,6]$ i Adrianek wybiera pude³ka $[2,3,5]$ to po wykonaniu tej operacji pude³ka zmieni± swoj± kolejno¶æ na $[1,4,6,2,3,5]$.
+
+Pomó¿ Adriankowi napisaæ program, który obliczy jak± minimaln± liczbê operacji musi wykonaæ maszyna, aby posortowaæ rosn±co rz±d pude³ek. Adrianek jest zbyt zajêty trollolowaniem na sprawdzaczce, wiêc nie ma na to czasu.
+
+  \section{Wej¶cie}
+W pierwszej linii wej¶cia znajduje siê liczba ca³kowita $z$, oznaczaj±ca liczbê zestawów danych. Nastêpnie na wej¶ciu pojawi siê opis $z$ zestawów danych. 
+
+Opis ka¿dego zestawu sk³ada siê z liczby naturalnej $n$, oznaczaj±cej liczbê pude³ek, które otrzyma³ Adrianek. W nastêpnym wierszu znajduje siê $n$ ró¿nych liczb ca³kowitych $a_1, a_2, \ldots, a_n$ ($1 \leq a_i \leq n$), gdzie $a_i$ oznacza numer $i$-tego pude³ka w rzêdzie. 
+
+Suma warto¶ci $n$ we wszystkich testach nie przekroczy $2 \,000\,000$.
+
+  \section{Wyj¶cie}
+Na wyj¶ciu nale¿y wypisaæ $z$ liczb ca³kowitych. W $i$-tej linii nale¿y wypisaæ odpowied¼ dla $i$-tego zestawu danych -- minimaln± liczbê operacji, jakie musi wykonaæ maszyna.
+
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

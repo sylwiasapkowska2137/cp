@@ -1,0 +1,22 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dziwna gra planszowa}
+\id{dgp}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+  \section{Wejście}
+  \section{Wyjście}
+\makecompactexample
+
+\end{tasktext}
+\end{document}

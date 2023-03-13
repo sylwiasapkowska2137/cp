@@ -1,0 +1,24 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Klocki}
+\id{klo}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{2}
+\date{27.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+  \section{Wejście}
+  
+  \section{Wyjście}
+  
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

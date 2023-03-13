@@ -1,0 +1,20 @@
+1. 3 typy z odleglosciami: (1, 2, 3,.., x, 1, 2, 3, ..., x, ...), n=7 m=14, x = 6
+2. wszystkie takie same, rowne odstepy, 2 7
+3. wszystkie takie same, jeden odstep inny, 3 20
+4. 2 typy zegarow, w pierwszym jeden inny odstep, w drugim dwa inne niz reszta, n=20 m=30
+5. 3 typy z odleglosciami: (1, 2, 3,.., x, 1, 2, 3, ..., x, ...), n=80 m=70, x = 20
+6. losowy, najwyzej k typow zegarow, n = 50, m = 70, k = 5
+7. losowy, najwyzej k typow zegarow, n = 90, m = 90, k = 40
+8. losowy, najwyzej k typow zegarow, n = 95, m = 97, k = 15
+9. losowy, najwyzej k typow zegarow, n = 100, m = 100, k = 3
+10. losowy, najwyzej k typow zegarow, n = 100, m = 100, k = 100
+11. 3 typy z odleglosciami: (1, 2, 3,.., x, 1, 2, 3, ..., x, ...), n=1000 m=1000, x = 6
+12. wszystkie takie same, rowne odstepy, n=1000 m=1000
+13. wszystkie takie same, jeden odstep inny, n=998 m=997
+14. 2 typy zegarow, w pierwszym jeden inny odstep, w drugim dwa inne niz reszta, n=950 m=1000
+15. 3 typy z odleglosciami: (1, 2, 3,.., x, 1, 2, 3, ..., x, ...), n=1000 m=1000, x = 4
+16. 3 typy z odleglosciami: (1, 2, 3,.., x, 1, 2, 3, ..., x, ...), n=1000 m=1000, x = 50
+17. losowy, najwyzej k typow zegarow, n = 850, m = 850, k = 100
+18. losowy, najwyzej k typow zegarow, n = 888, m = 1000, k = 10
+19. losowy, najwyzej k typow zegarow, n = 1000, m = 1000, k = 2
+20. losowy, najwyzej k typow zegarow, n = 1000, m = 1000, k = 987

@@ -1,0 +1,42 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Grobowiec}
+\id{grb}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{średnio-zaawansowana}
+\day{?}
+\date{??.09.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przebywając na wakacjach w słonecznym Egipcie, Przemek odkrył zaginiony grobowiec faraona Chołochamona, który zgodnie ze starymi binarnymi mitami cechował się nadludzkimi umiejętnościami matematycznymi. Ponadto w grobowcu znajduje się potężny artefakt zwany liczydłem Chołochamona, który obdarza użytkownika nadludzkimi zdolnościami w zakresie liczenia skończonych granic ciągów liczbowych.
+
+W grobowcu znajduje się $n$ komnat, które łączą korytarze w taki sposób, że pomiędzy dwiema dowolnymi komnatami istnieje dokładnie jedna, niekoniecznie bezpośrednia, droga. Wejście do grobowca znajduje się w pierwszej komnacie, a sam Chołochamon został pochowany wraz z jego liczydłem w komnacie numer $n$. Dostanie się do miejsca pochówku faraona nie jest jednak takie łatwe, ponieważ w każdym z korytarzy zostały umieszczone śmiercionośne pułapki, które pozbawią życia każdego kto odważy się postawić nogę w grobowcu.
+
+Przemek zauważył, że każdy z korytarzy został zbudowany z jednego z $k$ kolorów piaskowca. Nie byłoby to tak istotne, gdyby nie to, że w każdej komnacie znajduje się przycisk, którego wciśnięcie powoduje wyłączenie pułapek we wszystkich komnatach danego koloru oraz w tym samym czasie aktywuje pułapki w komnatach innego danego koloru. Przed wejściem do grobowca wszystkie pułapki są aktywne.
+
+Przemek uznał, że los nie obdarzy go drugą taką szansą na zostanie najlepszym na świecie w liczeniu skończonych granic ciągów liczbowych, więc bez tracenia czasu postanowił udać się do grobowca i zdobyć artefakt. Przed tym chciałby jednak poznać najmniejszą liczbę korytarzy, przez które będzie musiał przejść, aby bezpiecznie zdobyć liczydło, a następnie bez zadrapania opuścić budynek. 
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($2 \leq n \leq 10^5$, $2 \leq k \leq 5$), które oznaczają kolejno liczbę komnat w grobowcu Chołochamona oraz liczbę kolorów korytarzy.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $p_i$ ($1 \leq p_i \leq k$), które oznaczają że wciśnięcie przycisku w $i$-tej komnacie umożliwia przejście korytarzami $p_i$-tego koloru.
+
+W trzecim wierszu wejścia znajduje się $n$ liczb całkowitych $q_i$ ($1 \leq q_i \leq k$, $q_i \neq p_i$), które oznaczają że wciśnięcie przycisku w $i$-tej komnacie uniemożliwia przejście korytarzami $q_i$-tego koloru.
+
+W każdym z ostatnich $n-1$ wierszy znajdują się trzy liczby całkowite $a_i$, $b_i$ oraz $c_i$ ($1 \leq a_i, b_i \leq n$, $a_i \neq b_i$, $1 \leq c_i \leq k$), które oznaczają, że komnaty $a_i$ oraz $b_i$ łączy korytarz $c_i$-tego koloru.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać liczbę całkowitą oznaczającą minimalną liczbę korytarzy, którymi należy przejść, aby zdobyć artefakt po czym uciec z grobowca lub \texttt{NIE}, jeśli jest to niemożliwe bez uruchomienia żadnej pułapki.
+
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Najkrótsza możliwa droga przebiega kolejno przez komnaty o numerach (podkreślenie numeru komnaty oznacza wciśnięcie przycisku): \underline{1} $\rightarrow$ \underline{2} $\rightarrow$ 1 $\rightarrow$ 3 $\rightarrow$ 4 $\rightarrow$ \underline{5} $\rightarrow$ 4 $\rightarrow$ 8 $\rightarrow$ 4 $\rightarrow$ \underline{3} $\rightarrow$ 1. 
+\end{tasktext}
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wartość bezwzględna}
+\id{wrt}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{19.01.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Dany jest ciąg liczb całkowitych. Chcemy wybrać z niego 3 elementy tak, aby wartość $|s - m|$ była jak największa,
+gdzie $s$ oznacza średnią arytmetyczną tych liczb, a $m$ - medianę.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca 
+liczbę elementów w ciągu. Kolejny wiersz zawiera $n$ dodatnich liczb całkowitych, reprezentujących kolejne wartości
+elementów podanego ciągu. Liczby te nie będą większe niż $10^9$.
+
+  \section{Wyjście}
+    Należy wypisać największą możliwą wartość bezwzględną z różnicy pomiędzy średnią arytmetyczną a medianą 
+    pewnego trzyelementowego podzbioru podanego ciągu. Wynik powinien być wypisany z dokładnością do dwóch
+    miejsc po przecinku.
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+\usepackage{hyperref}
+
+\title{Żetony}
+\id{zet}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{17.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Bajtocki Festiwal Bitów to największe wydarzenie kulturalne w całej Bajtocji. W jego trakcie odbywają się Mistrzostwa Świata w Rozpruwania Liczb, których uczestnicy rywalizują o miano najlepszego Rozpruwacza Liczb w kraju. Ale w tym roku to nie oni stali się największą atrakcją festiwalu, a gra w którą można było zagrać na jednym ze stoisk i nieźle się wzbogacić. Jej zasady prezentują się następująco.
+
+Na stole do gry ustawionych zostaje $n$ stosów po $a_i$ żetonów w każdym. Osoba próbująca swoich sił w zabawie, w swoim pierwszym ruchu wybiera dowolny ze stosów, a w każdym kolejnym wybiera dowolny inny, sąsiadujący z pewnym już wcześniej wybranym. Jednakże, gracz może wykonać taki ruch tylko jeśli największy wspólny dzielnik liczby żetonów na wszystkich wybranych stosikach, łącznie z aktualnie wybranym, jest różny od 1. Gra kończy się, gdy nie można już wybrać żadnego stosika, a wygrana gracza jest równa sumie żetonów ze wszystkich wybranych przez niego stosów.
+
+Przemek jak co roku udał się na festiwal i, podobnie jak innych, urzekła go opisana wyżej gra. Teraz nie może się doczekać, aż sam będzie mógł jej spróbować. Kolejka do stoiska jest jeszcze bardzo długa, więc Przemek postanowił dla każdego stosu obliczyć maksymalną wygraną jeśli wykona on pierwszy ruch na tym stosiku i będzie grał optymalnie, czyli tak aby wygrana była jak największa.
+
+  \section{Wejście}
+
+W pierwszym wierszu znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę stosików.
+
+W drugim wierszu znajduje się $n$ liczb całkowitych $a_i$ ($1 \leq a_i \leq 10^6$), oznaczające liczbę żetonów na $i$-tym stosiku.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $n$ liczb całkowitych oddzielonych pojedynczymi spacjami. $I$-ta z nich powinna być równa maksymalnej wygranej gracza, zakładając że w pierwszym ruchu wybrał $i$-ty stosik.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

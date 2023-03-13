@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik]{sinol}
+  \def\sinolContestLogo{ILOlogo}
+  \info{Bia³ystok 2013, zawody zespo³owe}
+  \title{Fara³}
+  \signature{}
+  \id{F}
+  \etap{}
+  \day{}
+  \date{03.06.2013}
+  \RAM{128}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Mateusz Puczel}
+  \history{03.06.2013}{}{1.00}
+  \history{03.06.2013_11-06}{Poprawienie wyja¶nienie do przyk³adu.}{1.01}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji zbli¿a siê XXVI maraton. Rafa³ bardzo lubi biegaæ i chcia³by wzi±æ udzia³ w maratonie, lecz ze wzglêdu na zbyt ma³e umiejêtno¶ci oraz zbyt du¿± masê, nie jest w stanie przebiec go w ca³ej d³ugo¶ci. Pomimo to, Rafa³ nie odpuszcza i przygotowa³ sobie program treningowy, który zawiera $n$ odcinków o ró¿nym stopniu trudno¶ci do pokonania. Rafa³ ma wytrzyma³o¶æ $X$. Ka¿dego dnia przebiega odcinki w ustalonej kolejno¶ci, a na ka¿dym odcinku jego wytrzyma³o¶æ zmniejsza siê o poziom trudno¶ci odcinka. Rafa³ koñczy trening, gdy odcinek który go czeka ma wiêksz± trudno¶æ ni¿ Rafa³ wytrzyma³o¶æ. Wówczas przyje¿d¿a po niego Adam i zabiera go do domu. W rezultacie, poziom trudno¶ci ka¿dego odcinka, który przebieg³ Rafa³ danego dnia zmniejsza siê o $1$ oraz jednocze¶nie wytrzyma³o¶æ Rafa³a zwiêksza siê o liczbê odcinków, któr± przebieg³ danego dnia. Rafa³ chcia³by wiedzieæ, którego dnia bêdzie w stanie pokonaæ ka¿dy odcinek, aby móg³ z wiêksz± pewno¶ci± wystartowaæ w maratonie. Poniewa¿ Rafa³ w tej chwili biega, Ty napiszesz program, który obliczy, którego dnia Rafa³ przebiegnie wszystkie odcinki. Je¿eli trudno¶æ odcinka spadnie poni¿ej $0$, staje siê on dla Rafa³a tak prosty, ¿e zwiêksza na tym odcinku swoj± wytrzyma³o¶æ.
+
+  \section{Wej¶cie}
+W pierwszymwierszu liczba naturalna $n$ ($1 \leq n \leq 10^5$) oraz liczba $X$ ($1 \leq X \leq 10^9$) oznaczaj±ce kolejno liczbê odcinków do pokonania oraz pocz±tkow± wytrzyma³o¶æ Rafa³a.
+
+Kolejny wiersz zawiera $n$ liczb ca³kowitych $a$ ($0 \leq a \leq 10^9$) oznaczaj±ce trudno¶ci kolejnych odcinków, które Rafa³ bêdzie pokonywa³.
+
+
+  \section{Wyj¶cie}
+Jedna liczba ca³kowita $T$, oznaczaj±ca dzieñ, którego Rafa³ przebiegnie wszystkie odcinki lub s³owo \texttt{NIE} w przypadku gdy nie da siê ukoñczyæ programu treningowego. Rafa³ zaczyna dnia nr $1$.
+
+   \makecompactexample
+
+  \section{Wyja¶nienie do przyk³adu}
+Pierwszego dnia Rafa³ pokonuje pierwszy odcinek, jego wytrzyma³o¶æ wzrasta do $7$, a trudno¶æ odcinków wynios± kolejno: $3$ $4$ $3$ $2$.
+\\Drugiego dnia pokonuje $2$ odcinki, wytrzyma³o¶æ wzrasta do $9$, a trudno¶ci odcinków wynosz± kolejno: $2$ $3$ $3$ $2$.
+\\Trzeciego dnia Rafa³ pokona $3$ odcinki, wytrzyma³o¶æ wzro¶nie do $12$, a trudno¶ci odcinków wynios± kolejno: $1$ $2$ $2$ $2$.
+\\Czwartego dnia Rafa³owi starczy wytrzyma³o¶ci aby pokonaæ wszystkie odcinki.
+
+  \end{tasktext}
+\end{document}

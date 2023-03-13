@@ -1,0 +1,79 @@
+\documentclass[opr,utf8]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{pjk???}
+  \id{zam}
+  \title{Zamach}
+  \author{Przemysław Jakub Kozłowski}
+  \iomode{stdin}
+  \etap{olimpijska}
+  \day{2}
+  \date{27.09.2017}
+  \RAM{64}
+  \history{}{}{1.00}
+
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Uproszczona treść zadania Zamach}
+
+Mamy zmodyfikowaną szachownicę. Szachownica ma $N$ kolumn ($N \leq 1\,000$), których ,,dolna krawędź'' leży na jednej prostej. Każda kolumna jednak może mieć inną wysokość, tzn. inną liczbę pól. Na wejściu dodatkowo dostajemy $K$ wież. Chcemy wiedzieć na ile sposobów możemy rozstawić te wieże tak, aby się nie szachowały (modulo $10^9+7$). Wieże szachują się wtedy kiedy są w tej samej kolumnie lub w tym samym wierszu, przy czym pomiędzy wieżami, w wierszu tym nie może być ,,dziury''.
+
+\section{Opis rozwiązań zadania Zamach}
+
+Podstawą planszy nazwiemy rozmiar jej dolnego boku (czyli $N$ dla całej planszy z zadania).
+
+Tablicą wyników dla planszy o podstawie $N$, nazwiemy taką tablicę $tab$ o rozmiarze $N$, gdzie $tab[I]$ to liczba sposobów rozmieszczenia $I$ wież na tej planszy (czyli wynik dla tej planszy przy założeniu, że chcemy rozmieścić dokładnie $I$ wież).
+
+\textbf{Obserwacja 1}: Przyjmijmy, że na planszy o podstawie $N$ istnieje kolumna o wysokości $0$. Wtedy możemy podzielić planszę na dwie części: lewą o podstawie $X$ i prawą o podstawie $Y$ (po odpowiednich stronach od tej kolumny). Obie te plansze są od siebie w pełni niezależne (wieże pomiędzy nimi się nie szachują). Jeśli mamy tablice wyników dla obu tych planszy (lewej i prawej) $tabLEWA[X]$ i $tabPRAWA[Y]$ to możemy na podstawie nich obliczyć tablicę wyników dla całej planszy $tabCAŁA[N]$. Takie obliczenie wykonujemy w złożoności $O(X \cdot Y)$. Robimy to po prostu tak: $tabCAŁA[K] = tabLEWA[0] \cdot tabPRAWA[K] + tabLEWA[1]~\cdot~ tabPRAWA[K-1] + ... + tabLEWA[K] \cdot tabPRAWA[0]$.
+
+\textbf{Obserwacja 2}: Przyjmijmy, że na planszy o podstawie $N$ nie istnieje kolumna o wysokości $0$ (czyli najniższy wiersz jest ,,pełny''). Jeśli mamy tablicę wyników dla tej planszy to możemy w złożoności $O(N)$ policzyć tablicę wyników dla planszy, w której każda kolumna jest zmniejszona o $1$ (czyli dolny wiersz jest wykreślony). Niech $tabD[N]$ oznacza tablicę wyników dla początkowej planszy, a $tabG[N]$ oznacza tablicę wyników dla planszy, w której każda kolumna jest zmniejszona o $1$ (czyli dolny wiersz jest wykreślony). Zauważmy, że $tabG[K] = tabD[K] - tabG[K - 1]  \cdot  (N - (K - 1))$ dla każdego $K$ ($1 \leq K \leq N$). Jest tak, ponieważ liczba sposobów rozmieszczenia $K$ wież na planszy bez dolnego wiersza jest równa liczbie sposobów rozmieszczenia $K$ wież na całej planszy odjąć liczba sposobów rozmieszczenia $K$ wież na całej planszy z założeniem, że w najniższym wierszu musi stać wieża. Jeśli chcemy rozmieścić $K$ wież na całej planszy i w najniższym wierszu koniecznie musi stać wieża to możemy zrobić tak, że najpierw rozmieścimy $K-1$ wież na planszy bez najniższego wiersza, a następnie w najniższym wierszu postawimy wieżę na jednej z $N-(K-1)$ pozycji, które pozostały do wykorzystania (nieszachowane). Analogicznie możemy zrobić w drugą stronę, czyli też liczyć tablicę wyników dla planszy, w której każda kolumna została zwiększona o $1$ (czyli dolny wiersz dostawiony).
+
+\textbf{Rozwiązanie zadania w złożoności $O(N \cdot (N+H))$} (gdzie $H$ to wysokość najwyższej kolumny): Jeśli najniższy wiersz jest pełny to go wykreślamy, obliczamy tablicę wyników rekurencyjnie dla pozostałej planszy, a następnie dostawiamy najniższy wiersz i obliczamy końcową tablicę wyników korzystając z \textit{Obserwacji 2} w złożoności $O(N)$. Jeśli natomiast istnieje kolumna o wysokości $0$ to wtedy dzielimy planszę na dwie: lewą o podstawie $X$ i prawą o podstawie $Y$, następnie obliczamy tablice wyników rekurencyjnie dla obu tych planszy, a następnie korzystając z \textit{Obserwacji 1} obliczamy końcową tablicę wyników dla całej planszy w złożoności $O(X \cdot Y)$.
+
+\textbf{Obserwacja 3}: Jeśli mamy prostokąt o wymiarach $N \times M$ i chcemy na nim rozmieścić $K$ wież to możemy to zrobić na $\binom{N}{K} \cdot \binom{M}{K} \cdot (K!)$ sposobów. Ta liczba po obliczeniu wynosi: $\frac{N! \cdot M!}{(N-K)! \cdot (M-K)! \cdot K!}$, a to jest równe $ \frac{N!}{(N-K)!} \cdot \frac{M!}{(M-K)!} / (K!)$. Mamy możliwość obliczenia tego w złożoności $O(K)$ bardzo prosto jeśli możemy wykonywać "dzielenie modulo" (odwrotność modulo). Jeśli $N < K$ lub $M < K$ to wtedy wynikiem jest oczywiście $0$.
+
+\textbf{Rozwiązanie zadania w złożoności $O(N^2 \cdot \sqrt{N})$}: Znajdujemy najniższą kolumnę na planszy. Dzielimy planszę na dwie: lewą o podstawie $X$ i prawą o podstawie $Y$ ($X+Y+1 = N$). Najniższa kolumna jest po środku. Niech $V$ oznacza wysokość najniższej kolumny. Bez straty ogólności możemy przyjąć, że $X \leq Y$ (ponieważ planszę możemy odbić symetrycznie). Teraz rozważymy dwa przypadki.
+
+\textbf{Przypadek $X > \sqrt{Y}$}: W tym przypadku każdą kolumnę zmniejszamy o $V$. Po tej operacji nasza najniższa kolumna ma wysokość $0$. Następnie obliczamy rekurencyjnie tablicę wyników dla lewej planszy, oraz dla prawej planszy. Gdy już obliczyliśmy te tablice wyników to korzystając z \textit{Obserwacji 1}, scalamy te $2$ tablice w jedną tablicę wyników dla całej planszy (złożoność $O(X \cdot Y)$) $tabCALA[N]$. Następnie na dole dostawiamy z powrotem $V$ wierszy i obliczamy ostateczną tablicę wyników dla całej planszy. Jednak nie możemy tego zrobić po prostu korzystając z \textit{Obserwacji 2}, ponieważ wtedy obliczenie ostatecznej tablicy wyników miałoby złożoność $O(V \cdot N)$, a $V$ może być bardzo duże (np. $10^9$). W celu obliczenia ostatecznej tablicy wyników skorzystamy z \textit{Obserwacji 3}. Bierzemy pod uwagę każdą parę liczb $(a,b)$ ($1 \leq a,b \leq N$). Liczba $a$ oznacza ile wież chcemy ustawić powyżej $V$ najniższych wierszy, a liczba $b$ oznacza ile wież chcemy ustawić wewnątrz prostokąta składającego się z $V$ najniższych wierszy. Rozważamy każdą możliwą parę $(a,b)$, więc rozważymy każde możliwe ustawienie wież. Dla każdej pary $(a,b)$ policzymy na ile sposobów w taki sposób można rozstawić wieże i ten wynik dodamy do ostatecznej tablicy wyników pod indeksem $a+b$, bo tyle będzie łącznie wież. Jeśli na górze rozstawiamy $a$ wież to możemy to zrobić na $tabCALA[a]$ sposobów. Jeśli już rozstawiliśmy na górze $a$ wież to $a$ kolumn jest teraz "zaszachowanych", więc nasz dolny prostokąt o wysokości $V$ "stracił" $a$ kolumn (nie możemy tam umieszczać wież), więc pozostał nam prostokąt o wymiarach $V \times (N-a)$. W takim prostokącie, korzystając z \textit{Obserwacji 3}, możemy rozstawić $b$ wież na $\frac{V! \cdot (N-a)!}{(V-b)! \cdot (N-a-b)! \cdot b!}$ sposobów. Czyli łącznie parę $(a,b)$ da się uzyskać na $tabCALA[a] \cdot \frac{V! \cdot (N-a)!}{(V-b)! \cdot (N-a-b)! \cdot b!}$ sposobów. Zwiększając $b$ o $1$ jesteśmy w stanie w czasie stałym obliczyć ten wzór (o ile możemy korzystać z odwrotności modulo). W ten sposób ostateczną tablicę wyników obliczamy w złożoności $O(Y^2)$.
+
+\textbf{Przypadek $X \leq \sqrt{Y}$}: W tym przypadku nie zmniejszamy kolumn prawej planszy o $V$. Rekurencyjnie obliczamy tablicę wyników dla prawej planszy (bez zmniejszonych kolumn) $tabPRAWA[Y]$. Następnie rekurencyjnie obliczamy tablicę wyników dla lewej planszy (ale tutaj ze zmniejszonymi kolumnami o $V$) $tabLEWA[X]$. Gdy już mamy te $2$ tablice wyników obliczone to teraz chcemy obliczyć ostateczną tablicę wyników dla całej oryginalnej planszy. W tym celu rozważymy każdą trójkę liczb $(a, b, c)$. ($1 \leq a \leq x$, $1 \leq b \leq x+1$, $1 \leq c \leq y$). Liczba $a$ oznacza ile wież chcemy ustawić w lewej planszy (tej o podstawie $X$) powyżej $V$ najniższych wierszy. Liczba $b$ oznacza ile wież chcemy ustawić wewnątrz $V$ najniższych wierszy w lewej planszy połączonej ze środkową kolumną (bez prawej planszy). Prostokąt ten ma wymiary $V \times (X+1)$. Liczba $c$ oznacza ile wież chcemy ustawić w całej prawej planszy. Analogicznie jak w pierwszym przypadku, obliczamy liczbę sposobów dla każdej takiej trójki i dodajemy do ostatecznej tablicy wyników pod indeksem $a+b+c$. Gdy w lewej planszy na górze rozstawiamy $a$ wież to możemy to zrobić na $tabLEWA[a]$ sposobów. Po rozstawieniu $a$ wież, zostało wykreślonych $a$ kolumn, więc prostokąt poniżej ma teraz wymiary $V \times (X+1-a)$. W takim prostokącie $b$ wież możemy rozstawić na $\frac{V! \cdot (X+1-a)!}{(V-b)! \cdot (X+1-a-b)!}$ sposobów. Analogicznie jak w pierwszym przypadku, jeśli będziemy zwiększali $b$ o $1$ to w czasie stałym możemy obliczać ten wzór. Gdy już mamy obliczoną liczbę sposobów na rozstawienie pierwszych $a$ wież i kolejnych $b$ wież to teraz chcemy obliczyć liczbę sposobów na ustawienie $c$ wież w prawej planszy. Zauważmy, że pierwsze $a$ wież w ogóle nie wpływają na prawą planszę. Z kolej każda z kolejnych $b$ wież wpływa na prawą planszę (wykreśla z niej jeden pełny wiersz, który jest szachowany). Dzięki temu możemy obliczyć tablicę wyników dla prawej planszy z wykreślonymi $b$ najniższymi wierszami korzystając z \textit{Obserwacji 2} w złożoności $O(b)$. Obliczamy taką tablicę wyników i z tej tablicy wyników odczytujemy wynik spod indeksu $c$. Dzięki temu mamy wszystko co potrzebowaliśmy i możemy obliczyć ostateczną tablicę wyników. Obliczanie tej tablicy zajęło nam złożoność $O(X^2 \cdot Y)$.
+
+W ten sposób rozwiązaliśmy zadanie w złożoności $O(N^2 \sqrt{N})$.
+
+\end{tasktext}
+\end{document}

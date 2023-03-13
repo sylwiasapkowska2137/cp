@@ -1,0 +1,29 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Jedna deska}
+\id{jed}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{2}
+\date{27.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Jaco jest właścicielem wielkiej posiadłości w Serwach.
+Niestety niedawno jego okolice odwiedziła burza z~piorunami i podziurawiła cały dach (dziury w dachu są przedstawione jako punkty na osi współrzędnych).
+Jaco sam zabrał się za naprawę dachu.
+
+Jaco postanowił przykryć wszystkie dziury dokładnie jedną kwadratową deskę.
+Deska powinna być położona równolegle do osi układu współrzędnych.
+Powiedz Jacowi jaka jest najmniejsza długość boków deski, tak aby było to możliwe.
+
+Zak³adamy, ¿e dach Jaca ma bardzo du¿± powierzchniê, tak du¿± ¿e przyjmujemy ¿e jest nieskoñczony. 
+  \section{Wejście}
+  \section{Wyjście}
+\makecompactexample
+\end{tasktext}
+\end{document}

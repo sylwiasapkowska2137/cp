@@ -1,0 +1,47 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dzięcioły}
+\id{dzi}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{1}
+\date{16.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+W lesie Lothl\'{o}rien od zarania dziejów rosło potężne, magiczne drzewo, które miało dla elfów olbrzymie znaczenie kulturowe. Niestety mroczne siły zesłały nań 
+parszywe, jadowite robaki, które zaczęły zatruwać drzewiastą królowę. Bezsilne elfy postanowiły zawrzeć pakt z dzięciołami i wprowadzić je do niektórych dziupli
+chorego drzewa. 
+
+Dziuple znajdują się na każdym rozwidleniu gałęzi. Każda gąłąź, która prowadzi między dwiema dzuplami, ma wyceniony przez elfy stopień choroby.
+Jeżeli w pewnej dziupli zamieszka dzięcioł, wydziubiuje on robaki ze wszystkich gałęzi, które bezpośrednio wychodzą z rozwidlenia, w którym ta dziupla się znajduje,
+lecząc w ten sposób każdą z nich. Jeżeli na żadnym z dwóch końców gałęzi nie mieszka dzięcioł, robaki sieją na niej zarazę pogarszając stan całego drzewa
+o podany przez elfy stopień choroby tej gałęzi. Władca dzięciołów - Dziobomir - ostrzegł jednak Galadierę, że jego podwładni są bardzo waleczni i wprowadzenie dzięciołów 
+do dwóch sąsiednich dziupli wywoła u nich bój o krawędź pomiędzy ich schronieniami. W konsekwencji żaden z nich nie wyleczy wspomnianej gałęzi i stan drzewa się pogorszy.
+Dziobomir zniecierpliwił się naradami elfów omawiającymi liczbę dzięciołów potrzebnych do wyleczenia drzewa i wysłał oddział liczący $k$ dzięciołów, 
+wymuszając na elfach zakwaterowanie ich w drzewiastej królowej, nawet jeśli jest ich za dużo. Oczywiście w jednej dziupli drzewa może mieszkać co najwyżej jeden dzięcioł.
+
+Elfy nie były szkolone w zakresie matematyki i programowania, a obawiają się, że bez tych umiejętności nie uda im się tak rozmieścić dzięciołów, aby zminimalizować
+poziom choroby drzewa. Pomóż im, a na pewno uraczą Cię wyborniejszym posiłkiem niż szef kuchni Albatrosa. 
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq k \leq n \leq 1000$), oznaczające odpowiednio liczbę dziupli w drzewie oraz 
+liczbę dzięciołów, które wysłał Dziobomir. Dziuple dla uproszczenia ponumerowane są liczbami od $1$ do $n$.
+
+W każdym z kolejnych $n-1$ wierszy znajdują się trzy liczby całkowite $a_i$, $b_i$ oraz $w_i$ ($1 \leq a_i, b_i \leq n$, $a_i~\neq~b_i$, $1 \leq w_i \leq 10^9$),
+reprezentujące kolejne gałązie drzewa, gdzie $a_i$ i $b_i$ to numery dziupli pomiędzy którymi prowadzi gałąź, a $w_i$ to współczynnik choroby tej gałęzi.
+Gałęzie znajdujące się na samym szczycie drzewa (czyli takie, które nie prowadzą pomiędzy dwiema dziuplami) nie wymagają leczenia, gdyż można je uciąć, dlatego
+nie pojawiają się na wejściu.
+
+ \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbę całkowitą będącą minimalnym stopniem choroby drzewa jaki można uzyskać przy optymalnym rozmieszczeniu dzięciołów
+w dziuplach.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

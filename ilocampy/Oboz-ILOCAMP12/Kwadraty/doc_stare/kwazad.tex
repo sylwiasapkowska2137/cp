@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Kwadraty}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{kwa}
+  \iomode{stdin}
+  \etap{¶rednia}
+  \day{4}
+  \date{24.01.2013}
+  \RAM{32}
+  \history{2011.02.20}{JTom, pomys³ i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Adrian bawi siê kwadratami zbudowanymi z zapa³ek. Kwadraty s± u³o¿one w rzêdzie, a na ka¿dej zapa³ce znajduje siê jedna liczba ca³kowita ze zbioru $\{1, 2, 3, 4\}$. Wiemy, ¿e na jednym kwadracie nie ma dwóch zapa³ek z tymi samymi warto¶ciami.
+
+Adrian mo¿e obracaæ kwadraty -- zawsze o 90 stopni w dowoln± stronê. Zauwa¿, ¿e jeden kwadrat mo¿na obróciæ kilka razy.
+
+Adrian chcia³by poobracaæ kwadraty w taki sposób, aby stykaj±ce siê boki dwóch s±siednich kwadratów mia³y zawsze t± sam± warto¶æ. Zale¿y mu tak¿e, aby liczba obrotów by³a jak najmniejsza. Czy pomo¿esz Adrianowi?
+ 
+  \section{Wej¶cie}
+ Pierwszy wiersz standardowego wej¶cia zawiera jedn± liczbê ca³kowit± $n$ ($1 \leq n \leq 500\,000$), oznaczaj±c± liczbê wszystkich kwadratów. Nastêpnych $n$ wierszy zawiera opis kwadratów.
+
+Ka¿dy wiersz zawiera $4$ liczby ca³kowite $a, b, c, d$ ($1 \leq a, b, c, d \leq 4$), oznaczaj±cych kolejno warto¶æ górnej zapa³ki kwadratu, dolnej, lewej i prawej.
+
+  \section{Wyj¶cie}
+ Na standardowe wyj¶cie nale¿y wypisaæ jedn± liczbê ca³kowit±, równ± mminimalnej liczbie obrotów, które nale¿y dokonaæ, aby stykaj±ce siê boki kwadratów mia³y t± sam± warto¶æ. 
+
+     \exampleimg{kwa0.eps}
+     \makestandardexample
+
+  \end{tasktext}
+\end{document}

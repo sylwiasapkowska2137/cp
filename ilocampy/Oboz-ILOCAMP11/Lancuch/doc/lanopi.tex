@@ -1,0 +1,30 @@
+\documentclass[opr,utf8]{sinol}
+  \signature{jtom031}
+  \title{Łańcuch}  
+  \id{lan}                       
+  \iomode{stdin}
+  \author{Jacek Tomasiewicz}         
+  \history{2011.07.19}{JTom, przygotowanie opracowania autorskiego}{1.00}
+  
+  
+\begin{document}
+  \begin{tasktext}% 
+    \section{Rozwiązania poprawne}
+      
+	\begin{itemize}
+	\item
+	$O(n^2)$ --- sprawdzamy każdą parę liczb, które nie są sąsiadami i wybieramy z nich minimum,
+
+	\item
+	$O(n)$ --- znajdujemy cztery najmniejsze liczby i z nich szukamy najmniejszej pary liczb, która podzieli łańcuch na trzy części.
+
+	\end{itemize}
+
+    \section{Rozwiązania niepoprawne}
+	\begin{itemize}
+	\item
+	$O(n)$ --- podobne jak wzorcowe $O(n)$, tylko że szukamy pary lub trójki najmniejszych liczb.
+	\end{itemize}
+
+  \end{tasktext}
+\end{document}

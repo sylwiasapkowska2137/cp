@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Tester}
+\id{tes}
+\author{Michał Majewski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{średnia}
+\day{?}
+\date{??.09.2015}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Mateusz jest testerem w dużej korporacji. Niedawno dostał od szefa polecenie stworzenia testów do algorytmów na drzewach. Wszystko starannie przygotował i zadowolony poszedł do domu.
+Z samego rana czekała na niego niemiła niespodzianka. Okazało się, że testy miały składać się jedynie z drzew binarnych. Nie zdąży już wygenerować testów od nowa, więc chciałby zmodyfikować istniejące poprzez usunięcie niektórych wierzchołków. Nie chciałby tracić zbyt wiele, tak więc usunie jak najmniej wierzchołków.
+
+Dla danego testu wygenerowanego przez Mateusza oblicz, ile wierzchołków będzie musiał on minimalnie usunąć, aby otrzymać drzewo binarne.
+
+  \section{Wejście}
+Na wejściu znajduje się opis spójnego drzewa, czyli nieskierowanego grafu bez cykli.
+
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $N$ ($1 \leq N \leq 500\,000$) oznaczająca liczbę wierzchołków drzewa.
+
+W kolejnych $N - 1$ wierszach znajdują się pary liczb $A, B$ ($1 \leq A, B \leq N, A \neq B$), oznaczające krawędź między wierzchołkami $A$ i $B$.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca ile minimalnie wierzchołków należy usunąć z drzewa, aby było ono drzewem binarnym.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

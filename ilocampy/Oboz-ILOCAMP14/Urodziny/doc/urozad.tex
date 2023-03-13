@@ -1,0 +1,36 @@
+\documentclass[zad,zawodnik, utf8]{sinol}
+  \title{Urodziny}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{uro}
+  \iomode{stdin}
+  \konkurs{XIV obóz informatyczny}
+  \etap{zaawansowana}
+  \day{0}
+  \date{15.01.2017}
+  \RAM{64}
+  \history{JTom, pomysł i redakcja}{2012.07.07}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W dniu urodzin króla Bajtazara zorganizowano przyjęcie. Zaproszono na nie jedynie małżeństwa zgodnie z króla życzeniem. Wszystkie pary mają zasiąść przy długim stole, przy którym znajduje się tyle samo miejsc z jednej strony i drugiej strony stołu. 
+
+Każdą osobę charakteryzuje pewien wiek. Król zażyczył sobie, aby różnica między sumą wieku wszystkich osób zasiadających po jednej stronie stołu, a sumą wieku wszystkich osób zasiadających po drugiej stronie stołu była jak najmniejsza. Chciałby także, aby osoby z tego samego małżeństwa nie siedziały po tej samej stronie stołu. 
+
+Znajdź wartość tej różnicy, wiedząc, że w każdym małżeństwie różnica wieku nie przekracza stu lat. 
+
+  \section{Wejście}
+Pierwszy wiersz standardowego wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 500$), oznaczającą liczbę małżeństw zaproszonych na przyjęcie. 
+
+Kolejnych $n$ wierszy zawiera po dwie liczby całkowite $m_i, k_i$ ($1\leq m_i, k_i \leq 10^9, |m_i-k_i| \leq 100$), oznaczających odpowiednio wiek mężczyzny i wiek kobiety w $i$-tym małżeństwie.
+
+  \section{Wyjście}
+	
+Pierwszy i jedyny wiersz standardowego wyjścia powinien zawierać jedną liczbę całkowitą, równą minimalnej różnicy między wiekiem osób siedzących po jednej stronie, a wiekiem osób siedzących po drugiej stronie.
+
+     \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

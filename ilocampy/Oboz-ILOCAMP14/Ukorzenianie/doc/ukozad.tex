@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Ukorzenianie}
+\id{uko}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{0}
+\date{15.01.2017}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+
+
+Dane jest $n$-wierzchołkowe drzewo. Krawędzie są jednak skierowane w losowy sposób. Chcemy je tak poodwracać, aby wszystkie prowadziły w kierunku jednego wierzchołka – korzenia. Każda krawędź należy do jednej z $k$ grup. Odwracać można tylko całe grupy krawędzi (tj. odwrócenie grupy oznacza zmianę kierunków wszystkich należących do niej krawędzi na przeciwne). 
+
+Zadanie polega na znalezieniu najmniejszego numeru wierzchołka, który można uczynić korzeniem poprzez odpowiednie poodwracanie grup krawędzi.
+
+  \section{Wejście}
+  
+W pierwszym wierszu standardowego wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq n, k \leq 10^5$). 
+
+W kolejnych $n - 1$ wierszach znajduje się opis drzewa. W $i + 1$ wierszu znajdują się trzy liczby całkowite $a_i$ , $b_i$ oraz
+$g_i$. Oznaczają one, że od wierzchołka $a_i$ prowadzi skierowana krawędź do wierzchołka $b_i$ należąca do grupy $g_i$. Wierzchołki są ponumerowane od $1$ do $n$, zaś grupy od $1$ do $k$.
+
+W testach wartych przynajmniej 10\% punktów zachodzą dodatkowe warunki $n \leq 10$, $k \leq 10$. 
+
+W testach wartych przynajmniej 20\% punktów zachodzą dodatkowe warunki $n \leq 100, k \leq 100$. 
+
+W testach wartych przynajmniej 30\% punktów zachodzi dodatkowy warunek $n \leq 1\ 000$.
+
+\section{Wyjście}
+W pierwszym wierszu standardowego wyjścia należy wypisać jedną liczbę całkowitą – najniższy możliwy numer korzenia. Dane wejściowe są tak dobrane, że zawsze istnieje taki wierzchołek.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Sprężyna}
+\id{spr}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{2}
+\date{19.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+
+Przemek ma $n$ sprężyn.
+Każdą z nich rozciągnął na pewną długość i zastanawia się teraz, jakie długości będą miały jeśli je puści.
+Przemek zna rozciągliwość każdej ze sprężyn i wie,
+że każda z nich będzie się poruszać po puszeczeniu w następujący sposób.
+Najpierw zmniejszy się o $k$ później zwiększy się o $k-1$, zmniejszy się o $k-2$, \ldots, aż się zatrzyma.
+
+Znajdź, jaką długość będzie miała każda ze sprężyn, jak się zatrzyma.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 300\,000$), oznaczająca liczbę wszystkich sprężyn.
+W kolejnych $n$ wierszach znajdują się opisy sprężyn. Każdy wiersz zawiera dwie liczby całkowte $d, k$ ($1 \leq k \leq d \leq 10^9$),
+oznaczające początkową długość sprężyny, oraz o ile na początku zmiejszy sie długość sprężyny.
+
+
+  \section{Wyjście}
+Wyjście powinno zawierać $n$ wierszy będących odpowiedziami dla kolejnych sprężyn.
+Odpowiedzią powinna być jedna liczba całkowita, równa końcowej długości sprężyny.
+
+     \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

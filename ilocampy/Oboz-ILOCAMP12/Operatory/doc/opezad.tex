@@ -1,0 +1,66 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Operatory}
+\id{ope}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{19.01.2016}
+\RAM{8}
+
+\begin{document}
+\begin{tasktext}%
+Przemek napisał na tablicy ciąg $n$ znaków w postaci \texttt{COCOCO...COC}, gdzie \texttt{C} jest cyfrą, a \texttt{O} jest operatorem ze zbioru $\{$'\texttt{=}', '\texttt{<}', '\texttt{>}', '\texttt{+}', '\texttt{-}'$\}$.
+
+Przemek chce wybrać pewną liczbę rozłącznych podsłów podanego ciągu, które są poprawnymi wyrażeniami. Poprawne wyrażenie to spójne podsłowo podanego ciągu, które zaczyna i kończy się cyfrą, zawiera dokładnie jeden operator porównania ze zbioru $\{$'\texttt{=}', '\texttt{<}', '\texttt{>}'$\}$ i jest prawdziwe matematycznie.
+
+Przemek zastanawia się ile może maksymalnie wybrać poprawnych wyrażeń, które są rozłącznymi podsłowami podanego ciągu. Pomóż mu obliczyć tę wartość.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się jedna liczba całkowita nieparzysta $n$ ($1 \leq n \leq 10^7$), oznaczająca długość ciągu napisanego przez Przemka.
+
+W drugim wierszu znajduje się $n$ znaków reprezentujących ciąg napisany przez Przemka. Znaki na pozycjach nieparzystych są cyframi, a znaki na pozycjach parzystych są operatorami.
+
+Możesz dodatkowo założyć, że w testach wartych przynajmniej:\newline
+- $10\%$ punktów zachodzi: $n \leq 10$\newline
+- $30\%$ punktów zachodzi: $n \leq 10^3$\newline
+- $50\%$ punktów zachodzi: $n \leq 10^5$\newline
+- $70\%$ punktów zachodzi: $n \leq 5 \cdot 10^6$\newline
+- $90\%$ punktów zachodzi: $n \leq 9 \cdot 10^6$
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca maksymalną możliwą do uzyskania liczbę rozłącznych poprawnych wyrażeń.
+
+  \section{Przykład}
+   \twocol{%
+       \noindent Dla danych wejściowych:
+       \includefile{../in/\ID0.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID0.out}
+     }
+   \twocol{%
+       \noindent natomiast dla danych wejściowych:
+       \includefile{../in/\ID1.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID1.out}
+     }
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:}
+
+W pierwszym przykładzie można wybrać tylko jedno poprawne wyrażenie: \texttt{7-5<3}.
+
+W drugim przykładzie wybieramy następujące podsłowa: \texttt{5<6} oraz \texttt{4<5}.
+
+\medskip
+\noindent
+\textbf{Uwaga:} Limit pamięci podany w treści zadania dotyczy sumarycznego zapotrzebowania na pamięć, a więc zawiera rozmiar kodu wykonywalnego, stosu, sterty, itp. Można wysłać rozwiązanie na sprawdzarkę, aby sprawdzić czy nie przekracza ono limitu pamięci na testach przykładowych.
+
+\end{tasktext}
+\end{document}

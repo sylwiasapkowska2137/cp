@@ -1,0 +1,47 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Plansza}
+\id{pla}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{16.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Na nieskończonej planszy, opisanej przez układ współrzędnych kartezjańskich, na polu o współrzędnych $(0,~0)$ stoi pionek. Pionek można w jednym ruchu przesunąć o jedno pole w jednym z czterech kierunków: góra, dół, lewo lub prawo.
+Przemek chce przesunąć pionek na pole o współrzędnych $(a,~b)$ wykonując jedynie dozwolone ruchy. Czy jest możliwe, aby zrobił to wykonując dokładnie $m$ ruchów?
+
+Zakładamy, że pierwsza współrzędna opisuje położenie w poziomie (ruch w prawo ją zwiększa o 1, a w lewo zmniejsza o 1),
+a druga współrzędna opisuje położenie w pionie (ruch w górę zwiększa o 1, ruch w dół zmniejsza o 1).
+
+  \section{Wejście}
+Na wejściu znajdują się trzy liczby całkowite $a$, $b$, $m$ ($-10^9 \leq a, b \leq 10^9$, $0 \leq m \leq 2 \cdot 10^9$), oznaczające odpowiednio współrzędne
+końcowe pionka oraz liczbę ruchów, które należy wykonać, aby się tam dostać z punktu $(0,~0)$.
+
+  \section{Wyjście}
+Jeżeli Przemek może przesunąć pionek z pola (0, 0) na pole $(a,~b)$ wykonując dokładnie $m$ ruchów, należy na standardowe wyjście wypisać \texttt{TAK}.
+W przeciwnym wypadku należy wypisać \texttt{NIE}.
+  
+\section{Przykład}
+  \twocol{%
+      \noindent Dla danych wejściowych:
+      \includefile{../in/\ID0a.in}
+    }{%
+      \noindent poprawnym wynikiem jest:
+      \includefile{../out/\ID0a.out}
+    }
+  \twocol{%
+      \noindent natomiast dla danych wejściowych:
+      \includefile{../in/\ID0b.in}
+    }{%
+      \noindent poprawnym wynikiem jest:
+      \includefile{../out/\ID0b.out}
+    }
+
+\end{tasktext}
+\end{document}

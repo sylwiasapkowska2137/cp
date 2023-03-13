@@ -1,0 +1,15 @@
+Do rozwiązania potrzebujemy pierwszego i ostatniego indeksu  wystąpienia każdej z liter.
+1. Aby znaleźć pierwsze wystąpienie każdej litery, należy przejść liniowo przez słowo i dla każdego indeksu stwierdzić czy dana litera wystąpiła wcześniej. Jeśli nie, to zapisać aktualny indeks jako początkowy. To, czy litera już wystąpiła, możemy sprawdzać za pomocą dodatkowej tablicy booli.
+2. Aby znaleźć ostatnie wystąpienie każdej litery, możemy przejść słowo liniowo w kolejności rosnących indeksów i przy każdym napotkaniu litery zapisywać dany indeks jako końcowy. Wcześniejsze wyniki zostaną w ten sposób nadpisane.
+
+Zakładając, że slowo[] będzie ciągiem znaków wczytanego słowa, a wyst[] tablicą booli, gdzie i-ty indeks oznacza i-tą literę, a wartość pod indeksem to, czy wystąpiła czy nie. Odpowiednio s[] i k[] to tablice, przechowujące pierwszy i ostatni indeks dla każdej litery. Pseudokod uzupełniania tablic s i k może wyglądać następująco:
+
+wczytaj(slowo)
+for i := 0 to ilosc_znakow(slowo) do
+	if wyst[slowo[i]] != 1 then
+		wyst[slowo[i]] := 1
+		s[slowo[i]] := i
+	k[slowo[i]] := i;
+
+Następnie wystarczy wybrać taką literę, której pierwsze i ostatnie wystąpienie są jak najdalej od siebie. Dla każdej litery obliczamy wartość k[] - s[] + 1. Wybieramy z nich maksymalną i naszym wynikiem będzie ilosc_znakow(slowo) - maksymalna. Przy poszukiwaniu liczby maksymalnej nie można uwzględniać liter, które nie wystąpiły ani razu. Złożoność takiego rozwiązania jest liniowa.
+

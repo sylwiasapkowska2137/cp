@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Rękawiczki}
+\id{rek}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{18.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bitoasia ma $n$ rękawiczek o różnych kolorach. Rękawiczki  tego samego koloru są nierozróżnialne. Przykładowo, dwie  czarne rękawiczki tworzą parę, którą Bitoasia może założyć  na mróz.
+
+Bitoasi odcieli prąd, przez co w mieszkaniu jest bardzo  ciemno i nie można odróżnić koloru rękawiczek. 
+Pomóż Bitoasi i powiedz, ile minimalnie rękawiczek musi wziać ze sobą, aby miała pewność, że wśród nich będzie para.
+
+ \section{Wejście}
+	
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$  ($1 \leq n \leq 300\,000$), oznaczającą liczbę rękawiczek.  Kolejny wiersz zawiera $n$ liczb całkowitych $k_1, k_2, \ldots, k_n$ ($1 \leq k_i \leq 10^9$), gdzie $k_i$ oznacza  kolor $i$-tej rękawiczki.
+
+Możesz założyć, że w testach wartych $70\%$ puntków  zachodzi warunek $k_i \leq 10^6$, a w testach wartych $40\%$ punktów zachodzi $n \leq 5\,000$.
+
+  \section{Wyjście}
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną  liczbę całkowitą, równą minimalnej liczbie rękawiczek, które powinna wziąć Bitoasia. Jeśli biorąc wszystkie rękawiczki nie będzie pary, wynikiem powinna być wartość \texttt{-1}.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

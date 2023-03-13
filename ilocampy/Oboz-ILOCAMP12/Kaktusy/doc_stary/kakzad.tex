@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Kaktusy}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{kak}
+  \iomode{stdin}
+  \etap{zaawansowana}
+  \day{0}
+  \date{17.01.2016}
+  \RAM{32}
+  \history{2011.11.12}{AJas, pomys³ i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bitoadam ma ustawionych w rzêdzie na balkonie $n$ kaktusów ró¿nych wielko¶ci. Bitoadam postanowi³, ¿e mo¿e wyrzuciæ (usun±æ z rzêdu) czê¶æ kaktusów. Chcia³y, aby pozosta³e kaktusy tworzy³y pewien ci±g, który na pocz±tku ca³y czas ro¶nie, a potem ca³y czas maleje. Uzna³, ¿e bêdzie to wygl±da³o bardzo estetycznie. 
+
+Bitoadam nie chcia³by wyrzuciæ za du¿o kaktusów. Poprosi³ Ciebie o pomoc, aby¶ znalaz³ minimaln± liczbê kaktusów, po których usuniêciu dostaniemy kaktusy w kolejno¶ci \emph{rosn±co-malej±cej.}\footnote{Przyk³adem ci±gu rosn±co-malejacego mo¿e byæ: ($3, 5, 4, 2$), ($5, 4, 3$), ale tak¿e ciag jednoelementowy ($2$). Ci±giem, który nie jest rosn±co-malej±cy jest przyk³adowo: ($3, 5, 4, 5$).}
+
+  \section{Wej¶cie}
+	
+Pierwszy wiersz wej¶cia zawiera jedn± liczbê ca³kowit± $n$ ($1 \leq n \leq 500\,000$), oznaczaj±c± liczbê kaktusów.
+Drugi wiersz wej¶cia zawiera $n$ liczb ca³kowitych $k_1, k_2, \ldots, k_n$ ($1 \leq k_i \leq 10^9$), gdzie $k_i$ oznacza wysoko¶æ $i$-tego kaktusa
+
+Mo¿esz za³o¿yæ, ¿e w testach wartych $40\%$ puntków zachodzi dodatkowy warunek $n \leq 5\,000$.
+
+  \section{Wyj¶cie}
+Pierwszy i jedyny wiersz wyj¶cia powinien zawieraæ jedn± liczbê ca³kowit±, równ± minimalnej liczbie kaktusów, które powinien usun±æ Bitoadam.
+
+	\makecompactexample
+
+  \end{tasktext}
+\end{document}

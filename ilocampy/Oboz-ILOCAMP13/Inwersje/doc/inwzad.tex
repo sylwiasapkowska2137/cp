@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Inwersje}
+\id{inw}
+\author{Nie wiem} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{27.09.2016}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+Adi lubi ciągi liczb. Nienawidzi zaś w nich inwersji. Inwersja w ciągu liczb $a_1, a_2, \dots, a_n$ jest parą pozycji $i$, $j$ ($1 \leq i < j \leq n$) takich,
+że zachodzi $a_i > a_j$.
+
+Dzisiaj są urodziny naszego bohatera i dostał w prezencie od przyjaciół ciąg liczb $p_1, p_2, \dots, p_n$. Adi może pomnożyć wybrane
+przez siebie elementy ciągu $p$ przez $-1$. Po wykonaniu tych operacji mnożenia chce uzyskać minimalną możliwą liczbę inwersji w danym ciągu.
+
+  \section{Wejście}
+Pierwsza linia wejścia zawiera liczbę całkowitą dodatnią $z$, oznaczającą liczbę zestawów danych. Każdy zestaw danych składa się z dwóch linii,
+w pierwszej znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 100\,000$). Następna linia zestawu danych zawiera $n$ liczb całkowitych -- ciąg,
+który chce zmodyfikować Adi w postaci $p_1, p_2, \dots, p_n$ ($|p_i| \leq 100\,000$). Liczby są oddzielone spacjami. Możesz przyjąć, że w $80\%$ testów
+$1 \leq n \leq 2000$.
+  \section{Wyjście}
+Jedna liczba całkowita, równa minimalnej liczbę inwersji w ciągu, jaką może uzyskać Adi.
+\makecompactexample
+
+\end{tasktext}
+\end{document}

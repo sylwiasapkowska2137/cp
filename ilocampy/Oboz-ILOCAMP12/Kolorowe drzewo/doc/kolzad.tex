@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Kolorowe drzewo}
+\id{kol}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{4}
+\date{21.01.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Przemek narysował $n$-wierzchołkowe drzewo, a następnie każdy z wierzchołków pomalował na pewien kolor. Teraz zastanawia się,
+jaka jest długość najdłuższej ścieżki w tym drzewie, która zaczyna i kończy się w wierzchołkach o różnym kolorze. Każda krawędź może
+w tej ścieżce pojawić się tylko raz.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę wierzchołków w drzewie.
+
+W każdym z kolejnych $n - 1$ wierszy znajdują się dwie liczby całkowite $a$, $b$ ($1 \leq a \neq b \leq n$), oznaczające, że w drzewie istnieje
+nieskierowana krawędź pomiędzy wierzchołkami o numerach $a$ i $b$.
+
+W ostatnim wierszu znajduje się $n$ liczb całkowitych $c_1, c_2, \ldots, c_n$ ($1 \leq c_i \leq 10^9$), oznaczające kolory kolejnych wierzchołków drzewa.
+  \section{Wyjście}
+Na wyjściu powinna pojawić się jedna liczba całkowita -- długość najdłuższej ścieżki pomiędzy wierzchołkami o różnych kolorach.\newline
+Jeżeli taka ścieżka nie istnieje, należy wypisać $0$.  
+  \makecompactexample
+
+\end{tasktext}
+\end{document}

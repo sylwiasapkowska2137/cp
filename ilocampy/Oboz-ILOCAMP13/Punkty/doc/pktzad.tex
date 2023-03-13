@@ -1,0 +1,28 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Punkty}
+\id{pkt}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{27.09.2016}
+\RAM{128}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+  Masz siatkę $n$ na $m$ z punktami o współrzędnych całkowitych od $(0, 0)$ do $(n, m)$. Twoim zadaniem jest wybranie czterech różnych punktów z siatki i poprowadzenie łamanej między nimi, tak aby łamana była jak najdłuższa. Łamana może mieć samoprzecięcia. 
+  
+ \section{Wejście}
+    
+Na wejściu znajdują się dwie liczby $n, m$ ($0 \leq n, m \leq 1000$) oznaczające wymiary siatki. Jest zagwarantowane że każda siatka będzie miała przynajmniej 4 punkty.
+
+  \section{Wyjście}
+    Na wyjściu powinny się znaleźć współrzędne 4 punktów oddzielone znakiem nowej linii będące kolejnymi punktami łamanej. Punkty powinny być w postaci $x~y$ gdzie $0 \leq x \leq n$ i $0 \leq y \leq m$. Punkty powinny być parami różne.
+    
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

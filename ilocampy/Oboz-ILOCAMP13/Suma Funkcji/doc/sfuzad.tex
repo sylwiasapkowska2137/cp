@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Suma Funkcji}
+\id{sfu}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{26.09.2016}
+\RAM{256}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+  Masz podany ciąg liczb $A$ zawierający $n$ liczb oraz $n$ funkcji, gdzie $i$-ta funkcja zwraca sumę liczb z ciągu $A$ od elementu $L_i$ do elementu $R_i$ włącznie.
+ 
+  W tym zadaniu masz przetwarzać dwa typy zapytań:
+	\begin{itemize}
+  	\item typ 1 - zmień wartość $i$-tego elementu ciągu na $x$
+  	\item typ 2 - podaj sumę wartości funkcji znajdujących się na przedziale od $x$ do $y$ włącznie
+	\end{itemize}
+  
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^5$) oznaczająca długość ciągu oraz liczbę funkcji.
+
+W kolejnym wierszu wejścia znajduje się $n$ liczb opisujących ciąg $A$ ($1 \leq A_i \leq 10^8$).
+
+W $n$ kolejnych wierszach wejścia znajdują się dwie liczby $L_i$ i $R_i$ ($ 1 \leq L_i \leq R_i \leq n$) będące opisami kolejnych funkcji.
+
+Kolejny wiersz zawiera liczbę $q$ ($1 \leq q \leq 10^5$) oznaczającą liczbę zapytań.
+
+W kolejnych $q$ wierszach znajdują się zapytania w postaci:
+  \begin{itemize}
+  	\item dla zapytań pierszego typu: $1~i~x$ ($1 \leq i \leq n, 1 \leq x \leq 10^8$) oznaczające zmianę wartości $i$-tego elementu na $x$.
+  	\item dla zapytań drugiego typu: $2~x~y$ ($1 \leq x \leq y \leq n$) oznaczające zapytanie o sumę funkcji od $x$ do $y$.
+  \end{itemize}
+
+  \section{Wyjście}
+    Na wyjściu dla każdego zapytania drugiego typu w oddzielnym wierszu powinna znajdować się odpowiedź w postaci jednej liczby całkowitej.
+    
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

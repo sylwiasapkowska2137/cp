@@ -24,62 +24,27 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #endif
 
 #define int long long
+typedef pair<int, int> T;
 const int oo = 1e18, oo2 = 1e9+7, K = 30;
-const int mod = 998244353;
 
 void solve(){
-	int n; cin >> n;
-	vector<pair<int, int>>edges;
+	int n = 20;
+	int k = 4;
+	vector dp(n+1, vector<int>(k+1));
+	dp[0][0] = 1;
+	dp[1][0] = 1;
+	dp[2][0] = 1;
+	dp[3][0] = 1;
+	for (int ck = 1; ck<=k; ck++){
+		for (int i = 0; i<=n; i++){
+			for (int j = 0; j<4; j++){
+				dp[i][ck] += ((1<<ck) * j <= i ? dp[i-(1<<ck)*j][ck-1] : 0);
+			}
+		}
+	}
 	for (int i = 1; i<=n; i++){
-		edges.emplace_back(i, i%n+1);
+		debug(i, dp[i][k]);
 	}
-	for (int i = 2; i<=n; i++){
-		edges.emplace_back(1, i);
-	}
-	debug(edges);
-	int curr = 0;
-	vector<vector<int>>ans;
-	int M = (int)edges.size();
-	for (int mask2 = 1; mask2 < (1<<M); mask2++){
-		map<int, int>cnt;
-		bool ok2 = 0;
-		for (int i = 0; i<n; i++){
-			if (mask2&(1<<i)){
-				ok2 = 1;
-			}
-		}
-		for (int i = 0; i<M; i++){
-			if (mask2&(1<<i)){
-				cnt[edges[i].first]++;
-				cnt[edges[i].second]++;
-			}
-		}
-		bool ok = 1;
-		for (auto x: cnt){
-			if (x.second&1){
-				ok = 0;
-			}
-		}
-		if (ok && !ok2){
-			curr = 0;
-			break;
-		}
-		if (ok) {
-			vector<int>now;
-			for (int i = 0; i<M; i++){
-				if (mask2&(1<<i)){
-					now.emplace_back(i);
-				}
-			}
-			// debug(now);
-			ans.emplace_back(now);
-		}
-	}
-	sort(ans.begin(), ans.end(), [](auto x, auto y){return x.size() < y.size();});
-	// for (auto x: ans) {
-		// debug(x);
-	// }
-	cout << (int)ans.size() << "\n";
 }
 
 int32_t main(){

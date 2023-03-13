@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Drzewa}
+  \signature{jtom??}
+  \id{drz}
+  \etap{Olimpijska}
+  \day{2}
+  \date{11.01.2011}
+  \RAM{64}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \author{Jacek Tomasiewicz}
+  \history{07-2010}{J.Tomasiewicz: pomys³ i redakcja zadania}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Ogrodnik Bajtazar hoduje w swoim ogródku ukorzenione drzewo binarne. Ka¿dy wierzcho³ek mo¿e byæ bia³y lub czarny.
+
+Dzi¶ postanowi³ przyci±æ swoje drzewo, w taki sposób, aby ró¿nica miêdzy liczb± wierzcho³ków bia³ych i czarnych wynosi³a dok³adnie $d$. Przyciêcie drzewa polega na usuniêciu pewnego wierzcho³ka wraz z ca³ym jego poddrzewem.
+
+Bajtazar chcia³by siê dowiedzieæ, ile minimalnie ciêæ musi wykonaæ, aby osi±gn±æ swój cel. Pomó¿ mu!
+ 
+  \section{Wej¶cie}
+	Pierwsza liczba wej¶cia zawiera dwie liczby ca³kowite $n$ ($1 \le n \le 300$) i $d$ ($-n \le d \le n$), oznaczaj±ce liczbê wierzcho³ków drzewa i warto¶æ wymaganej ró¿nicy miêdzy liczb± wierzcho³ków bia³ych i czarnych.
+
+Kolejne $n$ bloków wej¶cia zawiera opis poszczególnych wierzcho³ków. Pierwsza linia ka¿dego bloku zawiera trzy liczby ca³kowite: identyfikator wierzcho³ka (unikaln± liczbê od $0$ do $n -1$), kolor wierzcho³ka ($1$ oznacza bia³y, a $0$ czarny wierzcho³ek) oraz liczbê $c$ ($0 \le c \le 2$) reprezentuj±c± liczbê dzieci tego wierzcho³ka.
+
+W kolejnych $c$ liniach znajduje siê jedna liczba ca³kowita reprezentuj±ca identyfikator jednego z dzieci. Korzeniem drzewa jest wierzcho³ek o identyfikatorze $0$.
+
+  \section{Wyj¶cie}
+	W jedynej linii wyj¶cia nale¿y wypisaæ minimaln± liczbê ciêæ. Je¿eli nie jest mo¿liwe osi±gniêcie wymaganej ró¿nicy $d$, nale¿y wypisaæ $-1$.
+
+     \makestandardexample
+
+  \end{tasktext}
+\end{document}

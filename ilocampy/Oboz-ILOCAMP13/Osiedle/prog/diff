@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE result [
+  <!ELEMENT result (#PCDATA)>
+  <!ATTLIST result outcome CDATA #REQUIRED>
+]>
+<result outcome="Accepted">Accepted</result>

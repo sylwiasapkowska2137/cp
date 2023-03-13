@@ -1,0 +1,60 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Łoki Toki}
+\id{lok}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{18.01.2017}
+\RAM{256}
+
+\usepackage{enumitem}
+ 
+\begin{document}
+\begin{tasktext}%
+W klasie Pszemka panuje moda na Łoki Toki. Uczniowie bawią się nim bez opamiętania podczas godziny wychowawczej. Każde Łoki Toki może w jednej chwili
+wysłać sygnał do kilku innych odbiorników. Jeśli jednak do urządzenia dociera w pewnym momencie więcej sygnałów, niektóre z nich zakłócają się i neutralizują, co w 
+konsekwencji sprawia, że właściciel tego Łoki Toki może nie zdawać sobie sprawy, że ktoś próbował się z nim skontaktować. Dokładniej, sygnały
+przed dotarciem do odbiornika parują się i wyciszają, zatem jeśli ich liczba jest parzysta, do Łoki Toki w tej chwili nie dotrze żaden z nich.
+Jeśli zaś liczba połączeń przychodzących jest nieparzysta, jeden z nich, który nie został sparowany i zneutralizowany, wywołuje wibrację w Łoki Toki
+adresata, a ten może nawiązać połączenie. 
+
+Jak w każdej klasie, w klasie Pszemka nie wszyscy się lubią. Uczniowie podczas zabawy Łoki Toki próbują się łączyć wyłącznie z osobami, z którymi się lubią.
+Podczas pierwszej sekundy godziny wychowawczej Pszemek wysłał po jednym sygnale do wszystkich swoich kolegów. Pszemek jest w klasie informatycznej, dlatego
+zachowanie uczniów, które potem miało miejsce, było bardzo specyficzne. Jeżeli w danej sekundzie któryś uczeń otrzymał połączenie przychodzące 
+(nastąpiła wibracja jego Łoki Toki), to w następnej sekundzie wysłał on po jednym sygnale do wszystkich swoich kolegów (gdyż nie wiedział, ilu z nich tak 
+naprawdę chciało się z nim połączyć). Jeśli zaś w pewnej sekundzie uczeń nie doczekał się połączenia, popadał w smutek i w ciągu następnej sekundy
+nie próbował nawiązać połączenia z żadnym ze swoich kolegów.
+
+Może o tym nie wiesz, ale jesteś wychowawcą klasy Pszemka, którego nikt nie lubi. Nic dziwnego, skoro wstawiasz uczniom uwagę do dziennika za każdą
+wibrację w jego Łoki Toki. Za karę, że nie jesteś prawilnym nauczycielem, musisz policzyć ile łącznie wibracji Łoki Toki miało miejsce podczas
+pierwszych $s$ sekund godziny wychowawczej w klasie Pszemka.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $s$ ($1 \leq n \leq 25, 0 \leq s \leq 10^{18}$), oznaczające kolejno
+liczbę uczniów w klasie Pszemka oraz czas, który masz za zadanie monitorować. Dla uproszczenia ponumerujmy uczniów liczbami naturalnymi od $1$ do $n$,
+rozpoczynając od Pszemka. 
+
+$I$-ty z następnych $n$ wierszy opisuje relacje koleżeńskie osoby o numerze $i$. Każdy wiersz rozpoczyna się jedną liczbą całkowitą $m_i$ 
+($0 \leq m_i \leq n-1$), po której następuje $m_i$ parami różnych liczb naturalnych, oznaczających numery osób, które lubi $i$-ty uczeń. 
+Relacje koleżeńskie w klasie Pszemka są obustronne, to znaczy, że jeżeli Mateusz lubi Maćka, to Maciek lubi też Mateusza. 
+
+Możesz założyć, że na liście osób, które lubi $i$-ta osba nie pojawi się liczba $i$.
+
+
+ \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbę całkowitą równą liczbie wszystkich wibracji Łoki Toki, które nastąpiły w ciągu pierwszych $s$ sekund 
+godziny wychowawczej.
+
+\makecompactexample
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} Na koniec pierwszej sekundy wibracja nastąpiła w Łoki Toki uczniów o numerach $2$ i $3$, na koniec drugiej sekundy
+zawibrowały urządzenia uczniów o numerach $2$, $3$ i $5$, a na koniec trzeciej sekundy - uczniów o numerach $3$ i $5$.
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Podział}
+\id{pdz}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{18.01.2017}
+\RAM{512}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemo narysował drzewo o $n$ wierchołkach. Każdy wierzchołek pomalował na jeden spośród $k$ kolorów. Teraz zastanawia się, na ile sposobów może
+podzielić narysowane drzewo na spójne poddrzewa o równej wielkości (poprzez usunięcie niektórych krawędzi) tak, aby każde z nich było $wyważone$. 
+Dla danego poddrzewa i koloru o numerze $i$ oznaczmy przez $r_i$ liczbę wierzchołków w tym poddrzewie, które są pokolorowane $i$-tym kolorem.
+Poddrzewo takie jest wyważone wtedy, gdy $r_1 = r_2 = \dots = r_k$. 
+
+Dwa podziały drzewa uznajemy zaś za różne wtedy, kiedy podzbiór krawędzi
+usuniętych przy pierwszym podziale jest różny od podzbioru krawędzi usuniętych przy drugim podziale.
+
+Gdy Przemo pozna odpowiedź na nurtujące go pytanie, zamierza dokonać paru transformacji na drzewie, polegających na przemalowaniu niektórych wierzchołków
+na inny kolor. Po każdej transformacji chciałby rozważyć wyżej opisany problem na nowo powstałym drzewie.
+
+Przemo jest zajęty jedzeniem $Prince Polo$, więc poświęć chwilę i pomóż mu znaleźć odpwowiedzi na jego pytania, jeśli zależy Ci na zdobyciu większej
+liczby punktów podczas dzisiejszego contestu.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $k$, $q$ ($1 \leq n, k, q \leq 10^5$), oznaczające kolejno liczbę wierzchołków
+w drzewie Przema, liczbę kolorów, którymi dysponuje oraz liczbę transformacji, które zamierza wykonać. Wierzchołki drzewa numerujemy liczbami od $1$ do $n$.
+W każdym z kolejnych $n-1$ wierszy znajdują się dwie liczby całkowite $a_i$ i $b_i$ ($1 \leq a_i, b_i \leq n$), które oznaczają, że w narysowanym przez Przema
+drzewie istnieje krawędź pomiędzy wierzchołkami o numerach $a_i$ oraz $b_i$.
+
+Następny wiersz wejścia zawiera $n$ liczb całkowitych $c_1, c_2, \dots, c_n$ ($1 \leq c_i \leq k$). $I$-ta z nich oznacza kolor, którym został oryginalnie pomalowany
+wierzchołek o numerze $i$.
+
+$Q$ kolejnych wierszy opisuje transformacje, których zamierza dokonać Przemo po znalezieniu odpowiedzi dla pierwotnie postawionego problemu.
+Każdy wiersz składa się z dwóch liczb całkowituch $a_i$ oraz $d_i$ ($1 \leq a_i \leq n$, $1 \leq d_i \leq k$), które oznaczają, że w $i$-tej transformacji drzewa
+Przemo zamierza przemalować wierzchołek o numerze $a_i$ na kolor o numerze $d_i$.
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $q+1$ liczb całkowitych. Pierwsza z nich powinna być równa liczbie sposobów na które można podzielić drzewo
+narysowane przez chłopca tak, aby uzyskać pewną liczbę wyważonych poddrzew o równej wielkości. $I$-ta z kolejnych $q$ liczb powinna być odpowiedzią
+na powyższy problem postawiony wobec drzewa uzyskanego po dokonaniu $i$-tej transformacji z wejścia.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

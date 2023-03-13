@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{tikz,amsmath,siunitx}
+\usetikzlibrary{arrows,snakes,backgrounds,patterns,matrix,shapes,fit,calc,shadows,plotmarks}
+\usepackage[graphics,tightpage,active]{preview}
+\PreviewEnvironment{tikzpicture}
+\PreviewEnvironment{equation}
+\PreviewEnvironment{equation*}
+\newlength{\imagewidth}
+\newlength{\imagescale}
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{document}
+
+   \begin{tikzpicture}[scale=1, >=stealth', shorten >= 1pt, auto]
+   \tikzstyle{vertex} = [rectangle, draw, minimum width = 1cm, minimum height = 1cm]
+   \tikzstyle{emptyVertex} = [rectangle, minimum width = 0.5cm]
+   \tikzstyle{vertexGrey} = [rectangle, draw, fill = black!20, minimum width = 0.7cm]
+   \tikzstyle{vcircle} = [circle, draw, fill = black!20]
+
+   \node[vertex] (b0) [at = {(0, 0)}] {};
+   \node[vertex] (b1) [at = {(1, 0)}] {};
+   \node[vertex] (b2) [at = {(2, 0)}] {};
+   \node[vertex] (b3) [at = {(0,-1)}] {};
+   \node[vertex] (b4) [right of = b3] {};
+   \node[vertex] (b5) [right of = b4] {};
+   \node[vertex] (b6) [at = {(0,-2)}] {};
+   \node[vertex] (b7) [right of = b6] {};
+   \node[vertex] (b8) [right of = b7] {};
+
+   \node[emptyVertex] (x0) [at = {(0, -0.3)}] {$_3$};
+   \node[emptyVertex] (x1) [right of = x0] {$_2$};
+   \node[emptyVertex] (x2) [at = {(-0.7, -1)}] {$_{2}$};
+   \node[emptyVertex] (x3) [at = {(1.7, -1)}] {$_{3}$};
+   \node[emptyVertex] (x4) [at = {(-0.7, -2)}] {$_{2}$};
+   \node[emptyVertex] (x5) [at = {(0.7, -2)}] {$_{3}$};
+   \node[emptyVertex] (x5) [at = {(0, -2.7)}] {$_{2}$};
+   \node[emptyVertex] (x5) [at = {(1, -1.7)}] {$_{1}$};
+
+   \node[vcircle] (c1) [at = {(0, -1)}] {};
+
+   \draw[line width=0.07cm] (-0.5, -0.5) -- (1.5,-0.5) -- (1.5, -1.5) -- (0.5, -1.5) -- (0.5, -2.5) -- (-0.5, -2.5) -- cycle;
+
+
+   \end{tikzpicture}
+
+\end{document}

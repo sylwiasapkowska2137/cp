@@ -1,0 +1,8 @@
+OM.
+Zadanie 2
+Załóżmy, że było mniej niz n-1 zmian kierunku z poziomego na pionowy. Zatem było ich ≤n-2. Oznacza to, że istnieją dwa wiersze i, j, w której tej zmiany nie było (zasada szufladkowa).
+Rozważmy dwa przypadki:
+a) przez i-ty lub j-ty wiersz wszystkie ruchy żołnierzyka były pionowe. Ale zmiana kierunku z pionowego, na pionowy w innej kolumnie wymaga przynajmniej jednej zmiany ruchu z poziomego na pionowy, zatem skoro zmian było ≥n-1, to tych zmian tez ≥n-1, sprzeczność.
+b) w, i-tym oraz j-tym wierszu istniał jakiś ruch poziomy. Ale jeden z tych wierszy na pewno nie jest wierszem, w którym żołnierzyk skończył swoją podróż, a skoro nie może poruszać się w jednym wierszu w jednym kierunku w nieskończność, kiedyś musiał w końcu wykonać zwrot i zmienić kierunek na pionowy.
+
+Otrzymana sprzeczność pokazuje, że było ≥n-1 zmian z poziomego na pionowy i analogicznie z pionowego, na poziomy. Zatem odpowiedź wynosi ≥2n-2.

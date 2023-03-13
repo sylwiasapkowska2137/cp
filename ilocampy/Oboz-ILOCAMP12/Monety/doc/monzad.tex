@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Monety}
+\id{mon}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{4}
+\date{21.01.2016}
+\RAM{32}
+ 
+\begin{document}
+  \begin{tasktext}%
+Bitoasia ułożyła w rzędzie $n$ monet. Każda z nich pokazuje orła lub reszkę.
+Dwie sąsiednie monety nazywamy \textit{przyległymi} jeśli pokazują tę samą stronę.
+ 
+Bitoasia \textbf{musi} odwrócić dokładnie jedną monetę.
+Chciałaby to zrobić w taki sposób, aby liczba par przyległych monet w całym ciągu była jak największa. 
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 300\,000$), 
+oznaczającą liczbę monet. Drugi wiersz wejścia zawiera $n$ liczb całkowitych 
+$m_1, m_2, \ldots, m_n$ ($m_i \in \{0, 1\}$), gdzie $m_i$ oznacza stronę $i$-tej monety: 0 --- orzeł, a 1 --- reszka.
+
+  \section{Wyjście}
+
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, 
+równą maksymalnej liczbie par przyległych monet.
+
+     \makecompactexample    
+	 
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} Po odwróceniu trzeciej monety, przeległe będą monety: (1, 2), (2, 3), (3, 4) i (5, 6).
+
+  \end{tasktext}
+\end{document}

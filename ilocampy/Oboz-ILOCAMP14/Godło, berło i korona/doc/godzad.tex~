@@ -1,0 +1,28 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Godło, berło i korona}
+\id{god}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{0}
+\date{15.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Zbliża się koronacja Przemysława na króla Przemsotocji. Lśniące berło i godło są już przygotowane do ceremonii. Została tylko do odlania nowa korona. Przemysław chciałby, aby korona wysadzana była $n$ kolorowymi klejnotami rozłożonymi równomiernie na obwodzie. Każdy klejnot może być w jednym z $k$ kolorów. Bitomir zastanawia się oczywiście, na ile różnych sposobów można zaprojektować jego koronę. Dwa wzory uważamy za takie same, jeśli jeden można uzyskać przez obrót na głowie króla drugiego wzoru. Korona ma wyraźnie oznaczony dół i górę i nie można nosić jej „do góry nogami”.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby naturalne $n$ i $k$ ($1 \leq n,k \leq 10^9$).
+
+  \section{Wyjście}
+Na wyjściu wypisz liczbę różnych wzorów na koronie króla modulo $10^9+7$.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

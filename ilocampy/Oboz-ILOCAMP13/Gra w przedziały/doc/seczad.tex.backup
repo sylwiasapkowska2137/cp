@@ -1,0 +1,30 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dziwna gra planszowa}
+\id{dgp}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{28.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Podczas zawodów programistycznych na ilocampie, Przemek i Jakub po ciężkiej nocy przygotowywania zadań, postanowili odprężyć się odrobinę
+i zagrać w nową, wymyśloną przez nich grę.
+
+
+  \section{Wejście}
+  \section{Wyjście}
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+W pierwszym zestawie danych Przemek może poruszać się cały czas w prawo, a Jakub nie jest w stanie mu przeszkodzić, ponieważ musiałby
+stanąć na polu sąsiadującym z pionkiem Przemka.
+\\W drugim zestawie danych Jakub może naśladować ruchy Przemka. Dzięki temu Przemek nigdy nie dojdzie do ostatniej kolumny.
+
+\end{tasktext}
+\end{document}

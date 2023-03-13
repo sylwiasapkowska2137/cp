@@ -1,0 +1,43 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Urwipołeć}
+\id{urw}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{18.01.2017}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek to urwipołeć. Dziś po raz kolejny postanowił pożartować sobie z uczestników obozu w trakcie zawodów.
+
+Jakub wysłał dziś na zawodach $n$ zgłoszeń do zadań. Każde zgłoszenie jest zaakceptowane lub odrzucone. Przemek pomyślał, że byłoby śmiesznie,
+gdyby pozamieniał rezultaty niektórych zgłoszeń, więc postanowił wypłatać Jakubowi figiel.
+Figiel polega na wybraniu dowolnych $k$ zgłoszeń i odwróceniu ich rezultatów -- zgłoszenie zaakceptowane
+stanie się odrzucone, a zgłoszenie odrzucone stanie się zaakceptowane. Przemek lubi, gdy Jakub ma dużo zaakceptowanych zgłoszeń, więc
+przedsięweźmie swój figiel, jeśli na koniec Jakub będzie miał ich jak najwięcej.
+
+Przemek po wypłataniu swojego figla odczuł ochotę na więcej, ale nie wie dokładnie, ile jeszcze powinien ich wykonać.
+Zaczął się zastanawiać, dla każdego $i$ ($1 \leq i \leq n$), jaka jest maksymalna liczba zgłoszeń zaakceptowanych, jaką może uzyskać
+Jakub po wykonaniu dokładnie $i$ figlów przez Przemka na początkowym ciągu rezultatów zgłoszeń Jakuba.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq n \leq 500\,000$, $1 \leq k \leq n$), oznaczające odpowiednio
+liczbę zgłoszeń Jakuba oraz liczbę zgłoszeń, których rezultaty odwróci Przemek w jednym figlu.
+
+W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $a_1, a_2, \cdots, a_n$ ($a_i \in \{0, 1\}$), oznaczających
+rezultaty kolejnych zgłoszeń Jakuba ($0$ oznacza zgłoszenie odrzucone, a $1$ zaakceptowane).
+
+  \section{Wyjście}
+Na wyjściu powinno znaleźć się $n$ wierszy. $i$-ty z nich powinien zawierać jedną liczbę całkowitą, oznaczającą maksymalną liczbę zaakceptowanych zgłoszeń
+po wykonaniu figla (odwrócenie rezultatu dowolnych $k$ zgłoszeń) dokładnie $i$ razy przez Przemka.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

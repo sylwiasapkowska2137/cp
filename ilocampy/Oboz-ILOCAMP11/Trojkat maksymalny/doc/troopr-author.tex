@@ -1,0 +1,33 @@
+\documentclass[opr,utf8]{sinol}
+  \signature{jtom010}            
+  \title{Trójkąty}  
+  \id{tro}                       
+  \iomode{stdin}
+  \author{Jacek Tomasiewicz}         
+  \history{2011.02.17}{JTom, przygotowanie opracowania autorskiego}{1.00}
+  
+  
+\begin{document}
+  \begin{tasktext}% 
+    \section{Rozwiązanie}
+      
+	\begin{itemize}
+	\item
+	$O(n^3)$ --- przeglądamy każdą trójkę patyczków i z tych, których da się 
+	zbudować trójkąt wybieramy ten o minimalnym obwodzie.
+
+	\item
+	$O(n^2)$ --- całość sortujemy. Następnie dwa krótsze boki ($a, b$) wybieramy 
+	na $n^2$ sposobów, a bok dłuższy ($c$) najlepiej wybrać jak najkrótszy, 
+	czyli następny w kolejności za bokiem $b$.
+
+	\item
+	$O(n*log n)$ --- całość sortujemy. ($A \leq B \leq C$). $B$ i $C$ muszą 
+	być koło siebie, $A$ możemy wyszukać binarnie lub jeśli znajdziemy już 
+	pewne $A$ spełniające warunek $A \leq B \leq C$ i tworzące trójkąt, to 
+	w następnych przypadkach opłaca nam się szukać tylko $A'< A$. 
+
+	\end{itemize}
+
+  \end{tasktext}
+\end{document}

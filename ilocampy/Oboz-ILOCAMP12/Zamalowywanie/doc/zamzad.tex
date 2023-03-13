@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zamalowywanie}
+\id{zam}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{18.01.2016}
+\RAM{128}
+
+\begin{document}
+\begin{tasktext}%
+Przemek ma tablicę dwuwymiarową o wysokości $n$ i szerokości $m$. W każdej komórce tablicy zapisana jest jedna liczba całkowita.
+
+Przemek postanowił zamalować pewne komórki tablicy. Chce wybrać komórki do zamalowania tak, aby suma liczb w zamalowanych komórkach była jak największa. Ponadto jeśli pewna komórka w tablicy jest zamalowana, to wszystkie komórki poniżej niej muszą również zostać zamalowane. Dodatkowo, zamalowane komórki w każdym wierszu tablicy muszą tworzyć co najwyżej jeden spójny przedział. Wyjątkiem jest najwyższy wiersz spośród tych, które mają przynajmniej jedną zamalowaną komórkę. Ten wiersz może mieć więcej niż jeden spójny zamalowany przedział.
+
+Pomóż Przemkowi obliczyć największą możliwą sumę zamalowanych komórek, jaką może uzyskać.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $m$ ($1 \leq n,m \leq 300$), oznaczające odpowiednio wysokość i szerokość tablicy dwuwymiarowej Przemka.
+
+Każdy z kolejnych $n$ wierszy zawiera $m$ liczb całkowitych $a_{i,j}$ ($-10^9 \leq a_{i,j} \leq 10^9$ dla $1 \leq i \leq n$, $1 \leq j \leq m$). Reprezentują one zawartość tablicy Przemka w kolejności od najwyższego do najniższego wiersza.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca maksymalną możliwą do uzyskania sumę zamalowanego obszaru.
+
+\makecompactexample
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:}
+W najwyższym wierszu Przemek nie zamalowuje żadnej komórki. W drugim wierszu od góry Przemek zamalowuje komórki 2 i 4 od lewej. W tym wierszu Przemek mógł zamalować więcej niż jeden przedział, ponieważ jest to najwyższy wiersz posiadający zamalowaną komórkę. W trzecim i czwartym wierszu Przemek zamalowuje przedział $[2,4]$, a w piątym wierszu przedział $[2,5]$.
+
+\end{tasktext}
+\end{document}

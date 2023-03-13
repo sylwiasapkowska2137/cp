@@ -1,0 +1,55 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Dziwna gra planszowa}
+\id{dgp}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{28.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Przemek i Jakub kupili ostatnio dziwną grę planszową. Składa się ona z planszy, która ma $n$ wierszy oraz $m$ kolumn.
+Każde pole na planszy jest wolne. Dodatkowo w zestawie są dwa pionki -- jeden należy do Przemka, a drugi do Jakuba.
+
+Początkowo oba pionki stoją na pewnych polach planszy. Celem Przemka jest dojść pionkiem do ostatniej kolumny planszy,
+a celem Jakuba jest nie dopuszczenie do tego. Dodatkowo gracz przegrywa, gdy nie może wykonać poprawnego ruchu.
+
+Gracze wykonują ruchy na przemian. W każdym ruchu
+gracz \textbf{musi} przesunąć swój pionek w jednym z czterech kierunków: góra, dół, lewo, prawo. Wykonując ruch gracz nie może
+wyjść poza planszę ani nie może stanąć na polu, które bezpośrednio sąsiaduje (ma wspólną krawędź) z polem, na którym stoi pionek przeciwnika.
+Gra kończy się, gdy Przemek postawi swój pionek na dowolnym polu ostatniej kolumny.
+Przemek wykonuje pierwszy ruch.
+
+Zanim gra się zacznie, Przemek zastanawia się, czy może zwycięsko zakończyć grę niezależnie od ruchów wykonywanych przez Jakuba.
+Ponieważ plansza jest bardzo duża, napisz program, który rozwieje jego wątpliwości.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $t$ ($1 \leq t \leq 500\,000$), oznaczająca liczbę zestawów danych.
+
+W każdym z kolejnych $t$ wierszy znajduje się 6 liczb całkowitych $n$, $m$, $r_p$, $c_p$, $r_j$, $c_j$ 
+($3 \leq r_p, r_j \leq n \leq 10^9$, $3 \leq c_p, c_j \leq m \leq 10^9$), oznaczających odpowiednio liczbę wierszy oraz kolumn planszy,
+numer wiersza oraz kolumny pola, na którym stoi pionek Przemka, numer wiersza oraz kolumny pola,
+na którym stoi pionek Jakuba.
+
+Wiersze ponumerowane są od góry do dołu kolejnymi liczbami naturalnymi od $1$ do $n$, a kolumny ponumerowane
+są od lewej do prawej kolejnymi liczbami naturalnymi od $1$ do $m$.
+
+Możesz założyć, że oba pionki nie stoją na tych samych polach ani na polach bezpośrednio sąsiadujacych.
+  \section{Wyjście}
+Na wyjściu powinno znaleźć się $t$ wierszy. W każdym z nich powinna pojawić się odpowiedź do odpowiedniego zestawu danych - 
+słowo \texttt{TAK}, jeśli Przemek jest w stanie wygrać niezależnie od ruchów Jakuba lub \texttt{NIE} w przeciwnym wypadku.
+
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+W pierwszym zestawie danych Przemek może poruszać się cały czas w prawo, a Jakub nie jest w stanie mu przeszkodzić, ponieważ musiałby
+stanąć na polu sąsiadującym z pionkiem Przemka.
+\\W drugim zestawie danych Jakub może naśladować ruchy Przemka. Dzięki temu Przemek nigdy nie dojdzie do ostatniej kolumny.
+
+\end{tasktext}
+\end{document}

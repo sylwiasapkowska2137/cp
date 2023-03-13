@@ -1,0 +1,28 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Arktyka}
+\id{ark}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{0}
+\date{15.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+
+W Arktyce trwa lato. Latem część pokrywy lodowej topi się i pojawiają się wody Oceanu Arktycznego. Sytuację wykorzystują foki, które chętnie wskakują na przepływającą krę i na niej wypoczywają. Foki są jednak wybredne, dlatego wybierają tylko te kwadratowe akweny, w których liczba pływających kawałków kry wynosi dokładnie $l$. Policz, ile jest takich obszarów.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby naturalne $n$, $m$ i $l$ ($1 \leq n,m \leq 10^3; 0 \leq l \leq nm $), oznaczające odpowiednio wysokość i szerokość mapy oceanu oraz liczbę kawałków kry, jaka może pływać w kwadratowym akwenie. W kolejnych liniach znajduje się mapa oceanu, gdzie "." oznacza wodę, zaś "\#" – krę.
+
+  \section{Wyjście}
+Wypisz liczbę takich kwadratowych akwenów, w których znajduje się dokładnie $l$ kawałków kry.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

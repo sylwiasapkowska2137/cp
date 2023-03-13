@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Sortowanie}
+\id{sor}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{21.01.2016}
+\RAM{32}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Mały Adrianek dostał ostatnio w prezencie zestaw pudełek. Każde pudełko ma na przodzie napisany numerek. Wszystkie numerki są różne. 
+
+Adrianek umieścił pudełka w rzędzie na podłodze i teraz postanowił, że chce je posortować wg numerów w kolejności rosnącej. Oprócz pudełek, Adrianek otrzymał w prezencie maszynę do ich sortowania. Maszyna działa w następujący sposób: Adrianek wybiera pewien podzbiór pudełek, następnie maszyna chwyta wybrane pudełka, i umieszcza je na końcu rzędu (zachowując oryginalną kolejność wybranych elementów), zostawiając niewybrane pudełka na początku rzędu (ich oryginalna kolejność również zostaje zachowana).
+
+Jeśli początkowy porządek pudełek to $[1,2,3,4,5,6]$ i Adrianek wybiera pudełka $[2,3,5]$ to po wykonaniu tej operacji pudełka zmienią swoją kolejność na $[1,4,6,2,3,5]$.
+
+Pomóż Adriankowi napisać program, który obliczy jaką minimalną liczbę operacji musi wykonać maszyna, aby posortować rosnąco rząd pudełek. Adrianek jest zbyt zajęty trollolowaniem na sprawdzaczce, więc nie ma na to czasu.
+
+  \section{Wejście}
+W pierwszej linii wejścia znajduje się liczba całkowita $z$, oznaczająca liczbę zestawów danych. Następnie na wejściu pojawi się opis $z$ zestawów danych. 
+
+Opis każdego zestawu składa się z liczby naturalnej $n$, oznaczającej liczbę pudełek, które otrzymał Adrianek. W następnym wierszu znajduje się $n$ różnych liczb całkowitych $a_1, a_2, \ldots, a_n$ ($1 \leq a_i \leq n$), gdzie $a_i$ oznacza numer $i$-tego pudełka w rzędzie. 
+
+Suma wartości $n$ we wszystkich testach nie przekroczy $2 \,000\,000$.
+
+  \section{Wyjście}
+Na wyjściu należy wypisać $z$ liczb całkowitych. W $i$-tej linii należy wypisać odpowiedź dla $i$-tego zestawu danych -- minimalną liczbę operacji, jakie musi wykonać maszyna.
+
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

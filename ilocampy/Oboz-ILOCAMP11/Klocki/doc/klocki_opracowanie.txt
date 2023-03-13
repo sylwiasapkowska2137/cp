@@ -1,0 +1,23 @@
+Na początku warto sprawdzić, czy da się tak poprzemieszczać klocki, aby wszystkie wieżyczki były równe. Jest to osiągalne, gdy suma wszystkich klocków jest podzielna przez ilość wieżyczek.
+Następnie można zauważyć, że nie interesuje nas dokładnie z której wieżyczki na którą będziemy przenosić klocki. Wystarczy tylko stwierdzić, ile klocków z wieżyczek musimy zdjąć i przełożyć na inne. Jeśli S oznacza sumę wszystkich klocków, a N ilość wieżyczek, to każda wieżyczka ma docelowo posiadać S/N klocków. Tak więc należy obliczyć dla każdej z wieżyczek, o ile liczba klocków na niej przekracza S/N. Suma wyników ze wszystkich wieżyczek jest odpowiedzią.
+
+Pseudokod
+
+wczytaj(N)
+S := 0
+for i := 0 to N do
+	wczytaj(t[i])
+	S := S + t[i]
+
+if S % N != 0 then
+	wypisz("NIE")
+
+X := S/N
+W := 0
+if S % N == 0 then
+	for i := 0 to N do
+		if t[i] > X then
+			W := W + (t[i] - X)
+wypisz(W)
+
+Złożoność takiego rozwiązania wynosi O(N). Dodatkowo musimy pamiętać o użyciu 64 bitowych zmiennych (long long int), ponieważ jeśli napotkamy test maksymalny, tj. N = 400000 i każda wieżyczka będzie posiadać po 10^6 klocków, to suma S wyniesie aż 4 * 10^11. Zakres 32 bitowych zmiennych (int) wynosi ok. 2 * 10^9.

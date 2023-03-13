@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Inspekcja}
+\id{ins}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{19.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+    
+    W Przemkolandii trzeba przeprowadzić inspekcję dróg. Przemek, znany inspektor, musi dokonać jej osobiście.
+Przemkolandia składa się z miast połączonych dwukierunkowymi drogami. Z każdego miasta do każdego innego da się dojechać na dokładnie jeden sposób. Innymi słowy Przemkolandia tworzy drzewo.
+\vskip 1mm
+   Przemek podczas swojej pracy wykonuje wiele "wypraw". Wyprawa to podróż, która zaczyna się w jakimś mieście, kończy w jakimś innym mieście i nie przebiega dwa razy przez to samo miasto. Podczas wyprawy Przemek dokonuje po jednej inspekcji na wszystkich drogach pomiędzy miastem startowym i końcowym. Każda droga ma pewien priorytet, mówiący ile razy należy dokonać na niej inspekcji. Jeśli Przemek nie przeprowadzi inspekcji jakiejś drogi tyle razy ile trzeba, to zapewne zostanie mu to potrącone z wypłaty. Jeśli zaś na jakiejś drodze dokona zbyt wielu inspekcji, to jego przełożeni zaczną podejrzewać, że Przemek coś kombinuje i straci on swoje szanse na awans. Niestety, przejeżdżając przez jakąś drogę Przemek nie potrafi powstrzymać się od przeprowadzenia inspekcji.
+\vskip 1mm
+Pomiędzy wyprawami Przemek może swobodnie podróżować samolotami, tzn. bez korzystania z dróg. Powiedz na ile conajmniej wypraw musi wyruszyć Przemek.
+\vskip 1mm
+Co więcej, priorytety dróg cały czas się zmieniają. Po każdej zmianie Przemek chciałby znać odpowiedź dla aktualnego zestawu priorytetów.
+
+
+  \section{Wejście}
+
+  W pierwszej linii wejścia znajduje się liczba całkowita $n$ ($1 \leq n \leq 500000$). W następnych $n-1$ wierszach znajdują się opisy dróg w postaci $a~b~x$ ($1 \leq a,b \leq n;~ a \neq b;~ 0 \leq x \leq 10^9$), która oznacza, że miasto $a$ jest połączone z miastem $b$ drogą o priorytecie wynoszącym aktualnie $x$.
+\vskip 1mm
+  W kolejnej linii znajduje się jedna liczba całkowita $q$ ($1 \leq q \leq 500000$) oznaczająca liczbę zmian. W następnych $q$ liniach znajdują opisy zmian w postaci $a~b~x$ ($1 \leq a,b \leq n;~ a \neq b;~ 0 \leq x \leq 10^9$), która oznacza, że od teraz droga łącząca miasta $a$ i $b$ ma priorytet $x$.
+
+  \section{Wyjście}
+   
+   Wypisz na wyjście $q+1$ linii, pierwsza z nich powinna być odpowiedzią na pytanie Przemka przed jakimikolwiek zmianami, zaś $q$ następnych odpowiedziami na pytania po zmianach priorytetów.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

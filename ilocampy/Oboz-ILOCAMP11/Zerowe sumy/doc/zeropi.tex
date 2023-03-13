@@ -1,0 +1,64 @@
+\documentclass[zad, zawodnik, utf8]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{zer}
+  \pagestyle{fancy}
+  \title{Zerowe sumy}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{początkująca}
+  \day{3}
+  \date{19.11.2011}
+  \RAM{32}
+  \history{2011.08.12}{Mateusz Litwin, przygotowanie rozwiązania}{1.00}
+
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwiązanie wolne $O(n^2)$}
+
+Dla każdej pary liczb sprawdzamy, czy sumuje się do 0. Wybieramy najbardziej odległą. Wszystkich par liczb jest $n^2$, stąd złożoność takiego rozwiązania to $O(n^2)$. Za takie rozwiązanie można było uzyskać $50\%$ punktów.
+
+\section{Rozwiązanie wzorcowe $O(n)$}
+
+W poprzednim rozwiązaniu nie wykorzystujemy, że wartości liczb są z niedużego zakresu. Możemy dla każdej wartości $x$ zapisać informację o najbardziej lewym oraz prawym elemencie. Łatwo zauważyć, że elementami sumującymi się do 0, będą wartości $-x$ i $x$. Dla każdego z nich w czasie stałym wyznaczamy dwa najbardziej odległe (wykorzystując wcześniej wygenerowane lewe i prawe elementy).
+
+Złożoność takiego rozwiązania to $O(n)$.
+
+\end{tasktext}
+\end{document}

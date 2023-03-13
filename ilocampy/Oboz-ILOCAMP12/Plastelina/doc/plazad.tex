@@ -1,0 +1,31 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Plastelina}
+\id{pla}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{18.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bitoasia ulepiła z plasteliny prostokąt o wymiarach $a \times b$. Teraz może rozciągać prostokąt wzdłuż dowolnego z~boków. Rozciągnięcie polega na zwiększeniu dowolnego boku o~1. Przykładowo mając prostokąt o~wymiarach $3 \times 6$, za pomocą jednego rozciągnięcia można utworzyć prostokąt o~wymiarach $4 \times 6$ lub $3 \times 7$. 
+
+Bitoasia chciałby za pomocą minimalnej liczby rozciągnięć dostać prostokąt o~powierzchni równej \textit{co~najmniej}~$x$.
+ 
+  \section{Wejście}
+ Pierwsza linia standardowego wejścia zawiera liczbę całkowitą $z$ ($1 \leq z \leq 100\,000$), oznaczająca liczbę dni w których Bitoasia lepi prostokąty z plasteliny. Następnych $z$ wierszy opisuje kolejne dni.
+
+Każdy wiersz zawiera trzy liczby całkowite $a, b, x$ ($1 \leq a, b \leq 10^6, x \leq 10^{18})$, oznaczające odpowiednio wymiary prostokątu i~oczekiwaną przez Bitoasię powierzchnię.
+
+  \section{Wyjście}
+Standardowe wyjście powinno zawierać $z$ wierszy, będących odpowiedziami dla kolejnych dni. Każdy wiersz powinien zawierać jedną liczbę całkowitą, równą minimalnej liczbie ruchów, po których Bitoasia może uzyskać prostokąt o powierzchni równej \textit{co~najmniej} $x$.
+
+     \makestandardexample
+
+  \end{tasktext}
+\end{document}

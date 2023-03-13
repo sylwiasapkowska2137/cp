@@ -1,0 +1,65 @@
+\documentclass[zad, zawodnik]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{pro}
+  \pagestyle{fancy}
+  \title{Prostok±t}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \etap{¶rednia}
+  \day{6}
+  \date{10.12.2011}
+  \RAM{32}
+  \history{2011.08.12}{Jacek Tomasiewicz}{1.00}
+
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwi±zanie wolne $O(n^3)$}
+
+Dla ka¿dych dwóch mo¿liwych wierszy $i$ oraz $j$, szukamy kolumny po³o¿onej najbardziej na lewo oraz najbardziej na prawo, w której obie warto¶ci wierszowe s± równe 1. Wyszukiwanie kolumn wykonujemy w czasie $O(n)$, co daje ³±czny czas $O(n^3)$.
+
+\section{Rozwi±zanie wzorcowe $O(\frac{n^3}{32})$}
+
+Spróbujmy podzieliæ wiersze na kawa³ki $32$-elementowe. Ka¿dy taki kawa³ek mo¿e byæ reprezentowany przez jedn± liczbê $32$-bitow±.
+
+Dalej rozwi±zanie bêdzie dzia³a³o podobnie do wolnego: dla ka¿dych dwóch wierszy bêdziemy przegl±daæ wszystkie kawa³ki $32$-bitowe. W takim rozwi±zaniu potrzebujemy szybko dowiadywaæ siê, czy dwa ró¿ne kawa³ki $k_1, k_2$ maj± ten sam bit równy 1. Zauwa¿my, ¿e aby tak by³o wystarczy sprawdziæ, czy warto¶æ $k_1$ \texttt{and} $k_2$ jest wiêksza od zera. Operacja \texttt{and} wykonuje siê w czasie sta³ym. 
+
+Po znalezieniu najbardziej lewego i prawego kawa³ka, wystarczy wyliczyæ odpowiedni± kolumnê, co pozostawiamy Czytelnikowi jako æwiczenie.
+
+\end{tasktext}
+\end{document}

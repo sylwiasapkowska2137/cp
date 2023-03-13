@@ -1,0 +1,42 @@
+\documentclass[zad,zawodnik]{sinol}
+\usepackage[utf8x]{inputenc}
+  \title{Wskazówki}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{wsk}
+  \iomode{stdin}
+  \etap{zaawansowana}
+  \day{1}
+  \date{16.01.2017}
+  \RAM{64}
+  \history{2011.02.20}{JTom, pomysł i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Jesteśmy w Bajtockim muzeum, gdzie znajduje się $n$ bardzo starych, okrągłych zegarów. Każdy z nich jest tej samej wielkości i posiada $m$ identycznych wskazówek. 
+
+Na zegarach, ze starości nie widać podziałki z godzinami, która pierwotnie była w zegarach. Podziałka oznacza liczbę miejsc (w równych odstępach), na które mogą wskazywać wskazówki zegara. Jedyne co różni zegary to ułożenie wskazówek. 
+
+W wyniku obrotu zegarów możemy doprowadzić do sytuacji, że dwa zegary będą wyglądały dokładnie tak samo. Chcielibyśmy wiedzieć, ile jest par zegarów, które w wyniku obrotu mogą wyglądać tak samo.
+ 
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera trzy liczby całkowite $n, m, p$ ($1 \leq n, m \leq 1\,000, 1 \leq p \leq 10^9$), oznaczające odpowiednio liczbę zegarów, liczbę wskazówek oraz wielkość podziałki zegarów. 
+
+Następnych $n$ wierszy opisuje kolejne zegary. Każdy wiersz zawiera $m$ liczb całkowitych $w_1, w_2, \ldots, w_m$ ($1 \leq w_i \leq p$), gdzie $w_i$ oznacza miejsce znajdowania się $i$-tej wskazówki.
+
+Możesz założyć, że w testach wartych $50\%$ punktów zachodzi $n, m \leq 300$.
+
+  \section{Wyjście}
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą liczbie par zegarów, które w wyniku obrotów mogą wyglądać tak samo.
+
+	\exampleimg{wsk0.eps}
+     \makestandardexample
+
+\bigskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} 
+Pary zagarów, które mogą wyglądać tak samo to: $(1,3), (1,4), (2,5), (3,4)$.
+
+  \end{tasktext}
+\end{document}

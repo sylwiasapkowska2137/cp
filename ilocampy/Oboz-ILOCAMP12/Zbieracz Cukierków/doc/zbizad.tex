@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zbieracz cukierków}
+\id{zbi}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{18.01.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Bajtek jest zbieraczem cukierków. Chciałby powiększyć swoją kolekcję cukierków, więc wybiera się w długą podróż. Bajtek nie jest jednak okazem zdrowia i w czasie jednej podróży może przejść trasę składającą się z co najwyżej $k$ dróg. Nasz bohater znajduje się w bardzo dziwnym świecie, w którym pomiędzy każdą parą miast istnieje dokładnie jedna ścieżka. Miasta w tym świecie są połączone drogami, na których mogą leżeć cukierki. Gdy Bajtek przechodzi drogą, zbiera wszystkie cukierki leżące na niej. Nie jest jednak tak kolorowo, bo na niektórych drogach zamiast cukierków mogą grasować bandyci, którzy ukradną Bajtkowi daną liczbę cukierków (lub wszystkie, jeśli będzie miał ich mniej). 
+Bajtek, jak to zbieracze cukierków mają w zwyczaju, nie lubi zawracać, więc żadną drogą nie może przejść więcej niż raz.
+
+Oblicz, ile maksymalnie cukierków może zebrać Bajtek podczas jednej podróży.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq k < n \leq 300\,000$), oznaczające liczbę miast i maksymalną długość trasy Bajtka.
+
+W kolejnych $n - 1$ wierszach znajdują się trzy liczby $a, b, c$ ($1 \leq a, b \leq n, a \neq b$, $-10^9 \leq c \leq 10^9$), oznaczające drogę pomiędzy wierzchołkami $a$ i $b$, podczas przejścia której liczba posiadanych przez Bajtka cukierków zmieni się o $c$.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita -- maksymalna liczba cukierków, o jaką może się wzbogacić Bajtek w czasie wyprawy.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

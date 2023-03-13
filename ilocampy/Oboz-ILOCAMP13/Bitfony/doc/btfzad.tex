@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Bitfony}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{btf}
+  \iomode{stdin}
+  \etap{pocz±tkuj±ca}
+  \day{2}
+  \date{27.09.2016}
+  \RAM{32}
+  \history{2011.11.19}{JTom, pomys³ i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji istniej± bitfony, które umo¿liwiaj± po³±czenie g³osowe (i tekstowe) z tylko jedn±, przypisan± do bitfonu osob±.
+
+W firmie pracuje $n$ osób, ka¿da z nich dysponuje jednym bitfonem. Je¶li pewna osoba $a$ chce wys³aæ wiadomo¶æ do osoby $b$, to wysy³a poprzez swój bitfon wiadomo¶æ (jej tre¶æ oraz nazwê adresata). Wiadomo¶æ porusza siê pomiêdzy bitfonami do momentu, a¿ trafi do $b$ lub wróci do $a$. 
+
+Jeste¶ programist± w firmie i chcesz wys³aæ wiadomo¶æ do pewnej osoby. Zastanawiasz siê, czy wiadomo¶æ dojdzie do wybranej osoby, je¶li tak, po jakim czasie. 
+
+  \section{Wej¶cie}
+	
+Pierszy wiersz wej¶cia zawiera jedn± liczbê ca³kowit± $n$ ($1 \leq n \leq 10^6$), oznaczaj±c± liczbê osób w firme. 
+
+Drugi wiersz wej¶cia zawiera $n$ liczb ca³kowitych $x_1, x_2, \ldots, x_n$ ($1 \leq x_i \leq n$), gdzie $x_i$ oznacza numer osoby, z któr± mo¿e po³±czyæ siê $i$-ta osoba.
+
+Trzeci wiersz wej¶cia zawiera dwie liczby ca³kowite $a, b$ ($1 \leq a, b \leq n, a \neq b$), oznaczaj±ce, ¿e osoba $a$, chce wys³aæ wiadomo¶c do osoby $b$.
+
+  \section{Wyj¶cie}
+	Pierwszy i jedyny wiersz wyj¶cia powinien zawieraæ jedn± liczbê ca³kowit±, równ± czasowi, po którym dojdzie wiadomo¶æ lub warto¶æ $-1$, je¶li wiadomo¶æ nigdy nie dojdzie.
+
+     \exampleimg{bitofon.eps}
+     \makestandardexample
+
+\medskip
+\noindent
+\textbf {Wyja¶nienie do przyk³adu:} Wiadomo¶æ dojdzie i bêdzie sz³a nastêpuj±co $1 \rightarrow 2 \rightarrow 3$.
+
+  \end{tasktext}
+\end{document}

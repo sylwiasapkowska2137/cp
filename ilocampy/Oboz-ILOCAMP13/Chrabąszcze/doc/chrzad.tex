@@ -1,0 +1,36 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+  \title{Chrabąszcze}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{chr}
+  \iomode{stdin}
+  \konkurs{XIII obóz informatyczny}
+  \etap{początkująca}
+  \day{0}
+  \date{25.09.2016}
+  \RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Dwa chrabąszcze wspinają się po łodydze. Każdy chrabąszcz co sekundę skacze o pewną  odległość w kierunku czubka rośliny. Chcielibyśmy znać najmniejszą odległość w jakiej znajdą się od siebie chrabąszcze.
+
+Odległość możemy liczyć tylko w  momencie, gdy chrabąszcze znajdują się na łodydze (nie możemy porównywać odległości w czasie skoku). Zakładamy, że łodyga jest tak długa, że chrabąszcze nigdy nie doskoczą do czubka  rośliny.
+
+  \section{Wejście}
+	Pierwszy wiersz wejścia zawiera trzy liczby całkowite $n, a, b$ ($1 \leq n \leq  500\,000, 1 \leq a, b \leq 10^9$), oznaczające odpowiednio liczbę skoków, położenie  pierwszego i drugiego chrabąszcza. Następnych $n$ wierszy opisuje skoki chrabąszczy w  kolejnych sekundach.
+
+Opis skoku zawiera dwie liczby całowite $x$, $y$ ($1 \leq x, y \leq 1\,000$), oznaczające odpowiednio długość skoku  pierwszego i drugiego chrabąszcza.
+
+  \section{Wyjście}
+Wyjście powinno zawierać jedną liczbę całkowitą, równą minimalnej odległości, w której  znajdą się dwa chrabąszcze.
+
+     \makecompactexample
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} Najbliżej położone chrabąszcze będą na pozycjach ($7,9$).
+
+  \end{tasktext}
+\end{document}

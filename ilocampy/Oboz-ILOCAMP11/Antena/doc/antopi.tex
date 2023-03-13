@@ -1,0 +1,57 @@
+\documentclass[opr,utf8]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{ant}
+  \title{Antena}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \etap{początkująca}
+  \day{}
+  \date{sierpień 2012}
+  \RAM{32}
+  \history{2011.12.29}{Jacek Tomasiewicz, przygotowanie rozwiązania}{1.00}
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwiązanie wzorcowe $O(1)$}
+
+Zadanie rozwiązujemy wykorzystując tylko instrukcje warunkowe. Łatwo zauważyć, że antenę ustawiamy po środku dwóch skrajnych domków, chyba że miejsce te wypada na ujemnej współrzędnej -- wtedy antenę ustawiamy na współrzędnej ($0,0$).
+
+Znalezienie dwóch skrajnych domków, to znalezienie minimum i maksimum z 3 podanych na wejściu punktów.
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Kwadraty}
+\id{kwa}
+\author{} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{18.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Adrian bawi się kwadratami zbudowanymi z zapałek. Kwadraty są ułożone w rzędzie, a na każdej zapałce znajduje się jedna liczba całkowita ze zbioru $\{1, 2, 3, 4\}$. Wiemy, że na jednym kwadracie nie ma dwóch zapałek z tymi samymi wartościami.
+
+Adrian może obracać kwadraty -- zawsze o 90 stopni w dowolną stronę. Zauważ, że jeden kwadrat można obrócić kilka razy.
+
+Adrian chciałby poobracać kwadraty w taki sposób, aby stykające się boki dwóch sąsiednich kwadratów miały zawsze tą samą wartość. Zależy mu także, aby liczba obrotów była jak najmniejsza. Czy pomożesz Adrianowi?
+ 
+  \section{Wejście}
+ Pierwszy wiersz standardowego wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 500\,000$), oznaczającą liczbę wszystkich kwadratów. Następnych $n$ wierszy zawiera opis kwadratów.
+
+Każdy wiersz zawiera $4$ liczby całkowite $a, b, c, d$ ($1 \leq a, b, c, d \leq 4$), oznaczających kolejno wartość górnej zapałki kwadratu, dolnej, lewej i prawej.
+
+  \section{Wyjście}
+ Na standardowe wyjście należy wypisać jedną liczbę całkowitą, równą mminimalnej liczbie obrotów, które należy dokonać, aby stykające się boki kwadratów miały tą samą wartość. 
+
+     \exampleimg{kwa0.eps}
+     \makestandardexample
+
+  \end{tasktext}
+\end{document}

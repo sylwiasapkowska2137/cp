@@ -1,0 +1,32 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Palindromy na okręgu}
+\id{pal}
+\author{Przemysław Jakub Kozłowski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{0}
+\date{25.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Palindrom to symetryczny napis, tzn. taki napis, który czytany od lewej do prawej i od prawej do lewej
+jest taki sam.
+Palindrom na okręgu to taki napis umieszczony na okręgu, który czytany od pewnej pozycji jest palindromem (jego rotacja jest palindromem). 
+Np. napis \texttt{aacc} jest palindromem na okręgu, ponieważ czytany od pozycji drugiej jest palindromem: \texttt{acca}. 
+Przemek napisał na okręgu pewien napis i teraz zastanawia się, ile minimalnie liter musi do niego wstawić, aby był palindromem na okręgu.
+
+  \section{Wejście}
+W pierwszej linii standardowego wejścia znajduje się jedna liczba naturalna $n$ ($1 \leq n \leq 2000$), oznaczająca długość napisu napisanego przez Przemka.
+W drugiej linii standardowego wejścia znajduje się ten napis czytany od pewnej pozycji. Napis składa się z małych liter alfabetu angielskiego.
+
+  \section{Wyjście}
+Jedna liczba całkowita oznaczająca minimalną liczbę liter, które trzeba wstawić, aby napis wymyślony przez Przemka był palindromem na okręgu.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Inwersje}
+\id{inw}
+\author{Nie wiem} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{27.09.2016}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+Adi lubi ciągi liczb. Nienawidzi zaś w nich inwersji. Inwersja w ciągu liczb $a_1, a_2, \dots, a_n$ jest parą pozycji $i$, $j$ ($1 \leq i < j \leq n$) takich,
+że zachodzi $a_i > a_j$.
+
+Dzisiaj są urodziny naszego bohatera i dostał w prezencie od przyjaciół ciąg liczb $p_1, p_2, \dots, p_n$. Adi może pomnożyć wybrane
+przez siebie elementy ciągu $p$ przez $-1$. Po wykonaniu tych operacji mnożenia chce uzyskać minimalną możliwą liczbę inwersji w danym ciągu.
+
+  \section{Wejście}
+Pierwsza linia wejścia
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+
+\end{tasktext}
+\end{document}

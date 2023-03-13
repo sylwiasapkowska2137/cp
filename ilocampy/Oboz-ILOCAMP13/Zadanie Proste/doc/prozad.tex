@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zadanie Proste}
+\id{pro}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{26.09.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Na płaszczyźnie znajduje się $n$ punktów. Chcemy znaleźć dokładnie $k$ prostych, takich że każdy punkt leży na którejś z nich.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n, k$ ($1 \leq n \leq 200\,000, 1 \leq k \leq 5$), oznaczające odpowiednio liczbę punktów na płaszczyźnie
+oraz liczbę poszukiwanych prostych.
+
+W każdym z kolejnych $n$ wierszy znajdują się dwie liczby całkowite $x, y$ ($-10^9 \leq x, y \leq 10^9$), oznaczające współrzędne kolejnych punktów.
+  
+  \section{Wyjście}
+W pierwszym wierszu wyjścia powinien znaleźć się napis \texttt{TAK}, jeżeli da się znaleźć $k$ prostych na płaszczyźnie takich, że każdy punkt leży na którejś z nich
+lub \texttt{NIE}, jeżeli to niemożliwe.
+
+Jeżeli da się ułożyć $k$ prostych, to w każdym z kolejnych $k$ wierszy należy wypisać 4 liczby całkowite $x_0, y_0, x_1, y_1$ ($-10^9 \leq x_0, y_0, x_1, y_1 \leq 10^9$),
+oznaczające współrzędne dowolnych dwóch \textbf{różnych} punktów, przez które przechodzi kolejna prosta.
+
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Pierwsze dwa punkty o współrzędnych (-1, 0) oraz (1, 0) reprezentują prostą przechodzącą przez oś $OX$, która pokrywa pierwszy i drugi punkt z wejścia.
+Kolejne dwa punkty o współrzędnych (0, -1) oraz (0, 1) reprezentują prostą przechodzącą przez oś $OY$, która pokrywa drugi i trzeci punkt z wejścia, zatem
+wszystkie punkty są pokryte którąś prostą.
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+\usepackage{hyperref}
+
+\title{Przeszkody}
+\id{pre}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{2}
+\date{17.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek po wielu godzinach wyczerpującego ulepszania sprawdzarki postanowił pouprawiać jakieś zajęcia na świeżym powietrzu w celu doznania relaksu.
+Postanowił pokonać tor przeszkód na swoim placu zabaw.
+
+Tor przeszkód ma kształt prostokąta o wysokości $n$ i szerokości $m$. Wyróżniamy w nim $(n+1)\cdot (m+1)$ punktów o współrzędnych całkowitych,
+z punktem $(0, 0)$ w lewym górnym rogu i punktem $(n, m)$ w prawym dolnym rogu.
+
+Na torze, w punktach o współrzędnych całkowitych mogą znajdować się środki przeszkód w kształcie koła. Każda przeszkoda ma pewien promień, może ona wystawać
+poza tor oraz przecinać się niepusto z innymi przeszkodami.
+
+Przemek zaczyna pokonywać tor przeszkód z dowolnego punktu na górnej krawędzi toru i chce go zakończyć w dowolnym punkcie na dolnej krawędzi toru.
+Problem w tym, że podczas pokonywania toru przeszkód nie może dotknąć żadnej przeszkody. Dokładniej, jego odległość od środka każdej przeszkody
+musi być większa niż promień tej przeszkody. Odległość mierzymy w metryce euklidesowej, tzn. odległość między dwoma punktami o współrzędnych
+$(x_A, y_A)$ i $(x_B, y_B)$ wyrażona jest wzorem $\sqrt{(x_A-x_B)^2 + (y_A-y_B)^2}$.
+Przemek jest bardzo chudy, więc z lotu ptaka wygląda jak punkt.
+Pomoż Przemkowi stwierdzić, czy to w ogóle możliwe.
+
+  \section{Wejście}
+W pierwszej linii wejścia znajduje się jedna liczba naturalna $t$ ($1 \leq t \leq 10$) oznaczająca liczbę zestawów testowych. Następnie opisywane są kolejne zestawy.
+
+W pierwszym wierszu zestawu znajdują się trzy liczby całkowite $n, m, k$ ($1 \leq n, m, k \leq 1\,000$) oznaczające odpowiednio rozmiar toru przeszkód oraz liczbę przeszkód.
+
+W każdym z kolejnych $k$ wierszy znajdują się trzy liczby całkowite $x, y, r$ ($0 \leq x \leq n$, $0 \leq y \leq m$, $1 \leq r \leq 1\,000$), oznaczające odpowiednio współrzędne kolejnych przeszkód i ich promienie.
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $t$ wierszy, a w każdym z nich odpowiedź dla odpowiedniego zestawu danych: słowo \texttt{TAK}, jeżeli Przemek
+może pokonać tor przeszkód, \texttt{NIE} w przeciwnym przypadku.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+
+
+\title{Sieci}
+
+\id{sie}
+
+\author{??} % Autor zadania
+
+\pagestyle{fancy}
+
+\iomode{stdin}
+
+\konkurs{XII obóz informatyczny}
+
+\etap{olimpijska}
+
+\day{4}
+
+\date{21.01.2016}
+
+\RAM{128}
+
+ 
+
+\begin{document}
+
+\begin{tasktext}%
+
+Sieć lokalna na obozie \texttt{ILOCAMP 2016 zima} ma strukturę drzewa, tzn. nie ma cykli i łączy $n$ urządzeń za pomocą $n-1$ kabli. Ponadto każdy kabel łączy dokładnie dwa różne urządzenia.
+
+
+
+Z powodu starych kabli i urządzeń sieć jest bardzo wolna. Administrator zdefiniował dla każdego kabla wartość $t_i$ oznaczającą czas transmisji pakietu między urządzeniami $a_i$ i $b_i$ za pomocą $i$-tego kabla.
+
+Dla dwóch komputerów $a$ i $b$ czas transmisji pakietu z jednego komputera do drugiego, to suma wartości $t_i$ dla wszystkich kabli na ścieżce z $a$ do $b$. Jedną z ważnych charakterystyk sieci jest maksymalny czas transmisji pakietu z jednego komputera do innego. Oznaczmy tą charakterystykę jako $m$.
+
+
+
+Administrator pod naciskami Bitoasi narzekającej na wolny transfer danych, zdecydował ulepszyć sieć i zmniejszyć jej charakterystykę $m$. W tym celu chce zamienić niektóre stare kable na nowoczesne ultraszybkie kable, którymi czas przesyłu wynosi $0$. Zamiana $i$-tego kabla na kabel ultraszybki kosztuje nas $p_i$.
+
+
+
+Pomóż mu znaleźć taki podzbiór kabli, że po ich zamianie na kable ultraszybkie, charakterystyka sieci $m$ się zmniejszy i osiągniemy to jak najmniejszym kosztem. Zauważ, że naszym celem nie jest minimalizacja $m$, a jedynie zmniejszenie tej charakterystyki.
+
+
+
+
+
+\section{Wejście}
+
+W pierwszej linii standardowego wejścia znajduje się liczba całkowita $n$ ($1\leq n \leq 10^5$), oznaczająca liczbę urządzeń w sieci. W następnych $n-1$ wierszach znajdują się po cztery liczby całkowite $a_i$, $b_i$, $t_i$, $p_i$ ($1\leq a_i, b_i\leq n, 1\leq t_i, p_i \leq 10^4$), oznaczające kolejno numery wierzchołków połączonych $i$-tym kablem, długość kabla oraz koszt zamiany $i$-tego kabla na kabel ultraszybki.
+
+
+
+\section{Wyjście}
+
+	
+
+W pierwszej i jednynej linii wyjścia należy wypisać jedną liczbę całkowitą, oznaczającą minimalny koszt zamiany kabli, pozwalający na zmniejszenie charakterystyki $m$.
+
+
+
+\makecompactexample
+
+
+
+\end{tasktext}
+
+\end{document}

@@ -1,0 +1,25 @@
+#
+# Ogolny makefile do obslugi dokumentow Latexowych
+#
+TEX  = $(wildcard [a-z]*.tex)
+PDF  = $(patsubst %.tex,%.pdf,$(TEX))
+
+all:  pdf
+
+pdf: $(PDF)
+
+%.pdf: %.tex
+	pdflatex $*.tex && pdflatex $*.tex
+
+%.dvi: %.tex
+	latex $*.tex
+	latex $*.tex	
+
+# Tej opcji uzywamy przy wysylaniu paczki
+clean:
+	rm -f *~
+	rm -f *.log
+	rm -f *.aux
+	rm -f *.dvi
+	rm -f *.err
+	rm -f *.inf

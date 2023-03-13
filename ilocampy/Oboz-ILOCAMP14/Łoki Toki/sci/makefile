@@ -1,0 +1,1 @@
+-include ~/.sinol/makefile.main

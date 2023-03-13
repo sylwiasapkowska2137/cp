@@ -1,0 +1,55 @@
+\documentclass[opr]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{lit}
+  \title{Literki}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \etap{pocz±tkuj±ca}
+  \day{}
+  \date{sierpieñ 2012}
+  \RAM{32}
+  \history{2011.12.29}{Jacek Tomasiewicz, przygotowanie rozwi±zania}{1.00}
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwi±zanie wzorcowe $O(n)$}
+
+Dla ka¿dej literki znajdujemy jej pierwsz± i ostatni± pozycjê. Mo¿na to zrobiæ przechodz±c jeden raz ca³y ci±g, i zapisywaæ w tablicy pod indkesem litery jej najmniejsz± i najwiêksz± pozycjê.
+
+\end{tasktext}
+\end{document}

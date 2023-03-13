@@ -1,0 +1,49 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Maksymalny zbiór k-pokrywający}
+\id{mak}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{ŻarzMasters}
+\day{4}
+\date{19.01.2017}
+\RAM{256}
+
+\usepackage{indentfirst}
+
+\begin{document}
+\begin{tasktext}%
+    
+	\textbf{Uwaga! To zadanie jest inne niż zwykłe zadania. Jest to zadanie aproksymacyjne. Nie musisz znaleźć optymalnego wyniku. Zaakceptowane zostanie każde rozwiązane, podające jakiś wynik w poprawnym formacie. Im lepszy podasz wynik, tym więcej otrzymasz punktów. Jest to pierwsza taka inicjatywa na obozie i wersja alfa, więc bądźcie wyrozumiali :)}
+\vskip 3mm
+    Masz dane drzewo z wagami na krawędziach. Chcesz wybrać podzbiór $k$ wierzchołków, żeby zmaksymalizować sumę wag krawędzi incydentnych do przynajmniej jednego wierzchołka.
+
+
+  \section{Wejście}
+
+   W pierwszej linii wejścia znajdują się dwie liczby całkowite $n$ i $k$ ($1 \leq k \leq n \leq 100000;~ 30000 \leq n$) oznaczające rozmiar drzewa i rozmiar podzbioru wierzchołków, który masz wybrać. W następnych $n-1$ wierszach znajdują się opisy krawędzi w postaci $a~b~x$ ($1 \leq a,b \leq n;~ a \neq b;~ 1 \leq x \leq 10^6$), co oznacza, że istnieje krawędź między wierzchołkami $a$ i $b$ o wadze $x$.
+
+  \section{Wyjście}
+   
+\vskip 1mm
+   W pierwszym wierszu wyjścia powinna znaleźć się jedna liczba całkowita oznaczająca sumę wag krawędzi incydentnych do przynajmniej jednego wybranego przez ciebie wierzchołka.
+\vskip 1mm
+   W drugim wierszu powinno znaleźć się dokładnie $k$ różnych liczb, oznaczających indeksy wybranych wirzchołków.
+
+  \section{Ocenianie}
+   
+\vskip 1mm
+   Jeśli wypiszesz wynik w niepoprawnym formacie, otrzymasz $0$ punktów za dany test.
+\vskip 1mm
+   Jeśli format będzie poprawny, to jeśli $A$ to twój wynik, a $B$ to wynik jury, to otrzymasz $10*(\frac{A}{B})^T$ punktów, gdzie $T$ i $B$ mogą się zmieniać w trakcie konkursu.
+\vskip 1mm
+   Testy nie będą grupowane i będą generowane następującym algorytmem:
+   Ręcznie wybierane są parametry $n$, $k$, $d$ oraz przedział z którego losowane są wagi krawędzi. Następnie dla każdego $i$ od $2$ do $n$ dodawana jest krawędź od $i$ do losowego wierzchołka z zakresu od $max(1, i-d)$ do $i-1$.
+
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

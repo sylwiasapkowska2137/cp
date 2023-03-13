@@ -1,0 +1,40 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{Rysowanie drzewa}
+  \signature{}
+  \id{rys}
+  \etap{olimpijska}
+  \day{4} 
+  \date{29.09.2016}
+  \author{Autor pomys³u na zadanie}
+  \RAM{256}
+  \iomode{stdin}
+  \pagestyle{fancy}
+  \history{02.02.2011}{kto i co zrobi³}{1.00}
+
+\begin{document}
+  \begin{tasktext}%
+Masz podane drzewo o $n$ wierzcho³kach oraz $n$ punktów na p³aszczy¼nie. ¯adne z trzech punktów nie s± wspó³liniowe.
+Twoim zadaniem jest narysowaæ podane drzewo na p³aszczy¼nie, korzystaj±c z podanych punktów jako wierzcho³ki.
+
+Powiniene¶ ka¿demu wierzcho³kowi przypisaæ dok³adnie jeden punkt na p³aszczy¼nie i je¿eli pewne dwa wierzcho³ki
+s± po³±czone krawêdzi± w drzewie, na rysunku powinien byæ narysowany odcinek miêdzy tymi wierzcho³kami. ¯adne
+dwa odcinki nie mog± siê przecinaæ, chyba ¿e maj± wspólny wierzcho³ek i wtedy mog± siê przecinaæ tylko w punkcie,
+w którym narysowany jest ten wierzcho³ek.
+
+\section{Wej¶cie}
+W pierwszym wierszu wej¶cia znajduje siê jedna liczba ca³kowita $n$ ($1 \leq n \leq 1\,500$), oznaczaj±ca liczbê wierzcho³ków i punktów na p³aszczy¼nie.
+
+W kolejnych $n-1$ liniach znajduj± siê pary liczb ca³kowitych $a_i, b_i$ ($1 \leq a_i, b_i \leq n)$, oznaczaj±ce ¿e wierzcho³ki $a_i$ i $b_i$ s± po³±czone krawêdzi±.
+
+Kolejnych $n$ linii zawiera dwie liczby ca³kowite $x_i, y_i$  ($-10^9 \leq x_i, y_i \leq 10^9$), oznaczaj±ce wspó³rzêdne $i$-tego punktu.
+
+\section{Wyj¶cie}
+
+Je¿eli nie jest mo¿liwe narysowanie takiego drzewa, nale¿y wypisaæ jedno s³owo \texttt{NIE}. Je¿eli jest mo¿liwe narysowanie drzewa na danych punktach, powiniene¶ wypisaæ $n$ liczb: $i$-ta liczba powinna byæ równa numerowi wierzcho³ka drzewa, który bêdzie narysowany na $i$-tym punkcie. 
+
+Je¿eli istnieje wiele rozwi±zañ, to mo¿esz wypisaæ dowolne z nich.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

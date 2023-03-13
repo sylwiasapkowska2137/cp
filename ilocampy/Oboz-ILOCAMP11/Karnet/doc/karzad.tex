@@ -1,0 +1,43 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Karnet}
+  \author{Mateusz Puczel}
+  \pagestyle{fancy}
+  \signature{mp???}
+  \id{kar}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{olimpijska}
+  \day{3}
+  \date{23.09.2015}
+  \RAM{128}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Przemek od pewnego czasu interesuje się sportem. Kupił sobie nawet $n$-dniowy karnet na siłownię. 
+Jeżeli Przemek pójdzie $i$-tego dnia na siłownię, to jego siła zwiększy się o $a_i$.
+Przemek ostatnio dużo czytał na temat treningu i wie, że jeżeli będzie chodził na siłownię przez $k$ dni z rzędu, 
+to dozna przemęczenia i przez kolejne $k$ dni nie zwiększy swojej siły niezależnie od tego, czy pójdzie na siłownię, czy nie. 
+
+Przemkowi zależy na maksymalnym zwiększeniu swojej siły.
+Jesteś jego trenerem personalnym, więc Twoim zadaniem jest stwierdzić, o ile maksymalnie Przemek może zwiększyć swoją siłę.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 5 \cdot 10^5$), 
+oznaczająca liczbę dni, przez które karnet jest ważny.
+
+W kolejnym wierszu wejścia znajduje się $n$ liczb całkowitych $a_1, a_2, \ldots, a_n$ ($0 \leq a_i \leq 10^9$), oznaczające wzrost siły Przemka $i$-tego dnia,
+jeśli pójdzie on wtedy na siłownię.
+
+W kolejnym wierszu wejścia znajduje się jedna liczba całkowita $q$ ($1 \leq q \leq 100$), oznaczająca liczbę zapytań.
+
+W każdym z kolejnych $q$ wierszy znajduje się jedna liczba całkowita $k$ ($1 \leq k \leq n$), oznaczająca liczbę dni,
+po których Przemek doznaje przemęczenia.
+
+  \section{Wyjście}
+Wyjście powinno składać się z $q$ wierszy. W $i$-tym wierszu powinna znaleźć się jedna liczba całkowita, oznaczająca maksymalny
+wzrost siły Przemka dla $i$-tego zapytania.
+    \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

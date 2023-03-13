@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Popularność}
+  \author{}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{pop}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{3}
+  \date{23.09.2015}
+  \RAM{64}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W obecnych czasach popularność na serwisach społecznościowych jest dla niektórych ważniejsza niż wszystko inne. Blogerzy, modele, czy aktorzy walczą o bycie obserwowanym. Każdy chce być najbardziej popularny. Nasze zadanie jest właśnie o tym.
+
+Mamy $N$ kont na pewnym portalu społecznościowym. Informacje o kontach są podane w postaci: ,,konto $X$ obserwuje konto $Y$''. Chcemy teraz dowiedzieć się, czy w pewnym podzbiorze znajduje się konto gwiazdy. Konto gwiazdy w podzbiorze to takie, które jest obserwowane przez wszystkie pozostałe konta (z tego podzbioru), podczas gdy samo nie obserwuje nikogo z pozostałych (z tego podzbioru). Zakładamy, że żadne konto nie może obserwować samego siebie.
+
+  \section{Wejście}
+W pierwszej linii wejścia znajduje się jedna liczba całkowita $N$ ($1 \leq N \leq 2\,000$), oznaczająca liczbę kont na portalu społecznościowym.
+
+W bloku kolejnych $N$ linii wejścia znajduje się po $N$ liczb całkowitych $o_{i,j}$ ($0 \leq o_{i,j} \leq 1, 1 \leq i, j \leq N$) stanowiących opis, kto kogo obserwuje. ($i$ oznacza numer wiersza w bloku, natomiast $j$ oznacza numer kolumny, $o_{i,j} = 1$ oznacza, że konto $j$-te jest obserwowane przez konto $i$-te).
+
+W kolejnej linii wejścia znajduje się jedna liczba całkowita $M$ ($1 \leq M \leq 1\,000\,000$), oznaczająca liczbę zapytań o podzbiory kont portalu.
+
+W każdej z następnych $M$ linii wejścia znajduje się opis poszczególnych zapytań o podzbiory w postaci jednej liczby $L$ ($1 \leq L \leq N$), a po niej $L$ liczb całkowitych $p_i$ ($1 \leq p_i \leq N$) oznaczających numery kont na portalu, znajdujących się w danym podzbiorze. Suma liczb $L$ ze wszystkich zapytań nie przekracza $1\,000\,000$.
+ 
+  \section{Wyjście}
+W $M$ liniach wyjścia powinny znaleźć się odpowiedzi dla poszczególnych podzbiorów. Odpowiedzią jest numer dowolnego konta gwiazdy (z rozpatrywanego podzbioru) lub wartość $-1$ jeśli takie konto nie istnieje.
+
+     \makecompactexample
+
+	\medskip
+	\noindent
+	\textbf{Wyjaśnienie do przykładu:} W pierwszym podzbiorze konto numer 3 jest obserwowane przez konta 1 i 2, zaś samo nie obswerwuje żadnego innego konta. W drugim podzbiorze konto 5 jest obserwowane przez konta 1 i 3, zaś nie obserwuje nikogo z nich. W czwartym podzbiorze nie istnieje konto, spełniające warunki bycia gwiazdą. 
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Robocik}
+\id{rob}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{4}
+\date{21.01.2016}
+\RAM{32}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Mały robocik jest ustawiony na kwadratowej planszy podzielonej na  $n^2$ pól. Robocikowi została zaprogramowana sekwencja ruchów, którą  będzie cały czas powtarzał. Dozwolone są tylko 4 ruchy: góra  (\texttt{G}), dół (\texttt{D}), lewo (\texttt{L}), prawo (\texttt {P}).
+
+Chcielibyśmy znać minimalną liczbę ruchów, które należy dołożyć do  sekwencji ruchów (w dowolne miejsca), tak aby robocik nigdy nie  wyszedł poza planszę. 
+ 
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera cztery liczby całkowite $n, m, x, y$  ($2 \leq n \leq 10^9, 1 \leq x, y \leq n, 1 \leq m \leq 10^6$), oznaczające  odpowiednio wielkość planszy, liczbę ruchów w zaprogramowanej sekwencji oraz współrzędne położenia robocika. Robocik stoi w kolumnie $x$ (licząc od lewej strony) oraz w wierszu $y$ (licząc od dołu).
+
+Kolejny wiersz zawiera sekwencję ruchów w postaci słowa złożonego z  $m$ znaków: \texttt{G}, \texttt{D}, \texttt{L}, \texttt{P}.
+
+  \section{Wyjście}
+Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę  całkowitą, równą minimalnej liczbie ruchów, które należy dołożyć do  sekwencji ruchów, tak aby robocik nigdy nie wyszedł poza planszę.
+
+	\exampleimg{rob0.eps}
+     \makestandardexample
+
+\bigskip
+\noindent
+\textbf{Wyjaśnienie do przykładu:} 
+Mając sekwencję ruchów \texttt{LD}, po wykonaniu 4 ruchów, czyli  \texttt{LDLD} robocik wyjdzie poza planszę. Jeśli dodamy dwa ruchy,  otrzymując sekwencję \texttt{GLDP}, robocik nigdy nie wyjdzie poza  planszę.
+
+  \end{tasktext}
+\end{document}

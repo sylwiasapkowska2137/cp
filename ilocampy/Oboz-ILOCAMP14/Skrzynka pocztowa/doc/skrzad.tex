@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Skrzynka pocztowa}
+\id{skr}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{2}
+\date{17.01.2017}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek codziennie przegląda swoją pocztę elektroniczną. Od jakiegoś czasu zajmuje mu to bardzo dużo czasu, więc postanowił tym razem przyspieszyć ten proces.
+
+W skrzynce odbiorczej Przemka znajduje się $n$ e-maili. Niektóre z nich są już przeczytane, a niektóre wciąż nie.
+Program do przegladania poczty składa się z dwóch widoków: widok z listą wszystkich e-maili uporządkowanych po czasie dostarczenia oraz
+widok szczegółowy dla danego e-maila. Po wejściu w widok szczegółowy dany e-mail staje się przeczytany i tylko tam można go przeczytać.
+
+Z widoku listy e-maili można za pomocą jednego kliknięcia przejść do widoku szczegółowego dowolnego e-maila. Z widoku szczegółowego można za pomocą jednego kliknięcia
+wrócić do listy e-maili, przejść do e-maila następnego lub poprzedniego (w sensie czasu dostarczenia).
+
+Przemek chciałby przeczytać wszystkie dotychczas nieprzeczytane e-maile. Chciałby zrobić to za pomocą minimalnej liczby kliknięć, aby maksymalnie skrócić
+czas przeglądania poczty. Napisz program, który mu to ułatwi.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę e-maili w skrzynce Przemka.
+W kolejnym wierszu wejścia znajduje się opis wszystkich e-maili w kolejności od najwcześniej dostarczonego do najpóźniej dostarczonego.
+Dokładniej, znajduje się w nim $n$ liczb całkowitych $a_1, a_2, \cdots, a_n$ ($0 \leq a_i \leq 1$), oznaczające stan kolejnych e-maili.
+Jeśli $a_i = 1$, to $i$-ty e-mail nie został przeczytany, a jeśli $a_i = 0$, to e-mail został przeczytany.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca minimalną liczbę kliknięć potrzebną do przeczytania wszystkich nieprzeczytanych e-maili.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

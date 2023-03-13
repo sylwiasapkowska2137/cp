@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Jabłka}
+\id{jab}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{18.01.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Na stole leży $n$ jabłek ułożonych w rzędzie. Każde jabłko jest pewnego gatunku. Przemek i Jakub chcieliby podzielić się jabłkami tak,
+aby każdy z nich otrzymał tyle samo jabłek każdego gatunku. W tym celu wybierają $m$ przedziałów i dla każdego z nich zastanawiają się, czy jabłka w tym przedziale
+można podzielić zgodnie z ich wymaganiami. Ponieważ jabłek jest bardzo dużo, poprosili Ciebie, abyś napisał program, który rozwiąże ich problem.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$, $m$ ($1 \leq n, m \leq 10^6$), oznaczające odpowiednio liczbę jabłek na stole
+oraz liczbę zapytań Przemka i Jakuba.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$ ($1 \leq x_i \leq 10^9$), oznaczające gatunki kolejnych jabłek.
+
+W każdym z kolejnych $m$ wierszy znajdują się dwie liczby całkowite $a$, $b$ ($1 \leq a \leq b \leq n$), oznaczające odpowiednio początek i koniec przedziału kolejnych zapytań.
+  \section{Wyjście}
+Na wyjściu powinno pojawić się $m$ wierszy. W każdym z tych wierszy powinno pojawić się słowo \texttt{TAK}, jeżeli dla kolejnych zapytań da się
+podzielić jabłka tak, aby Przemek i Jakub dostali tyle samo jabłek każdego typu. W przeciwnym wypadku należy wypisać \texttt{NIE}.
+\makecompactexample
+
+\end{tasktext}
+\end{document}

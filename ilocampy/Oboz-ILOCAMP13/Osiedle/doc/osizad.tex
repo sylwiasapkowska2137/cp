@@ -1,0 +1,45 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Osiedle}
+\id{osi}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{28.09.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Przemek jest nieoficjalnie nazywany królem swojego osiedla. Każdego wieczoru wybiera się na spacer po nim, podczas którego pilnuje porządku
+oraz rozwiązuje problemy innych ludzi. Dziś Przemek też wybierze się na spacer.
+
+Osiedle Przemka składa się z $n$ bloków mieszkalnych. Patrząc na osiedle Przemka z lotu ptaka, każdy z tych bloków ma kształt prostokąta o
+bokach równoległych do osi układu współrzędnych. Bloki nie przecinają się, ale mogą stykać się brzegami. Żaden blok nie zawiera się w innym.
+
+Spacer rozpoczyna się w pewnym punkcie, a kończy w innym. Przemek chciałby, aby przebyta droga była jak najkrótsza.
+Stojąc w pewnym punkcie, Przemek może przejść w linii prostej do dowolnego innego punktu, o ile na tym odcinku nie ma żadnego bloku, tj.
+odcinek między dwoma punktami nie może przecinać się z żadnym blokiem. Może natomiast dotykać zewnętrznych krawędzi bloku. Odległość
+między dwoma punktami jest mierzona w metryce euklidesowej, tj. odległość między punktami $A$ i $B$ wyrażona jest wzorem $\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}$.
+Podsumowując, spacer Przemka jest ciągiem przejść w linii prostej między pewnymi punktami, a łączna długość spaceru jest sumą odległości między
+kolejnymi punktami.
+
+Pomoż Przemkowi wyznaczyć minimalną długość spaceru.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się 5 liczb całkowitych $n$, $x_p$, $y_p$, $x_k$, $y_k$ ($1 \leq n \leq 700, -10^6 \leq x_p, y_p, x_k, y_k \leq 10^6$),
+oznaczające odpowiednio liczbę bloków mieszkalnych oraz współrzędne punktu początkowego oraz punktu końcowego. Punkty początkowe i końcowe nie leżą wewnątrz ani na brzegu
+żadnego bloku.
+
+W każdym z kolejnych $n$ wierszy wejścia znajdują się 4 liczby całkowite $x_0, y_0, x_1, y_1$ ($-10^6 \leq x_0, y_0, x_1, y_1 \leq 10^6, x_0 < x_1, y_0 < y_1$),
+oznaczające odpowiednio współrzędne lewego dolnego rogu oraz prawego górnego rogu kolejnego bloku.
+  
+  \section{Wyjście}
+Na wyjściu powinna pojawić jedna liczba rzeczywista, będąca minimalną długością spaceru Przemka. Wynik zostanie zaliczony, jeśli nie różni się
+od poprawnego o więcej niż $10^{-6}$ oraz liczba cyfr po przecinku nie przekracza 10. Jeśli nie da się dojść z punktu początkowego do końcowego, wypisz \texttt{NIE}.
+\makecompactexample
+
+\end{tasktext}
+\end{document}

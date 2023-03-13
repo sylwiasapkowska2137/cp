@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Turniej magiczny}
+\id{tmg}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{?}
+\date{??.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+W Bajtockim Turnieju Magicznym\footnote{Bajtocki Turniej Magiczny to największy turniej magów w całej Bajtocji, którego historia sięga ponad setki lat wstecz. Rywalizują w nim najlepsi z najlepszych bajtockich czarodziejów, a rywalizują o nie byle co, bo o niezwykle prestiżowy tytuł arcymaga, piękne czarownice, szybkie miotły oraz ogromną nagrodę pieniężną.} bierze udział $n$ magów, z których każdy włada trzema szkołami magii (ognia, wody oraz natury). Poziom wiedzy czarodzieja na temat każdej z nich określa pojedyncza liczba dodatnia. Można uznać, że im większa większa wiedza na temat danej szkoły magii, tym mag jest w niej potężniejszy. Turniej rozgrywany jest w formacie \textbf{każdy z każdym} tj. każdy mag staje w szranki z każdym pozostałym dokładnie raz. Pojedynek dwóch magów składa się z trzech następujących po sobie rund, w pierwszej z nich dozwolone jest używanie tylko czarów ognistych, w drugiej - wodnych, a w ostatniej tych spod domeny natury. Pojedynczą rundę wygrywa mag, który jest potężniejszy w obowiązującej szkole magii, a w przypadku gdy oboje posługują się nią równie dobrze przyznawany jest remis. Całe starcie wygrywa czarodziej, który zwyciężył w większej ilości rund. W razie równej ilości zwycięstw obu zawodników, pojedynek kończy się remisem. Zwycięzcą turnieju zostaje osoba, który wygra najwięcej pojedynków, a w przypadku sytuacji ex aequo zwycięzca jest wybierany zgodnie ze skomplikowanymi zasadami, które w tym momencie nie są istotne.
+
+Czarnoksiężnik Bajtazar popadł ostatnio w problemy finansowe i aby się z nich wykaraskać postanowił zdobyć główną nagrodę pieniężną turnieju. Niestety Bajtazar już wiele lat temu, z powodu testowania magii na zwierzętach, otrzymał zakaz uczestnictwa w turnieju, więc jego osobisty udział w zawodach nie wchodzi w grę. Jednak ostatnio udało mu się stworzyć potężne zaklęcie, które umożliwia rzucającemu zamianę ze sobą wartości swoich dwóch poziomów wiedzy. Bajtazar postanowił wziąć pod skrzydła jednego z uczestników turnieju i nauczyć go tego zaklęcia. Oczywiście, aby być pewnym zwycięstwa swojego podopiecznego, Bajtazar chce aby po opanowaniu zaklęcia był on w stanie zwyciężyć w turnieju wygrywając wszystkie pojedynki, mając możliwość użycia czaru nieogarniczoną ilość razy przed każdym z nich.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($2 \leq n \leq 300\,000$), oznaczająca liczbę magów biorących udział w turnieju.
+
+W każdym z kolejnych $n$ wierszy znajdują się 3 liczby całkowite $a_i$, $b_i$ oraz $c_i$ ($1 \leq a_i, b_i, c_i \leq 10^6$) określające wiedzę $i$-tego maga o kolejno magii ognia, wody i natury.
+
+Możesz założyć, że w testach wartych łącznie $50\%$ punktów wszystkie wartości $a_i$, $b_i$ oraz $c_i$ są parami różne.
+
+  \section{Wyjście}
+W pierwszym wierszu wyjścia powinna się znaleźć jedna liczba całkowita, będącą liczbą potencjalnych podopiecznych Bajtazara, których numery należy wypisać w kolejności rosnącej w następnym wierszu.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document} 

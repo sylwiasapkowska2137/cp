@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Literki}
+\id{lit}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{20.01.2016}
+\RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Mamy dane słowo składające się z $n$ liter. Chcielibyśmy wykreślić pewien początkowy fragment i pewien  końcowy, tak aby pozostała część słowa zaczynała się i kończyła tą samą literką.
+
+Chcielibyśmy przy tym, aby suma wyciętych fragmentów była jak najmniejsza. 
+
+  \section{Wejście}
+Pierwszy i jedyny wiersz wejścia zawiera jendą liczbę całkowitą $n$ ($1 \leq n \leq 1\,000\,000$),  oznaczającą długość słowa. Kolejny wiersz wejścia zawiera słowo składające się z $n$ małych liter  alfabetu angielskiego.
+
+  \section{Wyjście}
+Wyjście powinno zawierać jedną liczbę całkowitą, równą minimalnej długości sumie fragmentów, które  powinniśmy usunąć.
+
+     \makecompactexample
+
+\medskip
+  \noindent
+  \textbf{Wyjaśnienie do przykładu:} 
+Możemy usuwąć pierwszą i dwie ostatnie literki ze słowa.
+
+  \end{tasktext}
+\end{document}

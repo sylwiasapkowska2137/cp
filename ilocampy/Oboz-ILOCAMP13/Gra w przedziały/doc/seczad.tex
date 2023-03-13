@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Gra w przedziały}
+\id{sec}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{29.09.2016}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+Podczas zawodów programistycznych na Ilocampie, Przemek i Jakub po ciężkiej nocy przygotowywania zadań, postanowili odprężyć się odrobinę
+i zagrać w nową, wymyśloną przez nich grę.
+
+Na kartce znajduje się $n$ liczb całkowitych, wypisanych w rzędzie. Gra składa się z dwóch ruchów -- ruchu Przemka i ruchu Jakuba.
+Najpierw Przemek wycina pewien spójny fragment z ciągu liczb, następnie sklejane są pozostałe części, po czym Jakub również wycina pewien
+spójny fragment nowootrzymanego ciągu. Po wykonaniu obu ruchów sumujemy wartości z dwóch wyciętych fragmentów. Przemek chce, aby uzyskana suma była
+jak największa, a Jakub -- jak najmniejsza.
+
+Zakładając optymalną grę obu graczy, wyznacz wynik gry, czyli uzyskaną sumę.
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 10^6$), oznaczająca liczbę liczb napisanych na kartce.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $a_1, a_2, \dots, a_n$ ($-10^9 \leq a_i \leq 10^9$), oznaczających wartości
+kolejnych liczb na kartce.
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca wynik gry przy założeniu optymalnej gry Przemka i Jakuba.
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Przemek może wyciąć fragment od pozycji 7 do 9 włącznie, czyli fragment \texttt{12 -5 8}.
+Następnie Jakub wytnie fragment od pozycji 6 do 7 włącznie z nowopowstałego ciągu, czyli fragment \texttt{-2 -7}.
+
+\end{tasktext}
+\end{document}

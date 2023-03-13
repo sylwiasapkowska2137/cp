@@ -1,0 +1,29 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Sumy}
+\id{smy}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{26.09.2016}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+Mamy dany ciąg $n$ liczb całkowitych $l_1, l_2, \ldots, l_n$. Chcielibyśmy wyliczyć dla każdego elementu, sumę wszystkich innych liczb.
+Dokładniej, dla $i$-tego elementu, chcielibyśmy znać sumę $l_1 + l_2 + \ldots l_{i-1} + l_{i+1} + \ldots + l_n$.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 400\,000$), oznaczającą ilość liczb.
+Kolejny wiersz zawiera $n$ liczb całkowitych $l_1, l_2, \ldots, l_n$ ($1 \leq l_i \leq 10^3$), gdzie $l_i$ oznacza wartość $i$-tej liczby.
+
+  \section{Wyjście}
+Wyjście powinno zawierać $n$ liczb całkowitych będących wyliczonymi sumami dla każdego z elementów.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

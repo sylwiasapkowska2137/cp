@@ -1,0 +1,38 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Cztery rogi}
+\id{czt}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{olimpijska}
+\day{0}
+\date{17.01.2016}
+\RAM{32}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Mamy daną tablicę $n \times n$, wypełnioną wartościami: $0$ lub $1$. 
+Chcielibyśmy znaleźć  prostokąt zaczepiony w 4 komórkach, których wartości (w każdym rogu) są równe 1. 
+Dodatkowo prostokąt powinien mieć największe możliwe pole powierzchni.
+
+Zakładamy, że dwa rogi mogą być zaczepione w tej samej komórce tablicy.
+
+ \section{Wejście}
+	
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 2\,000$),  
+oznaczającą wielkość tablicy. W~$n$~kolejnych wierszach znajduje się opis tablicy. 
+W każdym wierszu po $n$ wartości: $0$ lub $1$.
+
+Możesz założyć, że w testach wartych $60\%$ punktów zachodzi warunek $n \leq 500$, 
+a w testach wartych $30\%$ punktów zachodzi $n \leq 100$.
+
+  \section{Wyjście}
+	Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą wartości największego pola powierzchni.
+	Jeśli nie da się znaleźć żadnego prostokąta, to odpowiedzią powinna być wartość \texttt{0}.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

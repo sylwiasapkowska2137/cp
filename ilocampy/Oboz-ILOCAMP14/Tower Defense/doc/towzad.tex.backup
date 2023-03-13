@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Tower Defense}
+\id{tow}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.01.2017}
+\RAM{64}
+ 
+\begin{document}
+\begin{tasktext}%
+Król Karol (ten z pokoju 303) w ramach rozwijania swoich umiejętności stategicznych, często gra w grę Tower Defense. 
+Polega ona na ustawieniu $k$ wież na prostokątnej planszy o $n$ wierszach i $m$ kolumnach w taki sposób, aby jak najlepiej chronić
+królestwo, które reprezentuje plansza. Dokładniej, gra polega na zminimalizowaniu powierzchni największego obszaru niechronionego przez żadną z wież.
+W każdej kolumnie i w każdym wierszu można postawić co najwyżej jedną wieżę - wówczas wieża ta chroni wszystkie pola w wierszu 
+i kolumnie w których się znajduje. 
+
+Król Karol rozstawił wszystkie $k$ wież na planszy i zastanawia się jakie jest pole największego prostokątnego obszaru, takiego
+że każde z jego pól nie jest chronione przez krórąkolwiek z wież. Pomóż mu odpowiedzieć na to pytanie!
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n$, $m$ i $k$ ($1 \leq n, m \leq 10^9, 1 \leq k \leq 10^6$, $k \leq min(n, m)$), 
+oznaczające odpowiednio wymiary planszy oraz liczbę wież, ktore ustawił król Karol. W następnych $k$ wierszach znajdują się opisy
+kolejnych wież, składające się z dwóch liczb całkowitych $y_i$, $x_i$, które reprezentują współrzędne wież na planszy.
+
+ \section{Wyjście}
+Na standardowe wyjście należy wypisać jedną liczbę całkowitą równą polu największego obszaru niechronionego przez wieże rozstawione
+przez króla Karola.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

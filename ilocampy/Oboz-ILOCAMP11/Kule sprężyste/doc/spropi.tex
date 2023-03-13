@@ -1,0 +1,63 @@
+\documentclass[zad, zawodnik, utf8]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{spr}
+  \pagestyle{fancy}
+  \title{Kule sprężyste}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{}
+  \date{sierpień 2012}
+  \RAM{32}
+  \history{2011.12.29}{Jacek Tomasiewicz, przygotowanie rozwiązania}{1.00}
+
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwiązanie wzorcowe $O(n)$}
+
+Moment, w którym nie będzie juz żadnych zderzeń będzie taki, że pewna początkowa liczba kul porusza się tylko w lewo, a reszta prawo, czyli \texttt{LL..LP..PP}.
+
+Jak wyliczać liczbę zderzeń i końcowy kierunek kul. Możemy poruszać się od lewej do prawej. W przypadku natrafienia na:
+\begin{itemize}
+\item kulę \texttt{P} -- dodajemy ją do kolejki (w kolejce będą tylko kule poruszające się w prawo),
+\item kulę \texttt{L} -- pierwsza z kolejki kula zmieni swój kierunek (poprzez ciąg zderzeń kolejnych kul z kolejki). Kula ta zmieni swój kierunek na dobre, więc możemy ją usunąć. Rozpatrywana kula \texttt{L} też zmieni swój kierunek, więc musimy ją dodać do kolejki. Liczbę zderzeń zwiększamy o liczbę elementów w kolejce.
+\end{itemize}
+
+\end{tasktext}
+\end{document}

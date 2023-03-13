@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Beduini}
+  \author{JT?}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{bed}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{średnia}
+  \day{2}
+  \date{22.09.2015}
+  \RAM{128}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Trzej Beduini podczas podróży przez pustynię natknęli się na mapę wydm oraz oaz znajdujących się na niektórych z nich. Teraz mają ambitny plan, aby otworzyć biznes. Chcą odnaleźć i zabezpieczyć trzy różne oazy, a następnie stworzyć sieć hoteli i spa, po jednym w każdej oazie. Niestety, podróż przez pustynię nie należy do najprzyjemniejszych, więc chcą maksymalnie ograniczyć dystans jaki w sumie będą musieli przebyć. Ponadto, nie wiedzą na której wydmie się znajdują, więc trzeba rozważyć wszystkie możliwości.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n, m$ ($1 \leq n \leq 2 \cdot 10^5, 1 \leq m \leq 4 \cdot 10^5$), oznaczające odpowiednio liczbę wydm na pustyni oraz liczbę ,,dróg'' łączących te wydmy.
+
+W każdej z następnych $m$ linii znajdują się po trzy liczby całkowite $a_i, b_i, d_i$ ($1 \leq a_i, b_i \leq n, 1 \leq d_i \leq 10^9$) oznaczające, że wydmy $a_i$ i $b_i$ łączy dwukierunkowa ,,droga'' o długości $d_i$. Wydmy może łączyć wiele dróg, drogi mogą też zaczynać i kończyć się przy tej samej wydmie.
+
+W kolejnym wierszu wejścia znajduje się liczba całkowita $o$ ($1 \leq o \leq n$), oznaczająca liczbę oaz. 
+
+W następnej linii znajduje się $o$ liczb całkowitych $w_i$ ($1 \leq w_i \leq n$), oznaczających numery wydm, przy których są oazy.
+
+  \section{Wyjście}
+W $n$ liniach standardowego wyjścia powinny znaleźć się odpowiedzi dla poszczególnych wydm (w $i$-tym wierszu wyjścia, powinna znaleźć się odpowiedź zakładająca, że Beduini znajdują się na $i$-tej wydmie), w postaci $s_i$ ($0 < s_i$), oznaczające sumę odległości, którą łącznie przebędą Beduini. Jeżeli nie jest możliwe wybranie oaz, odpowiedzią jest $-1$.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

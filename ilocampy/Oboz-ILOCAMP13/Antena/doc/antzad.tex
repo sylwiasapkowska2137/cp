@@ -1,0 +1,35 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Antena}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{ant}
+  \iomode{stdin}
+  \konkurs{XIII obóz informatyczny}
+  \etap{początkująca}
+  \day{0}
+  \date{25.09.2016}
+  \RAM{32}
+  \history{2011.02.20}{JTom, pomysł i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W maleńkiej wiosce Bajtowszczyźnie, znajdują się 3 domki jednorodzinne. Sołtys zastanawia się, w którym miejscu ustawić antenę, tak aby wszystkie domki były w jej zasięgu. Chce przy tym, aby antena miała jak najmniejszy zasięg. Pomóż mu i powiedz, jaki zasięg powinna mieć antena.
+
+Zakładamy, że zasięg anteny to jej promień, którego długość może być tylko całkowita. Domki leżą w linii prostej, a ich położenie utożsamiamy z punktami na osi. Antenę można ustawić w dowolnym punkcie o \textbf{nieujemnych} współrzędnych, gdyż tylko w tych miejscach sołtys ma pozwolenie na budowę.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera trzy liczby całkowite $x_1, x_2, x_3$ ($-10^9 \leq x_i \leq 10^9$), gdzie $x_i$ oznacza współrzędną $i$-tego domku. Zakładamy, że jest to współrzędna $x$-owa, a domki leżą na osi \textit{OX}, czyli wszystkie posiadają współrzędną $y = 0$.
+
+  \section{Wyjście}
+Wyjście powinno zawierać jedną liczbę całkowitą, równą minimalnemu zasięgowi anteny.
+
+     \makecompactexample
+
+  \medskip
+  \noindent
+  \textbf{Wyjaśnienie do przykładu:} 
+Domki mają współrzędne $(2, 0), (6, 0), (10, 0)$. Antenę ustawiamy w punkcie $(6,0)$, czyli tam gdzie drugi domek jednorodzinny. Jej zasięg ustawiamy na wartość 4.
+
+  \end{tasktext}
+\end{document}

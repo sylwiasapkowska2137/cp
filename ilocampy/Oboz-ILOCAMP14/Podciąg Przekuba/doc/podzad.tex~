@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Podciąg Przekuba}
+\id{pod}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{2}
+\date{17.01.2017}
+\RAM{512}
+ 
+\begin{document}
+\begin{tasktext}%
+    
+    Przemek i Jakub są bliźniakami, którzy nie są w stanie ogarnąć liczb większych od $k$. Każdy z nich podczas dzisiejszego śniadania, zgodnie z zaleceniem lekarza,
+    napisał na kartce pewien ciąg liczb naturalnych, aby utrwalić pisownię liczb, które znają. Ich starszy brat Przekub jest nieugiętym rozkminiaczem.
+    Pod nieuwagę bliźniaków zabrał im kartki i teraz rozkminia, jaki jest najkrótszy ciąg liczb, taki że nie jest on podciągiem 
+    żadnego z ciągów zapisanych na kartkach oraz wszystkie liczby, z których się składa, są znane przez bliźniaków.
+    
+    Niefortunnie Przekub nie umie tego rozkminić, zatem musisz zrobić to Ty.
+
+  \section{Wejście}
+
+  W pierwszej linii wejścia znajduje się jedna liczba całkowita $k$ ($1 \leq k \leq 2000$), oznaczająca największą liczbę naturalną, którą znają chłopcy. W kolejnym wierszu znajduje się liczba
+  $n$ ($1 \leq n \leq 2000$), oznaczająca długość ciągu $a_1, a_2, \dots, a_n$ ($1 \leq a_i \leq k$) zapisanego na kartce przez Przemka. Ciąg ten znajduje się w następnym wierszu wejścia. 
+  Czwarty wiersz zawiera liczbę całkowitą $m$ ($1 \leq m \leq 2000$), równą długości ciągu $b_1, b_2, \dots, b_m$ ($1 \leq b_i \leq k$) zapisanego przez Jakuba, podanego w piątym
+  wierszu wejścia.
+
+  \section{Wyjście}
+   
+   W pierwszym wierszu standardowego wyjścia powinna znaleźć się jedna liczba całkowita $l$ równa długości ciągu, który wykminiłeś za Przekuba. 
+   W drugim wierszu wyjścia powinieneś wypisać przykładowy ciąg o tej długości, który spełnia wymogi zadania.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Oszust Bożydar}
+\id{osz}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{1}
+\date{18.01.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bożydar rzuca przed siebie $n$ kamieniami, tak aby rzucić jak najbliżej wyznaczonej linii, oddalonej od niego
+o $x$ metrów. Znamy odległości wszystkich rzutów chłopca.
+Końcowy rezultat to sumaryczna odległość najlepszych $k$ rzutów od miejsca, w którym znajduje się linia 
+(im mniejszy wynik tym lepiej). Bożydar jest kłamczuszkiem i chce przesunąć linię, tak aby zminimalizować 
+swój wynik. Należy wypisać najlepszy wynik jaki może uzyskać oszust.
+
+ \section{Wejście}
+	
+Pierwszy wiersz wejścia zawiera trzy liczby całkowite $n$, $x$, $k$ ($1 \leq k \leq n \leq 10^6$, 
+$1 \leq x \leq 10^{12}$), oznaczające kolejno liczbę kamieni, którymi rzuca Bożydar, początkową odległość linii
+od chłopca oraz liczbę rzutów wliczających się do wyniku. W następnym wierszu wejścia znajduje się $n$ liczb 
+całkowitych $d_1, d_2, \ldots, d_n$ ($1 \leq d_i \leq 10^{12}$), równych odległościom kolejnych rzutów Bożydara.
+
+  \section{Wyjście}
+	Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą wartości najlepszego
+	(najmniejszego) wyniku, który może uzyskać Bożydar, odpowiednio przesuwając linię.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Bilet}
+  \signature{}
+  \id{bil}
+  \etap{początkująca}
+  \day{?} 
+  \konkurs{XI obóz informatyczny}
+  \date{??.09.2015}
+  \author{Autor pomysłu na zadanie}
+  \RAM{32}
+  \iomode{stdin}
+  \pagestyle{fancy}
+
+
+\begin{document}
+  \begin{tasktext}%
+Wzdłuż torów kolejowych rozmieszczonych jest $n$ miast. Przez kolejne miasta przebiega również piaszczysta, jednokierunkowa droga. Droga podzielona jest na odcinki, w których każdy łączy dwa sąsiednie miasta. Bajtazar chciałby się dostać z pierwszego miasta do końcowego oraz chciałby przy tym jak najwięcej zarobić.
+
+Bajtazar zarabia sprzedając towary. Wie on dokładnie, ile zarobi lub straci na każdym odcinku piaszczystej drogi. Bajtazar nie musi odwiedzać każdego odcinka drogi, gdyż ma jeden bilet na pociąg, który może wykorzystać na dowolnym kawałku drogi (czyli wsiąść w pewnym mieście i wysiąść w dowolnym innym, być może wcześniejszym). Pociąg jeździ w obie strony, a Bajazar przy ponownym odwiedzeniu odcinka drogi zarobi lub straci tyle samo co poprzednio.
+
+Bajtazar chciałby zaplanować wcześniej podróż, dlatego pomóż mu i powiedz, ile może maksymalnie zarobić.
+
+\section{Wejście}
+Dane podawane są na standardowym wejściu. W pierwszym wierszu podana jest
+jedna liczba całkowita $z$ ($1 \leq z \leq 20$), oznaczająca liczbę zestawów danych. Dalej podawane są zestawy zgodnie z opisem:
+
+\section{Jeden zestaw danych}
+
+Pierwszy wiersz zawiera jedną liczbę całkowitą $n$ ($2 \leq n \leq 10^5$),
+oznaczającą liczbę miast rozmieszczonych wzdłuż torów. Kolejny wiersz zawiera $n-1$ liczb całkowitych $k_1, k_2, \ldots, k_{n-1}$ ($-20000 \leq k_i \leq 20000$), gdzie $k_i$ oznacza zysk (liczba dodatnia) lub stratę (liczba ujemna) Bajtazara na odcinku drogi pomiędzy $i$-tym a $i+1$-wszym miastem.
+
+\section{Wyjście}
+
+Wyniki programu powinny być wypisywane na standardowe wyjście. W kolejnych wierszach należy podać odpowiedzi obliczone dla kolejnych zestawów danych. W jedynym wierszu wyjścia danego zestawu danych powinna znajdować się jedna liczba całkowita, równa maksymalnemu zysku jaki, może osiągnąć Bajazar.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

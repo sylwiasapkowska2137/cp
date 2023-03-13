@@ -1,0 +1,26 @@
+Zadanie wymyślone przez Przemka Kozłowskiego. Jest to zmodyfikowane zadanie Palindromy z obozu Puck październik 2010 Stowarzyszenia Talent. 
+Nie było pytań do tego zadania w czasie zawodów.
+
+Hashe SHA-1 testów:
+2de0bf327185d51209494df9aa2550bb950661ad  0.in
+e5fa44f2b31c1fb553b6021e7360d07d5d91ff5e  0.out
+097857c12bf3517bacfcd0ef11cfc44adf64d8c0  01.in
+c6e4ffdb7e1f4c736fb7ab897162332b4619d9ca  01.out
+379034eeec2b41da0382d305f3598f6bd7c9e407  02.in
+1e75a596aa20330d754d6453345d056acd41c625  02.out
+f11d188a3433721e88a31edfddac6b21850d4d49  03.in
+ccf271b7830882da1791852baeca1737fcbe4b90  03.out
+3394d444ed7f5aff7dd5825e04e5c395ebcceb79  04.in
+408a310a28ddcebbcfdc8f886c79ab12825b6973  04.out
+22ff6be93ce24973447414ca1c976d1cb11be771  05.in
+22bdea34b7c69e3af7ff10888a56cb0a14bab838  05.out
+8ef80a591d8be51ab28f532b4eaed9f0bc0b7280  06.in
+959fbf708d2a640c0dafa136f5f6ffaaba983cbd  06.out
+5fdde08f70be2b2c6868b1a268a13b0d52c1ff2b  07.in
+09d2af8dd22201dd8d48e5dcfcaed281ff9422c7  07.out
+b3518b7820fe9f2e09b1f1f9c049e04eff45121e  08.in
+f7519857a64df07960711400511f53cbffed9a5e  08.out
+a567decbd5da504e0fa508c628317ab5f344f9e1  09.in
+fd798c93bcf01d440133239636b640b07a840eb1  09.out
+3a457f7c191977dd7582a0fd10b69d1d997fd2d6  10.in
+e5fa44f2b31c1fb553b6021e7360d07d5d91ff5e  10.out

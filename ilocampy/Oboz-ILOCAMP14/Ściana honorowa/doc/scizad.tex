@@ -1,0 +1,42 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Ściana Honorova}
+\id{sci}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{4}
+\date{19.01.2017}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Przemek od jakiegoś czasu interesuje się osiągnięciami rosyjskich matematyków. Ostatnio kiedy przechadzał się korytarzami wydziału,
+na którym studiuje, zauważył pewną ścianę pokrytą kafelkami, którą natychmiast skojarzył z jednym ze swoich idoli. Po krótkim 
+namyśle wykrzyknął $"Ściana~Honorova!"$. 
+
+Ściana na wydziale pokryta jest kafelkami, ułożonymi w $n$ wierszy i $m$ kolumn. Każdy kafelek ma rozmiar $1\times 1$. Każdy kafelek ma biały lub czarny kolor, lub wcale nie jest pomalowany.
+Mówimy, że ściana pokryta kafelkami jest $Ścianą~Honorova$, jeżeli w każdym kwadracie o wymiarach $2\times 2$, który zawiera dokładnie 4 kafelki, znajdują się trzy kafelki czarne
+i jeden biały lub na odwrót -- trzy kafelki białe i jeden czarny.
+
+Ściana, którą obserwuje Przemek niekoniecznie jest $Ścianą~Honorova$. Ma ona pewne kafelki pomalowane na konkretny kolor, ale niektóre wciąż czekają na pomalowanie.
+Przemek natychmiast chwycił farbę i pędzel, i postanowił poprosić samego twórcę owego kształtu, Honorova, aby pomalował resztę kafelków i uczynił obserwowaną ścianę $Ścianą~Honorova$. Zanim jednak to zrobi,
+chciałby wiedzieć, ile różnych $Ścian~Honorova$ Honorov jest w stanie namalować. Pomóż mu to policzyć modulo $10^9+7$.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się trzy liczby całkowite $n, m, k$ ($1 \leq n, m, k \leq 500\,000$), oznaczające odpowiednio
+wymiary ściany oraz liczbę do tej pory pomalowanych kafelków. Wiersze są numerowane kolejnymi liczbami naturalnymi od $1$ do $n$, a kolumny od $1$ do $m$.
+
+W każdym z kolejnych $k$ wierszy znajdują się trzy liczby całkowite $r, c, b$ ($1 \leq r \leq n$, $1 \leq c \leq m$, $c \in \{0, 1\}$), oznaczające, że
+kafelek w $r$-tym wierszu i w $c$-tej kolumnie jest pomalowany na kolor czarny, jeżeli $b = 1$ lub biały, jeśli $b = 0$.
+
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca liczbę $Ścian~Honorova$, które może namalować Honorov modulo $10^9+7$.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

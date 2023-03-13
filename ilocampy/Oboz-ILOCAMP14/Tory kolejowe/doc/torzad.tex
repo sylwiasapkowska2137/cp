@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Tory kolejowe}
+  \id{tor}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \iomode{stdin}
+  \konkurs{XIV obóz informatyczny}
+  \etap{początkująca}
+  \day{0}
+  \date{15.01.2017}
+  \RAM{32}
+  \history{2011.02.20}{JTom, pomysł i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+ W Bajtocji tory kolejowe położone są w linii prostej i prowadzą ze wschodu na zachód. Domki znajdują się na północ od trasy kolejowej.
+
+Jeśli pewne dwie osoby z dwóch różnych domków chcą się spotkać, to spotkają się w połowie odległości między tymi domkami. Odległość między dwoma domkami nie jest liczona w tradycyjny sposób -- jest to długość drogi jaką pokonuje osoba chcąca przejść z jednego domku do drugiego. Taka osoba idzie na początku prosto (z północy na południe) do torów, następnie wzdłuż torów, aż do linii na której położony jest docelowy domek, a następnie prosto (z południa na północ) do danego domku. 
+
+Ze wszystkich par domków, chcielibyśmy wybrać taką parę, dla której odległość pomiędzy nimi jest minimalna. 
+
+  \section{Wejście}
+
+ Pierwszy wiersz standardowego wejścia zawiera jedną liczbę całkowitą $n$ ($2 \leq n \leq 10^6$), oznaczającą liczbę wszystkich domków. Kolejnych $n$ wierszy zawiera po dwie liczby całkowite $x_i, y_i$ ($1 \leq x_i, y_i \leq 10^9$), oznaczające współrzędne kolejnego $i$-tego domku. 
+
+Zakładamy, że tory znajdują się na współrzędnej $y = 0$ oraz, że żadne dwa domki nie mają tej samej współrzędnej $x$. 
+
+  \section{Wyjście}
+
+ Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą minimalnej odległości między dowolną parą domków, gdzie odległość liczona jest zgodnie z treścią zadania. 
+
+     \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Sumujący kangur}
+\id{sum}
+\author{Przemysław Jakub Kozłowski} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{0}
+\date{25.09.2016}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+Na łące jest $n$ drzew ustawionych w rzędzie. Kangur Przemek bardzo lubi skakać po tych drzewach.
+Każdego dnia przychodzi na łąkę, wskakuje na drzewo o numerze $a_i$,
+wykonuje $b_i$ skoków o długości $c_i$, a następnie zeskakuje z drzewa, na którym się znalazł.
+Przemek zawsze skacze w prawą stronę na drzewo o większym numerze. Każde drzewo ma pewną liczbę liści.
+Kangur zna te liczby i chciałby wiedzieć ile łącznie liści mają drzewa, na których był danego dnia.
+Kangur nie umie dodawać, więc poprosił Ciebie o pomoc.
+
+  \section{Wejście}
+W pierwszym wierszu standardowego wejścia znajdują się dwie liczby naturalne $n$ i $m$ ($1 \leq n,m \leq 10^5$), 
+oznaczające odpowiednio liczbę drzew i liczbą rozpatrywanych dni. W następnym wierszu znajduje się $n$ liczb naturalnych nie większych niż $10^9$, 
+oznaczających liczbę liści na kolejnych drzewach. 
+W każdym z następnych $m$ wierszy znajdują się trzy liczby naturalne
+$a_i$, $b_i$, $c_i$ ($1 \leq a_i,b_i,c_i$, $a_i+b_i\cdot c_i \leq n$, dla $i=1,2,3,\cdots,m$),
+oznaczające odpowiednio drzewo, na które kangur wskakuje $i$-tego dnia, liczbę skoków jaką kangur wykonuje oraz długość skoku.
+
+  \section{Wyjście}
+Twój program powinien wypisać na standardowe wyjście $m$ wierszy. Wiersz o numerze $i$ powinien zawierać jedną liczbę całkowitą: sumę liści drzew,
+na których kangur być $i$-tego dnia.
+
+\makecompactexample
+
+  \section{Wyjaśnienie do przykładu}
+Pierwszego dnia kangur zaczyna na $1$ drzewie i wykonuje $1$ skok o długości $1$ na drugie drzewo.
+Kangur był na drzewach $1$ i $2$, które łącznie mają \textbf{3} liście.
+
+Drugiego dnia kangur zaczyna na $1$ drzewie i wykonuje $2$ skoki o długości $2$ kolejno na drzewa $3$ i $5$. 
+Kangur był na drzewach $1$, $3$, $5$, które łącznie mają \textbf{9} liści.
+
+Trzeciego dnia kangur zaczyna na $2$ drzewie i wykonuje $1$ skok o długości $2$ na drzewo $4$. Kangur był na drzewach $2$ i $4$,
+które łącznie mają \textbf{6} liści.
+
+\end{tasktext}
+\end{document}

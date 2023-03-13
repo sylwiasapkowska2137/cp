@@ -1,0 +1,59 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Przechadzka}
+\id{pse}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{zaawansowana}
+\day{4}
+\date{21.01.2016}
+\RAM{128}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Król Jakubosław uwielbia przechadzać się po swoim królestwie, którego miasta łącznie z drogami
+pomiędzy nimi tworzą $drzewo$. Miasta są ponumerowane liczbami od $1$ do $n$. 
+Król podczas przechadzki nigdy nie spaceruje dwukrotnie pomiędzy tą samą
+parą miast.
+
+
+Jakubosław chce teraz zaplanować swoją najbliższą wycieczkę. To, co jest dla niego ważne przy jej wyborze,
+to miasto, z którego wyruszy, długość trasy oraz miasto, w którym przechadzka się skończy. Ze względu na to,
+że miast w królestwie Jakubosława jest wiele, król prosi Cię o pomoc. Przesyła Ci $m$ propozycji, w których podaje
+miasto początkowe przechadzki oraz liczbę $d$ - pożądaną długość trasy rozpoczynającej się w tym mieście. 
+Twoim zadaniem jest zaproponowanie mu
+dowolnego miasta, które jest odległe o $d$ od miasta startowego, w którym mógłby zakończyć podróż. 
+Jeżeli w królestwie nie istnieje żadne miasto odległe o $d$ od miasta wyznaczonego na początek trasy, należy poinformować o tym króla.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajduje się dwie liczby całkowite $n$ i $m$ ($1 \leq n, m \leq 5 \cdot 10^5$), oznaczające odpowiednio 
+liczbę miast w królestwie Jakubosława oraz liczbę propozycji. 
+
+W nastepnych $n-1$ wierszach znajduje się opis połączeń pomiędzy miastami
+w królestwie. Każdy z tych wierszy to para liczb $a_i$, $b_i$ ($1 \leq a_i, b_i \leq n, a_i \neq b_i$), która oznacza, że istnieje
+bezpośrednia, dwukierunkowa droga pomiędzy miastami o numerach $a_i$ oraz $b_i$.
+
+W kolejnych $m$ wierszach znajdują się propozycje wycieczek wysłane przez Króla. Każda z nich to dwie liczby $v_j$ oraz $d_j$
+($1 \leq v_j \leq n, 0 \leq d_j < n$), oznaczające, że należy podać dowolne miasto odległe o $d_j$
+od miasta o numerze $v_j$, w którym król mógłby zakończyć swą przechadzkę.
+
+  \section{Wyjście}
+    Na standardowe wyjście należy wypisać dokładnie $m$ wierszy. Każdy wiersz to odpowiedź na kolejną propozycję Jakubosława.
+    Jest to numer miasta, w którym król może zakończyć swoją wycieczkę lub $-1$ jeżeli nie istnieje żadne miasto odległe o $d_j$
+    od miasta początkowego.
+    
+    \section{Przykład}
+   \twocol{
+       \noindent Dla danych wejściowych
+       \includefile{../in/\ID0.in}
+     }{
+       \noindent jednym z poprawnych wyników jest na przykład
+       \includefile{../out/\ID0.out}
+     }
+    
+
+  \end{tasktext}
+\end{document}

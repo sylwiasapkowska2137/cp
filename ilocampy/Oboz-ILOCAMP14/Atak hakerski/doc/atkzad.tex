@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+\usepackage{hyperref}
+
+\title{Atak hakerski}
+\id{atk}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{zaawansowana}
+\day{4}
+\date{19.01.2017}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+
+W trakcie ostatniego obozu ILOCampowa serwerownia, za sprawą geniuszu kadry, zamieniła się w istną maszynę do robienia pieniędzy (o czym możecie przeczytać w \href{https://ilocamp14.ilo.pl/pliki/srw.pdf}{\textbf{TUTAJ}}). Po otrzymaniu finansowego raportu kwartalnego z działania serwerowni kadra, podbudowana znakomitymi osiągami ich pomysłu, postanowiła rozbudować i odnowić serwerownie, aby działała ona jeszcze lepiej i mogła walczyć o miano międzynarodowego potentata branży przechowywania danych.
+
+Serwerownia przeszła gruntowny remont. Z podłogi pozbyto się resztek przypalonych tostów, starto wszelkie kurze oraz wprowadzono szereg optymalizacji w działaniu serwerów jak i zmieniono zupełnie strukturę ich połączeń. Korzeniem pozostał serwer numer $1$, ale od teraz serwery i ich połączenia tworzą pełne drzewo binarne o głębokości $n$, w którym traktując $i$-ty serwer jako węzeł drzewa, serwery $2i$ oraz $2i + 1$ są jego kolejno lewym i prawym dzieckiem. 
+
+Wydawało się, że wszystko zmierza w jak najlepszą stronę, kiedy to haker, działający pod intrygującym pseudonimem bOudroX\_skY, przeprowadził atak na ILOCampową serwerownię! Zdołał on złamać zabezpieczenia $k$-tego serwera i umieścił na nim wirusa, który w każdej jednostce czasu roznosi się do sąsiednich serwerów (tj. ojca i dzieci), co skutkuje ich zniszczeniem. Kadra nie pozostała bierna wobec ataku, od razu ruszając z kontrofensywą. W każdej chwili po zarażeniu nowych serwerów może ona zabezpieczyć dowolny niezarażony serwer dzięki czemu wirus na pewno się już na niego nie dostanie. Pomóż kadrze wygrać walkę z czasem i podstępnym hakerem, tym samym ratując ich złoty interes, i znajdź maksymalną liczbę serwerów, które zostaną ochronione przed niszczycielskim działaniem wirusa.
+
+  \section{Wejście}
+W pierwszym wierszu znajduje się jedna liczba całkowita $t$ ($1 \leq t \leq 500\ 000$), oznaczająca liczbę zestawów testowych.
+
+W każdym z kolejnych $t$ wierszy znajdują się dwie liczby całkowite $n$ oraz $k$ ($1 \leq n \leq 60, 1 \leq k \leq 2^n - 1$) oznaczające kolejno głębokość drzewa oraz numer zarażonego wierzchołka. 
+
+  \section{Wyjście}
+Na standardowe wyjście należy wypisać $t$ wierszy, a w każdym z nich jedną liczbę całkowitą będącą maksymalną liczbą niezarażonych węzłów w kolejno rozpatrywanych zestawach testowych.
+
+\makecompactexample
+\end{tasktext}
+\end{document}

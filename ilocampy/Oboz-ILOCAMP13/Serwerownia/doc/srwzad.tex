@@ -1,0 +1,53 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Serwerownia}
+\id{srw}
+\author{Karol Waszczuk} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{28.09.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+
+ILOCampowa serwerownia składa się z $n$ serwerów, z których każdy może pomieścić pewną ilość jednostek danych. W celu umożliwienia przesyłu danych, serwery zostały połączone kablami w taki sposób, że tworzą one spójne drzewo, którego korzeniem jest serwer o numerze 1.
+
+W ostatnich dniach w gronie kadry obozu narodził się genialny pomysł zamiany obozowej serwerowni na taką, świadczącą usługi przechowywania danych w zamian za korzyści majątkowe. Ogromnie zafascynowana tym pomysłem postanowiła jak najszybciej ruszyć z tą inicjatywą (w końcu czas to pieniądz!), ale zanim to zrobi potrzebuje programu, który potrafiłby obsługiwać trzy operacje:
+\begin{itemize}
+\item \texttt{1 x y} - umieść w serwerowni plik zajmujący $x$ jednostek danych na serwerze wybranym zgodnie z następującymi zasadami:
+    \begin{itemize}
+    \item plik musi zmieścić się \textbf{w całości} na wybranym serwerze
+    \item na ścieżce pomiędzy wybranym serwerem, a korzeniem musi znajdować się serwer $y$
+    \item w przypadku kilku serwerów spełniających powyższe zasady, należy wybrać ten, którego kolejne serwery na najkrótszej drodze od korzenia do tego serwera tworzą najmniejszy leksykograficznie ciąg liczbowy
+    \end{itemize}
+\item \texttt{2 x y} - dodaj do serwerowni nowy serwer o pojemności $x$ jednostek danych, podłącz go do serwera $y$ oraz nadaj mu numer równy najmniejszemu dodatniemu numerowi, który nie jest jeszcze zajęty przez inny serwer 
+\item \texttt{3 x} - usuń plik, który został dodany w $x$-tej operacji pierwszego typu, o ile wciąż znajduje się na jakimś serwerze
+\end{itemize}
+
+Kadra obozu chciałaby jak najszybciej zacząć zarabiać na ich pomyśle, aby kolejne edycje obozu mogły odbyć się na słonecznym Bahama. Niestety bez wyżej wspomnianego programu ani rusz, a obozowe obowiązki uniemożliwiają im jego napisanie. Pomóż kadrze i napisz za nich potrzebny program!
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $q$ ($1 \leq n \leq 300$ $000$, $1 \leq q \leq 500$ $000$), które oznaczają liczbę serwerów w obozowej serwerowni oraz liczbę zapytań.
+
+W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $c_1, c_2, ..., c_n$ ($1 \leq c_i \leq 10^6$), oznaczający pojemności danych kolejnych serwerów kadry.
+
+W kolejnych $n-1$ wierszach znajdują się po dwie liczby całkowite $a$ oraz $b$ ($1 \leq a, b \leq n$), które oznaczają że serwery $a$ i $b$ są do siebie bezpośrednio podłączone.
+
+W ostatnich $q$ wierszach znajdują się opisy operacji:
+\\Dla operacji pierwszego typu - 3 liczby całkowite $1$, $x$, $y$ ($1 \leq x \leq 10^6$).
+\\Dla operacji drugiego typu - 3 liczby całkowite $2$, $x$, $y$ ($1 \leq x \leq 10^6$).
+\\Dla operacji trzeciego typu - 2 liczby całkowite  $3$, $x$. Można założyć, że przed każdą tego typu operacją nastąpi conajmniej $x$ operacji pierwszego typu.
+\\W przypadku pierwszej i drugiej operacji można założyć, że serwer $y$ istnieje już w serwerowni.
+
+W testach wartych łącznie 50\% punktów nie występuje operacja drugiego typu.
+
+  \section{Wyjście}
+Na wyjściu dla każdego zapytania pierwszego typu należy wypisać jedną liczbe całkowitą będąca numerem serwera, na którym zostanie zapisany plik z rozpatrywanego zapytania lub \texttt{-1}, jeśli jest to niemożliwe. Odpowiedź na każde zapytanie powinno znajdować się w odzielnej linii.
+\makecompactexample 
+
+\end{tasktext}
+\end{document}

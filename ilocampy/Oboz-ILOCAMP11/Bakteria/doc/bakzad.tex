@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Bakteria}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{bak}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{początkująca}
+  \day{1}
+  \date{21.09.2015}
+  \RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji istnieje system wczesnego ostrzegania przed zakażeniem bakteriologicznym.
+Właśnie odkryto zalążek takiego zakażenia na kwadratowym jeziorze rozmiaru $n \times n$.
+
+Znamy położenie zalążka i wiemy, że w ciągu jednej doby potrafi zainfekować przylegające do niego komórki. 
+Dokładniej jeśli pewna komórka na pozycji $a, b$ jest zainfekowana, to w ciągu doby infekują się komórki na następujących pozycjach: $(a-1, b),(a+1,b),(a, b-1), (a, b+1)$.
+Jak szybko bakteria rozprzestrzeni się na całe jezioro?
+
+  \section{Wejście}
+W pierwszym i jedynym wierszu wejścia znajdują się trzy liczby całkowite $n, x, y$ ($1 \leq x, y \leq n \leq 10^9$), 
+oznaczające odpowiednio wymiary jeziora oraz położenie zalążka bakterii.
+
+  \section{Wyjście}
+Wyjście powinno zawierać jedną liczbę całkowitą, równą liczbie dni po których zostanie zainfekowane całe jezioro.
+
+     \makecompactexample
+
+
+  \end{tasktext}
+\end{document}

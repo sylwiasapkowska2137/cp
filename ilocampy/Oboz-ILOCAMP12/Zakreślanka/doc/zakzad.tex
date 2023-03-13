@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Zakreślanka}
+\id{zak}
+\author{Mateusz Chołołowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{1}
+\date{18.01.2016}
+\RAM{64}
+ 
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Stworek ma tablicę dwuwymiarową o wysokości $n$ i szerokości $m$. W każdej komórce tablicy zapisana jest
+jedna liczba całkowita.
+Stworek postanowił zakreślić pewne komórki tablicy. Chce wybrać komórki do zakreślenia tak, aby
+suma liczb w zakreślonych komórkach była jak największa. Ponadto jeśli w $i$-tym od góry rzędzie chłopiec zakreśla
+komórki o indeksach od $a$-tego do $b$-tego włącznie, to w wierszu $i+1$-szym również musi zakreślić komórki
+o tych indeksach (być może jeszcze jakieś dodatkowe).
+Pomóż Stworkowi obliczyć największą możliwą sumę zakreślonych komórek, jaką może uzyskać.
+
+ \section{Wejście}
+    
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$ i $m$ ($1 \leq n, m \leq 1000$), oznaczające odpowiednio
+wysokość i szerokość tablicy Stworka.
+
+Każdy z kolejnych $n$ wierszy zawiera $m$ liczb całkowitych 
+$a_{i,j}$ ($-10^9 \leq a_{i,j} \leq 10^9$ dla $1 \leq i \leq n$, $1 \leq j \leq m$).
+Reprezentują one zawartość tablicy Stworka w kolejności od najwyższego do najniższego wiersza.
+
+  \section{Wyjście}
+    Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca maksymalną możliwą do uzyskania sumę zakreślonego obszaru.
+
+     \makecompactexample
+
+  \end{tasktext}
+\end{document}

@@ -28,47 +28,55 @@ typedef pair<int, int> T;
 const int oo = 1e18, oo2 = 1e9+7, K = 30;
 const int mod = 998244353;
 
+struct event{
+	int l, r, i;
+	void assign(T a, T b, int _i){
+		l = b.first - a.second;
+		r = b.second - a.first;
+		i = _i;
+	}
+	bool operator <(const event&he) const{
+		return l == he.l ? r < he.r : l < he.l;
+	}
+};
 
 void solve(){
 	int n, m; cin >> n >> m;
-	vector<T>tab(n);
-	T prev; cin >> prev.first >> prev.second;
-	tab[0] = prev;
-	vector<T>a, b;
-	for (int i = 1; i<n; i++){
-		T curr; cin >> curr.first >> curr.second;
-		a.emplace_back(curr.first-prev.second, i-1);
-		tab[i] = curr;
-		prev = curr;
+	vector<T>a(n+1);
+	for (int i = 1; i<=n; i++) cin >> a[i].first >> a[i].second;
+	vector<event>b(n-1);
+	for (int i = 2; i<=n; i++){
+		b[i-2].assign(a[i-1], a[i], i);
 	}
-	for (int i = 0; i<m; i++) {
-		int x; cin >> x;
-		b.emplace_back(x, i);
-	}
-	sort(a.begin(), a.end());
 	sort(b.begin(), b.end());
-	// debug(a);
-	// debug(b);
-	// debug(tab);
+	vector<int>ans(n+1, -1);
+	set<T>s; //r,idx
+	vector<T>len(m);
+	for (int i = 0; i<m; i++) {
+		cin >> len[i].first;
+		len[i].second = i+1;
+	}
+	sort(len.begin(), len.end());
 	int ptr = 0;
-	vector<int>ans(n);
-	for (auto [len, idx]: a){
-		while (ptr < m && b[ptr].first < len){
+	for (auto [curr, idx]: len){
+		while (ptr < (int)b.size() && b[ptr].l <= curr){
+			s.insert({b[ptr].r, b[ptr].i});
 			ptr++;
 		}
-		if (ptr == m){
+		auto it = s.lower_bound({curr, -1});
+		if (it != s.end()){
+			ans[it->second] = idx;
+			s.erase(it);
+		}
+	}
+	for (int i = 2; i<=n; i++){
+		if (ans[i] == -1){
 			cout << "Nie\n";
 			return;
 		}
-		ans[idx] = b[ptr].second;
-		if (b[ptr].first > tab[idx+1].second - tab[idx].first){
-			cout << "Nie\n";
-			return;
-		}
-		ptr++;
 	}
 	cout << "Tak\n";
-	for (int i = 0; i<n-1; i++) cout << ans[i]+1 << " ";
+	for (int i = 2; i<=n; i++) cout << ans[i] << " ";
 	cout << "\n";
 }
 

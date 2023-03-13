@@ -1,0 +1,57 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Podróż}
+\id{pod}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XII obóz informatyczny}
+\etap{początkująca}
+\day{3}
+\date{20.01.2016}
+\RAM{128}
+
+\begin{document}
+\begin{tasktext}%
+Bajtocja jest grafem o $n$ wierzchołkach mającym $m$ dwukierunkowych krawędzi o długości 1.
+Bitowiusz, jej mieszkaniec znajduje się w wierzchołku $a$ i chciałby szybko wrócić do domu, który znajduje się w wierzchołku~$b$. Jednak jest pewien problem. Otóż Bitolania, która znajduje się w wierzchołku $x$ poprosiła go, żeby ją przy okazji odwiedził. Bitowiusz jest informatykiem, więc nie interesują go dziewczyny, ale nie chciałby zrobić przykrości Bitolanii. Obiecał więc, że zajdzie do niej jeśli przechodząc przez miejsce jej pobytu, którym jest wierzchołek $x$, nie będzie musiał przejść większej odległości, niż jakby szedł bezpośrednio do domu w wierzchołku $b$.
+
+Bitolania bardzo chciałaby się dowiedzieć czy Bitowiusz ją odwiedzi, a ty jako jej wierny, zfriendzonowany przyjaciel zostałeś poproszony o pomoc!
+
+  \section{Wejście}
+W pierwszym wierszu wejścia pojawią się dwie liczby całkowite $n, m$ ($1 \leq n, m \leq 3 \cdot 10^5$), oznaczające kolejno ilość wierzchołków w grafie oraz ilość krawędzi.
+Kolejne $m$ wierszy zawiera liczby $c, d$ ($1 \leq c, d \leq n$), oznaczające, że istnieje dwukierunkowa ścieżka pomiędzy wierzchołkiem $c$ i wierzchołkiem $d$.
+Ostatni wiersz wejścia zawiera trzy liczby całkowite $a, b, x$ ($1 \leq a, b, x \leq n$), oznaczające kolejno miejsce, w którym znajduje się Bitowiusz, miejsce, do którego chce dotrzeć oraz miejsce, w którym znajduje się Bitolania.
+
+Z miejsca, w którym znajduje się Bitowiusz zawsze da się dojść do jego domu oraz do miejsca pobytu Bitolanii.
+
+  \section{Wyjście}
+Na wyjściu powinno się znaleźć słowo \texttt{TAK} lub \texttt{NIE}, które będzie odpowiedzią na pytanie czy Bitowiusz odwiedzi Bitolanie.
+
+  \section{Przykład}
+   \twocol{%
+       \noindent Dla danych wejściowych:
+       \includefile{../in/\ID0a.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID0a.out}
+     }
+   \twocol{%
+       \noindent natomiast dla danych wejściowych:
+       \includefile{../in/\ID0b.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID0b.out}
+     }
+   \twocol{%
+       \noindent z kolei dla:
+       \includefile{../in/\ID0c.in}
+     }{%
+       \noindent poprawnym wynikiem jest:
+       \includefile{../out/\ID0c.out}
+     }
+
+
+
+\end{tasktext}
+\end{document}

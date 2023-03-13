@@ -1,0 +1,47 @@
+\documentclass[zad,zawodnik]{sinol}
+  \title{BitoBingo}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{bit}
+  \iomode{stdin}
+  \etap{pocz±tkuj±ca}
+  \day{2}
+  \date{27.09.2016}
+  \RAM{32}
+  \history{2011.11.19}{JTom, pomys³ i~redakcja}{1.00}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Ja¶ gra z Ma³gosi± w BitoBingo. Maj± oni do dyspozycji planszê o wymiarach $n \cdot n$. Dzieci rysuj± na przemian krzy¿yk w pewnym polu planszy (tylko w pustych polach). Wygrywa ta osoba, która po postawieniu swojego krzy¿yka utworzy planszê, w której pewien wiersz lub pewna kolumna bêdzie posiada³a wszystkie zakrzy¿ykowane pola. 
+
+Mimo zwyciêstwa pewnej osoby, dzieci mog± dalej stawiaæ krzy¿yki. Zak³adamy, ¿e pierwszy ruch wykonuje Ma³gosia.
+
+  \section{Wej¶cie}
+	
+Pierwszy wiersz wej¶cia zawiera dwie liczby ca³kowite $n, m$ ($1 \leq n, m \leq 10^5$), oznaczaj±c± wymiary planszy oraz liczbê ruchów, które wykonaj± dzieci. 
+
+Kolejne wiersz opisuj± ruchy dzieci. Ka¿dy wiersz zawiera dwie liczby ca³kowite $x, y$ ($1 \leq x, y \leq n$) oznaczaj±ce numer wiersza i kolumny pola, które zakrzy¿ykuje kolejna osoba.
+
+W testach wartych oko³o $40\%$ punktów zachodzi dodatkowy warunek $n \leq 10^3$.
+
+  \section{Wyj¶cie}
+	Pierwszy i jedyny wiersz wyj¶cia powinien zawieraæ jedn± liczbê ca³owit±, równ± numerze ruchu, po którym nast±pi zwyciêstwo, oraz literê \texttt{M} je¶li wygra³a Ma³gosia, lub \texttt{J}, je¶li wygra³ Ja¶. 
+
+Je¶li nikt nie wygra, po zakoñczeniu wszystkich ruchów, nale¿y wypisaæ warto¶æ $-1$.
+
+     \makecompactexample
+
+\medskip
+\noindent
+\textbf {Wyja¶nienie do przyk³adu:} 
+Po $5$ ruchach plansza bêdzie wygl±da³a nastêpuj±co:
+
+\medskip
+\noindent
+\texttt{XXX}\\
+\texttt{.X.}\\
+\texttt{..X}
+
+  \end{tasktext}
+\end{document}

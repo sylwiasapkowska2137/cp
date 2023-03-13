@@ -1,0 +1,28 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Muzea}
+\id{muz}
+\author{Jacek Tomasiewicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XI obóz informatyczny}
+\etap{początkująca}
+\day{?}
+\date{??.09.2015}
+\RAM{32}
+ 
+\begin{document}
+\begin{tasktext}%
+W Bajtocji są dwa muzea. W związku z rocznicą wielkiej bitwy o Bajtocję, minister kultury postanowił zlecić kustoszom przegląd zbiorów muzealnych. Z obu muzeów otrzymano listy przedmiotów wraz z ich wiekiem wyrażonym w latach. Teraz minister chce znaleźć pary przedmiotów takie, że jeden znajduje się w muzeum pierwszym, drugi zaś w drugim, ponadto wiek obu przedmiotów jest taki sam. Zastanawia się, jaką najstarszą (tj. o największym wieku) parę przedmiotów uda mu się znaleźć, a Ty mu w tym pomożesz.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajdują się dwie liczby całkowite $N$ i $M$ ($ 1 \leq N, M \leq 300\,000$), oznaczające odpowiednio liczbę przedmiotów w pierwszym i drugim muzeum.
+W drugim wierszu wejścia znajduje się $N$ liczb całkowitych $p_i$ ($ 1 \leq p_i \leq 300\,000$), oznaczających wiek poszczególnych eksponatów w muzeum pierwszym. W trzecim i ostatnim wierszu wejścia znajduje się $M$ liczb całkowitych $d_i$ ($ 1 \leq d_i \leq 300\,000$), oznaczających wiek poszczególnych okazów w muzeum drugim.
+
+  \section{Wyjście}
+W pierwszym i jedynym wierszu wyjścia powinna znaleźć się jedna liczba całkowita, oznaczająca największy możliwy wiek przedmiotu, taki, aby w obu muzeach znajdowały się przedmioty o takim wieku. Jeżeli nie istnieje para przedmiotów o takim samym wieku z różnych muzeów, odpowiedzią jest $-1$.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

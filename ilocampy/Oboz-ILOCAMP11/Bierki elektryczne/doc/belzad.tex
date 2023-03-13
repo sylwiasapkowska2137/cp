@@ -1,0 +1,33 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Bierki elektryczne}
+  \author{JT?}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{bel}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{olimpijska}
+  \day{2}
+  \date{22.09.2015}
+  \RAM{64}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Bierki elektryczne to zaiste elektryzujący sport, który przyciąga na mecze całą rzeszę kibiców. Puchar Świata w bierkach rządzi się swoimi zasadami: aby zdobyć główną nagrodę, zawodnik musi wygrać ponad połowę rozgrywek, które toczone są w ciągu roku.
+
+Komitet główny Pucharu Świata napotkał problem, bo być może nie będzie można wyłonić zwycięzcy całej serii meczów. Pomysł jest taki, aby część meczów wyłączyć z rywalizacji pucharowej, a uznawać tylko niektóre z nich. Dokładniej, sędziowie chcą wybrać najdłuższy spójny fragment spośród ciągu meczów, tak aby na jego podstawie dało się jednoznacznie ustalić zwycięzcę.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $N$ ($1 \leq N \leq 10^6$) oznaczająca liczbę meczów rozegranych w Pucharze. W drugiej i ostatniej linii wejścia znajduje się $N$ liczb całkowitych $z_i$ ($1~\leq~z_i~\leq~10^9$), oznaczających numer zawodnika, który wygrał $i$-ty mecz.
+
+  \section{Wyjście}
+W pierwszym i ostatnim wierszu wyjścia powinna znaleźć się jedna liczba całkowita, oznaczająca maksymalną długość spójnego przedziału meczów, na podstawie którego Puchar Świata może wygrać jakiś zawodnik.
+
+     \makecompactexample
+
+	\medskip
+	\noindent
+	\textbf{Wyjaśnienie do przykładu:} Sędziowie mogą wybrać przedział meczów o długości 5 na dwa sposoby: mecze od drugiego do szóstego włącznie, albo od pierwszego do piątego. W ten sposób wybrane mecze pozwolą ustalić zwycięzcę Pucharu Świata, którym zostanie zawodnik z numerem 4.
+
+  \end{tasktext}
+\end{document}

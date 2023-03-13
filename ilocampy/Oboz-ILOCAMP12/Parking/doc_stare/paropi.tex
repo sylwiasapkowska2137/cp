@@ -1,0 +1,76 @@
+\documentclass[opr]{sinol}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\newcounter{def}
+\newcounter{tw}
+\newcounter{lem}
+\newcounter{wn}
+\newcounter{obs}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small,
+  keywordstyle=\bfseries,
+  numbers=left,
+  language=pascal,
+  xleftmargin=1.2em,
+  frame=TBLR,
+  mathescape=true,
+  numberstyle=\footnotesize,
+ }
+
+\newcommand{\definicja}[1]{\vskip 0.2cm \noindent {\bf Definicja.\thedef.} \stepcounter{def} \emph{#1} \vskip 0.3cm}
+\newcommand{\twierdzenie}[1]{\vskip 0.2cm \noindent {\bf Twierdzenie.\thetw.} \stepcounter{tw} \emph{#1} \vskip 0.3cm}
+\newcommand{\lemat}[1]{\noindent {\vskip 0.2cm \bf Lemat.\thelem.} \stepcounter{lem} \emph{#1} \vskip 0.3cm}
+\newcommand{\wniosek}[1]{\noindent {\vskip 0.2cm \bf Wniosek.\thewn.} \stepcounter{wn} \emph{#1} \vskip 0.3cm}
+\newcommand{\obserwacja}[1]{\noindent {\vskip 0.2cm \bf Obserwacja.\theobs.} \stepcounter{obs} \emph{#1} \vskip 0.3cm}
+\newcommand{\intuicja}[1]{\noindent {\vskip 0.2cm \bf Intuicja.} #1 \vskip 0.3cm}
+\newcommand{\dowod}[1]{\begin{proof} #1 \end{proof}}
+\begin{document}
+ \signature{jtom???}
+  \id{par}
+  \title{Parking}
+  \author{Jacek Tomasiewicz}
+  \iomode{stdin}
+  \etap{pocz±tkuj±ca}
+  \day{5}
+  \date{03.12.2011}
+  \RAM{32}
+  \history{2011.08.12}{Jacek Tomasiewicz, przygotowanie rozwi±zania}{1.00}
+
+\begin{tasktext}%
+
+\setcounter{def}{1}
+\setcounter{tw}{1}
+\setcounter{wn}{1}
+\setcounter{obs}{1}
+
+\section{Rozwi±zanie wzorcowe $O(n)$}
+
+Na pocz±tku obliczamy po³o¿enie dwóch samochodów:
+\begin{itemize}
+	\item pó³nocny -- samochód zwrócony w kierunku pó³nocnym, po³o¿ony najbli¿ej pó³nocy (o najmniejszym numerze rzêdu)
+	\item po³udniowy -- samochód zwrócony w kierunku po³udniowym, po³o¿ony najbli¿ej po³udnia (o najwiêkszym numerze rzêdu).
+\end{itemize}
+
+Kiedy nie mo¿emy ustawiæ samochodów w jednym rzêdzie? Tylko wtedy, gdy numer rzêdu samochodu pó³nocnego jest mniejszy od numeru rzêdu samochodu po³udniowego. 
+
+\begin{lstlisting}
+wczytaj(n, s[])
+poludniowy := 0
+polnocny := n + 1
+for i := 1 to n do
+   wczytaj(z)
+   if (z == 1) poludniowy = max(poludniowy, s[i])
+   if (z == 0) polnocny = min(polnocny, s[i])
+if (polnocny < poludniowy)
+   wypisz(NIE)
+else
+   wypisz(TAK)
+\end{lstlisting}
+
+Z³o¿ono¶æ czasowa i pamiêciowa takiego rozwi±zania to $O(n)$.
+
+\end{tasktext}
+\end{document}

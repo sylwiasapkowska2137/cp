@@ -1,0 +1,46 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Młot obozu}
+\id{zaz}
+\author{Mateusz Radecki} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{18.01.2017}
+\RAM{512}
+ 
+\begin{document}
+\begin{tasktext}%
+    
+    Masz dany graf zawierający $n$ wierzchołków i początkowo $0$ krawędzi, oraz $q$ zapytań. Zapytania są jednego z trzech typów:
+\vskip 1mm
+$1:$ dodaj krawędź nieskierowaną między wierzchołkami $a$ i $b$ o wadze $x$.
+\vskip 1mm
+$2:$ usuń krawędź nieskierowaną spomiędzy wierzchołków $a$ i $b$.
+\vskip 1mm
+$3:$ powiedz, czy między wierzchołkami $a$ i $b$ istnieje ścieżka (niekoniecznie prosta, może przechodzić wielokrotnie przez wierzchołki i krawędzie), której xor wag krawędzi jest równy $x$.
+
+  \section{Wejście}
+
+  W pierwszej linii wejścia znajdują się dwie liczby całkowite $n$ i $q$ ($1 \leq n,q \leq 200\,000$), oznaczające liczbę wierzchołków i liczbę zapytań. W kolejnych $q$ wierszach znajdują się zapytania, każde jest w jednej z podanych form:
+\vskip 1mm
+$1 ~ a ~ b ~ x$ -- oznacza dodanie krawędzi między $a$ i $b$ o wadze $x$ ($1 \leq a,b \leq n;~ a \neq b;~ 0 \leq x < 1024 $).
+\vskip 1mm
+$2 ~ a ~ b$ -- oznacza usunięcie krawędzi łączącej wierzchołki $a$ i $b$ ($1 \leq a,b \leq n;~ a \neq b$).
+\vskip 1mm
+$3 ~ a ~ b ~ x$ -- oznacza zapytanie o istnienie ścieżki o xorze $x$ między wierzchołkami $a$ i $b$ ($1 \leq a,b \leq n;~ 0 \leq x < 1024 $).
+\vskip 4mm
+Gwarantujemy, że graf w żadnym momencie nie będzie zawierał multikrawędzi, pętli, oraz że zawsze usuwamy istniejącą krawędź.
+\vskip 4mm
+W testach wartych przynajmniej $20\%$ punktów wagi wszystkich krawędzi będą wynosić 0.
+
+  \section{Wyjście}
+   
+   Dla każdego zapytania trzeciego typu wypisz w osobnej linii \texttt{TAK}, lub \texttt{NIE}, w zależności od tego czy istnieje żądana ścieżka.
+  
+\makecompactexample
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Bitfony}
+  \author{Jacek Tomasiewicz}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{btf}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{początkująca}
+  \day{?}
+  \date{??.09.2015}
+  \RAM{32}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+W Bajtocji istnieją bitfony, które umożliwiają połączenie głosowe (i tekstowe) z tylko jedną, przypisaną do bitfonu osobą.
+
+W firmie pracuje $n$ osób, każda z nich dysponuje jednym bitfonem. Jeśli pewna osoba $a$ chce wysłać wiadomość do osoby $b$, to wysyła poprzez swój bitfon wiadomość (jej treść oraz nazwę adresata). Wiadomość porusza się pomiędzy bitfonami do momentu, aż trafi do $b$ lub wróci do $a$. 
+
+Jesteś programistą w firmie i chcesz wysłać wiadomość do pewnej osoby. Zastanawiasz się, czy wiadomość dojdzie do wybranej osoby, jeśli tak, po jakim czasie. 
+
+  \section{Wejście}
+	
+Pierszy wiersz wejścia zawiera jedną liczbę całkowitą $n$ ($1 \leq n \leq 10^6$), oznaczającą liczbę osób w firme. 
+
+Drugi wiersz wejścia zawiera $n$ liczb całkowitych $x_1, x_2, \ldots, x_n$ ($1 \leq x_i \leq n$), gdzie $x_i$ oznacza numer osoby, z którą może połączyć się $i$-ta osoba.
+
+Trzeci wiersz wejścia zawiera dwie liczby całkowite $a, b$ ($1 \leq a, b \leq n, a \neq b$), oznaczające, że osoba $a$, chce wysłać wiadomośc do osoby $b$.
+
+  \section{Wyjście}
+	Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą, równą czasowi, po którym dojdzie wiadomość lub wartość $-1$, jeśli wiadomość nigdy nie dojdzie.
+
+     \exampleimg{bitofon.eps}
+     \makestandardexample
+
+\medskip
+\noindent
+\textbf {Wyjaśnienie do przykładu:} Wiadomość dojdzie i będzie szła następująco $1 \rightarrow 2 \rightarrow 3$.
+
+  \end{tasktext}
+\end{document}

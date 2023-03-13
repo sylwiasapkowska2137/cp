@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+  \title{Wioska}
+  \author{}
+  \pagestyle{fancy}
+  \signature{jtom???}
+  \id{wio}
+  \iomode{stdin}
+  \konkurs{XI obóz informatyczny}
+  \etap{olimpijska}
+  \day{4}
+  \date{24.09.2015}
+  \RAM{128}
+
+\begin{document}
+  \begin{tasktext}% Ten znak % jest istotny!
+Szaman chce otoczyć swoją wioskę płotem. Jest jednak bardzo oszczędny i zależy mu, aby nie przepłacić. Sporządził już kwadratową mapę okolicy swojej wioski. Mapa jest podzielona na mniejsze kwadraty, które tworzą szachownicę. Szaman policzył też koszt budowy płotu wzdłuż każdej krawędzi mniejszych kwadratów składających się na szachownicę. Dysponując takimi danymi, wyznacz minimalny koszt otoczenia wioski płotem.
+
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $N$ ($1 \leq N \leq 100$), oznaczającą długość boku mapy, którą sporządził szaman.
+Drugi wiersz wejścia zwiera dwie liczby całkowite $X, Y$ ($1 <= X, Y <= N$), oznaczające lokalizację wioski. (Wioska znajduje się wewnątrz $X$-tego kwadratu w $Y$-tym rzędzie mapy, licząc od lewego, górnego rogu).
+
+W bloku kolejnych $N + 1$ wierszy wejścia znajduje się opis poziomych krawędzi mapy sporządzonej przez szamana. W $i$-tym wierszu znajduje się po $N$ liczb całkowitych $k_j$ ($1 \leq k_j \leq 10^9$), oznaczających koszt wybudowania płotu na $j$-tej krawędzi poziomej w $i$-tym rzędzie poziomych krawędzi od góry.
+
+Podobnie w bloku kolejnych $N$ wierszy wejścia znajduje się opis pionowych krawędzi mapy. W $i$-tym wierszu znajduje się po $N + 1$ liczb całkowitych $k_j$ ($1 \leq k_j \leq 10^9$), oznaczających koszt wybudowania płotu na $j$-tej krawędzi pionowej w $i$-tym rzędzie pionowych krawędzi od góry.
+  \section{Wyjście}
+Na wyjściu powinna znaleźć się jedna liczba całkowita, oznaczająca całkowity koszt wybudowania płotu dookoła wioski szamana.
+
+  \exampleimg{image.eps}
+
+  \makestandardexample
+
+	\medskip
+	\noindent
+	\textbf{Wyjaśnienie do przykładu:} Szaman wybuduje płot wzdłuż krawędzi o koszcie (kolejno od lewego górnego rogu, zgodnie z ruchem wskazówek zegara): 3, 2, 3, 1, 3, 2, 2, 2.
+
+  \end{tasktext}
+\end{document}

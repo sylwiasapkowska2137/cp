@@ -1,0 +1,39 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Osiedle}
+\id{osi}
+\author{Mateusz Puczel} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{zaawansowana}
+\day{3}
+\date{28.09.2016}
+\RAM{128}
+ 
+\begin{document}
+\begin{tasktext}%
+Przemek jest nieoficjalnie nazywany królem swojego osiedla. Każdego wieczoru wybiera się na spacer po nim, podczas którego pilnuje porządku
+oraz rozwiązuje problemy innych ludzi. Dziś Przemek też wybierze się na spacer.
+
+Osiedle Przemka składa się z $n$ bloków mieszkalnych. Patrząc na osiedle Przemka z lotu ptaka każdy z tych bloków ma kształt prostokąta o
+bokach równoległych do osi układu współrzędnych. Bloki nie przecinają się, ani nie stykają się bokami.
+
+Spacer rozpoczyna się w pewnym punkcie, a kończy w innym. Przemek chciałby, aby przebyta droga była jak najkrótsza.
+Stojąc w pewnym punkcie, Przemek może przejść w linii prostej do dowolnego innego punktu, o ile na tym odcinku nie ma żadnego bloku, tj.
+odcinek między dwoma punktami nie może przecinać się z żadnym blokiem. Może natomiast dotykać zewnętrznych krawędzi bloku. Odległość
+między dwoma punktami jest mierzona w metryce euklidesowej, tj. odległość między punktami $A$ i $B$ wyrażona jest wzorem $\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}$.
+Podsumowując, spacer Przemka jest ciągiem przejść w linii prostej między pewnymi punktami, a łączna długość spaceru jest sumą odległości między
+kolejnymi punktami.
+
+Pomoż Przemkowi wyznaczyć minimalną długość spaceru.
+
+  \section{Wejście}
+W pierwszym wierszu wejścia znajduje się 5 liczb całkowitych $n$, $x_p$, $y_p$, $x_k$, $y_k$ ($1 \leq n \leq 700, -10^9 \leq x_y, y_p, x_k, y_k \leq $)
+  
+  \section{Wyjście}
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}

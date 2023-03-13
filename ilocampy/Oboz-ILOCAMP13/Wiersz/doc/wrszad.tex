@@ -1,0 +1,37 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Wiersz}
+\id{wrs}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIII obóz informatyczny}
+\etap{olimpijska}
+\day{3}
+\date{28.09.2016}
+\RAM{256}
+ 
+\begin{document}
+\begin{tasktext}%
+
+Życie informatyka nie jest proste i nie tak łatwo jest je pogodzić z obowiązkami szkolnymi, o czym dotkliwie przekonał się ostatnio Bajtazar. Pani Bitolińska, nauczycielka języka polskiego, zadała tydzień temu klasie Bajtazara wiersz do nauczenia się na pamięć. Niestety, skupiony na rozwiązywaniu zadań z różnorakich konkursów informatycznych, Bajtazar zupełnie o tym zapomniał, a test ze znajomości tekstu odbędzie się już jutro! W akcie desperacji Bajtazar włamał się do komputera nauczycielki i wykradł treść jutrzejszego testu. 
+
+Okazało się, że test składać się będzie z $q$ zadań, z których każde będzie polegało na podaniu pewnego spójnego fragmentu wiersza. Bajtazar przypomniał sobie, że w ubiegłych latach $x$ razy musiał się nauczyć pewnych wierszy na pamięć, z czego w zupełności się wywiązał (wtedy jeszcze nie umiał programować) i pamięta je wszystkie do tej pory. Młodzieniec postanowił, że nie będzie już uczył się zadanego tekstu i zamiast tego na teście spróbuje uzyskać odpowiedzi do zadań poprzez łączenie fragmentów wierszy, które już zna. Ponadto przy rozwiązywaniu każdego z zadań, Bajtazar nie chce użyć więcej niż jednego fragmentu z każdego znanego już wiersza. Bajtazar chciałby wiedzieć na które z zadań w teście jest w stanie uzyskać poprawną odpowiedź.
+
+  \section{Wejście}
+
+W pierwszym wierszu wyjścia znajdują się trzy liczby całkowite $x$ oraz $q$ ($1 \leq x \leq 10$, $1 \leq q \leq 10~000$) oznaczające liczbę wierszy, które Bajtazar już zna oraz liczbę zadań na teście.
+
+W każdym z kolejnych $x$ wierszy znajduje się opis wierszy znanych przez Bajtazara. Każdy z nich składa się z jednej liczby całkowitej $m_i$ i następującym po nim słowie o długości $m_i$, będącym treścią wiersza. ($1 \leq m_i \leq 50~000$) Sumaryczna długość wszystkich znanych już przez Bajtazara wierszy nie przekracza $50~000$
+
+W następnym wierszu znajduje się jedna liczba całkowita $n$ po której występuje jedno słowo $n$-literowe ($1 \leq n \leq 50~000$), będace treścią wiersza pani Bitolińskiej, który tak samo jak wszystkie wiersze znane przez Bajtazara, składa się tylko z małych liter alfabetu angielskiego.
+
+W ostatnich $q$ wierszach znajdują się po dwie liczby całkowite $a_i$ oraz $b_i$ ($1 \leq a_i \leq b_i \leq n$), określające początek i koniec fragmentu wiersza, który należy podać w $i$-tym zadaniu. Sumaryczna długość wszystkich fragmentów nie przekracza $50~000$. 
+
+
+  \section{Wyjście}
+Na wyjście należy wypisać $q$ wierszy. W $i$-tym z nich należy podać odpowiedź do $i$-tego zapytania, \texttt{TAK}, jeśli Bajtazar może wyrecytować fragment wiersza wskazany przez panią Bitolińską, używajac tylko wierszy poznanych w przeszłości lub \texttt{NIE} jeśli nie jest w stanie tego zrobić.
+\makecompactexample 
+
+\end{tasktext}
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\title{Budynki}
+\id{bud}
+\author{Maciej Hołubowicz} % Autor zadania
+\pagestyle{fancy}
+\iomode{stdin}
+\konkurs{XIV obóz informatyczny}
+\etap{olimpijska}
+\day{1}
+\date{16.01.2017}
+\RAM{128}
+
+\usepackage{graphicx}
+ 
+\begin{document}
+\begin{tasktext}%
+
+ Na płaszczyźnie wprowadźmy układ współrzędnych kartezjanskich. Wielkie Góry Bajtowe zajmują na tej płaszczyźnie prostoktokąt o przeciwległych wierzchołkach w punktach ($0,0$) i ($w,h$), gdzie $w$ i $h$ są dodatnimi liczbami całkowitymi. W Górach jest n szczytów, a kazdy z nich jest położony w jednym z punktów kratowych prostokąta (punkt kratowy to punkt o całkowitych współrzędnych). Coraz więcej turystów odkrywa piękno Wielkich Gór Bajtowych i kazdy z nich chciałby zbudować sobie w nich budynek. Jednak zgodnie z prawem Narodowego Parku Wielkich Gór Bajtowych, w kazdym punkcie kratowym prostokąta można zbudowac co najwyżej jeden budynek i nie można budować budynków na górskich szczytach. Tak więc jest dokładnie ($w + 1$)~*~($h + 1$)$-n$ miejsc, w których można postawić budynek. 
+ 
+ Niektóre z tych miejsc są uwazane za bardziej atrakcyjne od innych. Powiemy, że punkt ($x,y$) ma północnego sąsiada, jezeli istnieje górski szczyt w pewnym punkcie ($x,y + d$) dla dodatniej liczby całkowitej $d$. Podobnie definiujemy południowego, wschodniego i zachodniego sąsiada. W ten sposób każdy punkt kratowy niebędący górskim szczytem posiada od 0 do 4 sąsiadów. Naturalnie im więcej sąsiadów, tym punkt jest bardziej atrakcyjny (z powodu lepszego widoku na góry). 
+
+Dyrektor Parku chciałby znac maksymalny zysk, jaki mógłby uzyskać ze sprzedaży ziemi pod budowę budynków. Pomóz mu i policz ile punktów kratowych (z wyłączeniem górskich szczytów) posiada $0, 1, 2, 3 i 4$ sąsiadów.
+
+  \section{Wejście}
+Pierwszy wiersz wejscia zawiera trzy liczby całkowite $w, h i n$ ($1 \le w,h \le 10^9, 1 \le n \le 5 * 10 ^ 5$), pooddzielane pojedynczymi odstępami. Pozostałe $n$ wierszy opisuje połozenie górskich szczytów w Parku. Każdy z nich zawiera dwie liczby całkowite $x$ i $y$ ($0 \le x \le w, 0 \le y \le h$), oddzielone pojedynczym odstępem. Nie ma dwóch szczytów znajdujących się w tym samym punkcie.
+
+ \section{Wyjście}
+Pierwszy i jedyny wiersz wyjscia powinien zawierać 5 liczb całkowitych, pooddzielanych pojedynczymi odstępami i oznaczających liczby punktów kratowych (z wyłączeniem górskich szczytów), mających odpowiednio 0, 1, 2, 3 i 4 sąsiadów.
+
+\makecompactexample
+
+\end{tasktext}
+\end{document}
