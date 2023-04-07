@@ -1,0 +1,16 @@
+1. chash
+2. 
+
+moze zmalec o 0, 1, lub 2
+bity z n/2 i n/2+1
+fix i, subtract bits
+--> n/2 ---> force 0
+mamy maske, chcemy znalezc 
+
+101100101 --> 0, pozycje obojetne
+_0__00_0_
+strata = min (v\in A) __builtin_popcount(mask&v);
+dp[v] = __builtin_popcount(v);
+dp[mask] = dp[mask|(1<<i)] + 
+
+0(0/1)00(0/1)0(0/1)0
